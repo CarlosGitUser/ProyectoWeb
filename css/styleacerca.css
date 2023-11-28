@@ -1,0 +1,23 @@
+article{
+    padding: 5px;
+    text-align: center;
+    width: 100%;
+  }
+  .Vision .vision{
+    background-color: lightblue;
+  }
+  .Vision .mision{
+    background-color: lightcoral;
+  }
+  .Vision .objetivo{
+    background-color: lightgoldenrodyellow;
+  }
+  p{
+    text-align: justify;
+  }
+  h2{
+    text-align: center;
+  }
+  img{
+    width: 90;
+  }
