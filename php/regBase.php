@@ -22,9 +22,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $respuesta = $_POST['respuestaSeguridad'];
     $contra = $_POST['contraseña'];
     
+    $contraseña_encriptada = password_hash($contra, PASSWORD_DEFAULT);
 
-    // Ejemplo de cómo podrías insertar el usuario en una tabla de la base de datos
-    $sql = "INSERT INTO usuario (nombre, cuenta, correo, password, preg_sec, res_preg) VALUES ('$usuario','$nomCuenta','$correo','$contra','$pregunta','$respuesta')";
+    $sql = "INSERT INTO usuario (nombre, cuenta, correo, password, preg_sec, res_preg) VALUES ('$usuario','$nomCuenta','$correo','$contraseña_encriptada','$pregunta','$respuesta')";
     
     if ($conn->query($sql) === TRUE) {
         // Si la inserción fue exitosa, redireccionar o mostrar un mensaje de éxito
