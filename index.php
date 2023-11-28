@@ -99,7 +99,7 @@
         <img src="image/shop_banner_img1.jpg" alt="">
         <div class="content">
             <span>special offer</span>
-            <h3>upto 50% off</h3>
+            <h3>Hasta 50% de rebaja</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
@@ -108,7 +108,7 @@
         <img src="image/shop_banner_img2.jpg" alt="">
         <div class="content">
             <span>special offer</span>
-            <h3>upto 50% off</h3>
+            <h3>Hasta 50% de rebaja</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
@@ -121,7 +121,7 @@
 
 <section class="products" id="products">
 
-    <h1 class="heading"> exclusive <span>products</span> </h1>
+    <h1 class="heading"> Productos <span>Exclusivos</span> </h1>
 
     <div class="filter-buttons">
         <div class="buttons active" data-filter="all">all</div>
@@ -547,7 +547,7 @@
                     <div class="price">
                         <div class="amount">$20.00</div>
                         <div class="cut">$25.00</div>
-                        <div class="offer">20% off</div>
+                        <div class="offer">20% de descuento</div>
                     </div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -575,7 +575,7 @@
                     <div class="price">
                         <div class="amount">$20.00</div>
                         <div class="cut">$25.00</div>
-                        <div class="offer">20% off</div>
+                        <div class="offer">20% de descuento</div>
                     </div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -966,7 +966,7 @@
         <a href="#" class="fab fa-instagram"></a>
     </div>
 
-    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de ropa</a></span> </div>
+    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de peliculas</a></span> </div>
     
 </section>
 
