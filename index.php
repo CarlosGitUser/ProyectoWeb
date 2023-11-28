@@ -99,7 +99,7 @@
         <img src="image/shop_banner_img1.jpg" alt="">
         <div class="content">
             <span>special offer</span>
-            <h3>Hasta 50% de rebaja</h3>
+            <h3>Hasta 50%</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
@@ -108,7 +108,7 @@
         <img src="image/shop_banner_img2.jpg" alt="">
         <div class="content">
             <span>special offer</span>
-            <h3>Hasta 50% de rebaja</h3>
+            <h3>Hasta 50%</h3>
             <a href="#" class="btn">shop now</a>
         </div>
     </div>
