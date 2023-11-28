@@ -4,15 +4,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
 
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/styleproduct.css">
+
+    <title>Productos</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
 </head>
 <body>
 <header class="header">
@@ -53,10 +53,22 @@
         <section class="product-list">
             <div class="product-item" category="peliculas">
                 <img src="" alt="">
-                <a href="#">pelicula hp</a>
-</div>
-</section>
-</div>
+                <a href="#">pelicula terror</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="" alt="">
+                <a href="#">pelicula romance</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="" alt="">
+                <a href="#">pelicula ciencia ficcion</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="" alt="">
+                <a href="#">pelicula comedia</a>
+            </div>
+        </section>
+    </div>
 </div>
 
 <!-- fin body -->
