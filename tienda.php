@@ -1,13 +1,18 @@
-<?php
-
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Productos</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+
+    <!-- font awesome cdn link  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
 <header class="header">
@@ -15,12 +20,11 @@
 <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i> The void zone </a>
 
 <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#products">Productos</a>
-    <a href="#featured">Destacados</a>
-    <a href="#review">Revisar</a>
-    <a href="#contact">Contacto</a>
-    <a href="#blogs">Blogs</a>
+        <a href="index.php">Home</a>
+        <a href="tienda.php">Productos</a>
+        <a href="Vision.php">Acerca De</a>
+        <a href="Contactanos.php">Contacto</a>
+        <a href="Ayuda.php">Ayuda</a>
 </nav>
 
 <div class="icons">
@@ -37,10 +41,25 @@
 
 </header>
 
+<!-- body -->
+<div class="wrap">
+    <h1>Lista de Productos</h1>
+    <div class="store-wrapper">
+        <div class="category_list">
+            <a href="#" id="categoryItem" category="all">Todo</a>
+            <a href="#" id="categoryItem" category="peliculas">Peliculas</a>
+            <a href="#" id="categoryItem" category="figuras">Figuras de Accion</a>
+        </div>
+        <section class="product-list">
+            <div class="product-item" category="peliculas">
+                <img src="" alt="">
+                <a href="#">pelicula hp</a>
+</div>
+</section>
+</div>
+</div>
 
-
-
-
+<!-- fin body -->
 
 <!-- footer section starts  -->
 
@@ -97,6 +116,11 @@
 
 <!-- footer section ends -->
 
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="js/script.js"></script>
 
 </body>
 </html>
