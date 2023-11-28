@@ -8,11 +8,10 @@
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
-    <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
+     <!-- font awesome cdn link  -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
 <header class="header">
@@ -45,7 +44,7 @@
 
 <!-- Vision section starts -->
 <section class="acerca">
-    <article class="vision">
+    <article id="vision">
         <img src="visionPROGA.jpg" alt="" width="250">
         <h2>Nuestra Vision</h2>
         <p>La visión de Void Zone, una empresa apasionada por el mundo del entretenimiento, se centra en proporcionar a sus 
@@ -58,7 +57,7 @@
         </p>
     </article>
 
-    <article class="mision">
+    <article id="mision">
         <img src="misionPROGRA.jpg" alt="" width="250">
         <h2>Nuestra Misión</h2>
         <p>La misión de Void Zone es proporcionar a los aficionados del cine y la colección un refugio donde sus pasiones puedan florecer
@@ -68,7 +67,7 @@
         </p>
     </article>
 
-    <article class="objetivo">
+    <article id="objetivo">
         <img src="objetivosPROGRA.jpg" alt="" width="250">
         <h2>Nuestro Objetivo</h2>
         <p>El objetivo central de Void Zone es convertirse en el destino predilecto para los entusiastas del cine y la colección, 
