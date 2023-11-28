@@ -99,7 +99,7 @@
         <div class="content">
             <span>Oferta especial</span>
             <h3>Hasta 50%</h3>
-            <a href="#" class="btn">shop now</a>
+            <a href="#" class="btn">Comprar ahora</a>
         </div>
     </div>
     
@@ -108,7 +108,7 @@
         <div class="content">
             <span>Oferta especial</span>
             <h3>Hasta 50%</h3>
-            <a href="#" class="btn">shop now</a>
+            <a href="#" class="btn">Comprar ahora</a>
         </div>
     </div>
 
