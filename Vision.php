@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/styleacerca.css">
      <!-- font awesome cdn link  -->
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
 </head>
 <body>
 <header class="header">
@@ -46,7 +47,7 @@
 <!-- Vision section starts -->
 <section class="acerca">
     <article id="vision">
-        <img src="visionPROGA.jpg" alt="" width="250">
+        <img src="image/visionPROGA.jpg" alt="" width="700">
         <h2>Nuestra Vision</h2>
         <p>La visión de Void Zone, una empresa apasionada por el mundo del entretenimiento, se centra en proporcionar a sus 
         clientes una experiencia única y envolvente en el universo del cine y la colección
@@ -59,7 +60,7 @@
     </article>
 
     <article id="mision">
-        <img src="misionPROGRA.jpg" alt="" width="250">
+        <img src="image/misionPROGRA.jpg" alt="" width="300">
         <h2>Nuestra Misión</h2>
         <p>La misión de Void Zone es proporcionar a los aficionados del cine y la colección un refugio donde sus pasiones puedan florecer
         Buscamos constantemente innovar en la forma en que los aficionados disfrutan y comparten su amor por el entretenimiento.
@@ -69,7 +70,7 @@
     </article>
 
     <article id="objetivo">
-        <img src="objetivosPROGRA.jpg" alt="" width="250">
+        <img src="image/objetivosPROGRA.jpg" alt="" width="300">
         <h2>Nuestro Objetivo</h2>
         <p>El objetivo central de Void Zone es convertirse en el destino predilecto para los entusiastas del cine y la colección, 
             proporcionando una experiencia integral que va más allá de la simple adquisición de productos.
