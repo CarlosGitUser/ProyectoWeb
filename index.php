@@ -98,7 +98,7 @@
     <div class="banner">
         <img src="image/shop_banner_img1.jpg" alt="">
         <div class="content">
-            <span>special offer</span>
+            <span>Oferta especial</span>
             <h3>Hasta 50%</h3>
             <a href="#" class="btn">shop now</a>
         </div>
@@ -107,7 +107,7 @@
     <div class="banner">
         <img src="image/shop_banner_img2.jpg" alt="">
         <div class="content">
-            <span>special offer</span>
+            <span>Oferta especial</span>
             <h3>Hasta 50%</h3>
             <a href="#" class="btn">shop now</a>
         </div>
