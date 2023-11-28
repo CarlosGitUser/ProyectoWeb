@@ -1,12 +1,10 @@
-<?php
-    echo    "contactanos:" ;
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Contacto</title>
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
@@ -22,12 +20,11 @@
 <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i> The void zone </a>
 
 <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#products">Productos</a>
-    <a href="#featured">Destacados</a>
-    <a href="#review">Revisar</a>
-    <a href="#contact">Contacto</a>
-    <a href="#blogs">Blogs</a>
+        <a href="index.php">Home</a>
+        <a href="tienda.php">Productos</a>
+        <a href="Vision.php">Acerca De</a>
+        <a href="Contactanos.php">Contacto</a>
+        <a href="Ayuda.php">Ayuda</a>
 </nav>
 
 <div class="icons">
@@ -157,6 +154,12 @@
 </section>
 
 <!-- footer section ends -->
+
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="js/script.js"></script>
 </body>
 </html>
 

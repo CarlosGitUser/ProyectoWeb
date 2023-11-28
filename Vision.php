@@ -1,13 +1,10 @@
-<?php
-    echo "hola";
-
-?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Acerca De</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
@@ -23,13 +20,12 @@
 <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i> The void zone </a>
 
 <nav class="navbar">
-    <a href="#home">Home</a>
-    <a href="#products">Productos</a>
-    <a href="#featured">Destacados</a>
-    <a href="#review">Revisar</a>
-    <a href="#contact">Contacto</a>
-    <a href="#blogs">Blogs</a>
-</nav>
+        <a href="index.php">Home</a>
+        <a href="tienda.php">Productos</a>
+        <a href="Vision.php">Acerca De</a>
+        <a href="Contactanos.php">Contacto</a>
+        <a href="Ayuda.php">Ayuda</a>
+    </nav>
 
 <div class="icons">
     <div id="menu-btn" class="fas fa-bars"></div>
@@ -47,7 +43,40 @@
 
 
 
+<!-- Vision section starts -->
+<section class="acerca">
+    <div class="vision">
+        <h3>Nuestra Vision</h3>
 
+        <p>La visión de Void Zone, una empresa apasionada por el mundo del entretenimiento, se centra en proporcionar a sus 
+            clientes una experiencia única y envolvente en el universo del cine y la colección
+        </p>
+        <br>
+        <p>no solo buscamos vender películas y figuras coleccionables, sino también cultivar una comunidad donde los aficionados 
+            puedan compartir su entusiasmo, descubrir tesoros cinematográficos y 
+            encontrar piezas exclusivas para enriquecer sus colecciones
+        </p>
+        <img src="visionPROGA.jpg" alt="">
+    </div>
+    <div class="mision">
+        <h3>Nuestra Misión</h3>
+
+        <p>La misión de Void Zone es proporcionar a los aficionados del cine y la colección un refugio donde sus pasiones puedan florecer
+        Buscamos constantemente innovar en la forma en que los aficionados disfrutan y comparten su amor por el entretenimiento.
+        </p>
+        <p>aspiramos a ser el punto de encuentro donde la pasión por el cine y la colección se fusiona con la satisfacción de encontrar tesoros únicos.
+        </p>
+        <img src="misionPROGRA.jpg" alt="">
+    </div>
+    
+    <div class="Objetivo">
+        <h3>Nuestro Objetivo</h3>
+        <p>El objetivo central de Void Zone es convertirse en el destino predilecto para los entusiastas del cine y la colección, 
+            proporcionando una experiencia integral que va más allá de la simple adquisición de productos.
+        </p>
+        <img src="objetivosPROGRA.jpg" alt="">
+    </div>
+</section>
 
 <!-- footer section starts  -->
 
@@ -104,5 +133,10 @@
 
 <!-- footer section ends -->
 
+
+<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+
+<!-- custom js file link -->
+<script src="js/script.js"></script>
 </body>
 </html>
