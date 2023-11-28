@@ -8,6 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 <header class="header">
@@ -37,10 +38,17 @@
 
 </header>
 
+<!-- body -->
+<div class="wrap">
+    <h1>Lista de Productos</h1>
+    <div class="store-wrapper">
+        <div class="category_list">
+            <a href="#" id="categoryItem" category="all">Todo</a>
+            <a href="#" id="categoryItem" category="peliculas">Peliculas</a>
+            <a href="#" id="categoryItem" category="figuras">Figuras de Accion</a>
 
 
-
-
+<!-- fin body -->
 
 <!-- footer section starts  -->
 
