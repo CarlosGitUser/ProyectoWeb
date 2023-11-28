@@ -24,7 +24,7 @@
         <a href="Vision.php">Acerca De</a>
         <a href="Contactanos.php">Contacto</a>
         <a href="Ayuda.php">Ayuda</a>
-    </nav>
+</nav>
 
 <div class="icons">
     <div id="menu-btn" class="fas fa-bars"></div>
