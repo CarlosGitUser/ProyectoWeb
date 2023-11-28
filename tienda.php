@@ -57,7 +57,15 @@
             <a href="#" id="categoryItem" category="all">Todo</a>
             <a href="#" id="categoryItem" category="peliculas">Peliculas</a>
             <a href="#" id="categoryItem" category="figuras">Figuras de Accion</a>
-
+        </div>
+        <section class="product-list">
+            <div class="product-item" category="peliculas">
+                <img src="" alt="">
+                <a href="#">pelicula hp</a>
+</div>
+</section>
+</div>
+</div>
 
 <!-- fin body -->
 
