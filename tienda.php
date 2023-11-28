@@ -6,12 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Productos</title>
 
+    <link rel="stylesheet" href="css/style.css">
+
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
 
 </head>
 <body>
@@ -41,10 +41,25 @@
 
 </header>
 
+<!-- body -->
+<div class="wrap">
+    <h1>Lista de Productos</h1>
+    <div class="store-wrapper">
+        <div class="category_list">
+            <a href="#" id="categoryItem" category="all">Todo</a>
+            <a href="#" id="categoryItem" category="peliculas">Peliculas</a>
+            <a href="#" id="categoryItem" category="figuras">Figuras de Accion</a>
+        </div>
+        <section class="product-list">
+            <div class="product-item" category="peliculas">
+                <img src="" alt="">
+                <a href="#">pelicula hp</a>
+</div>
+</section>
+</div>
+</div>
 
-
-
-
+<!-- fin body -->
 
 <!-- footer section starts  -->
 
