@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="stylesheet" href="css/styleproduct.css">
+
 
     <title>Productos</title>
 
@@ -13,6 +13,7 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="css/styleproduct.css">
 </head>
 
 <body>
@@ -47,9 +48,9 @@
     <h1>Lista de Productos</h1>
     <div class="store-wrapper">
         <div class="category_list">
-            <a href="#" id="categoryItem" category="all">Todo</a>
-            <a href="#" id="categoryItem" category="peliculas">Peliculas</a>
-            <a href="#" id="categoryItem" category="figuras">Figuras de Accion</a>
+            <a href="#" id="category_item" category="all">Todo</a>
+            <a href="#" id="category_item" category="peliculas">Peliculas</a>
+            <a href="#" id="category_item" category="figuras">Figuras de Accion</a>
         </div>
         <section class="product-list">
             <div class="product-item" category="peliculas">
