@@ -46,9 +46,9 @@
     <h1>Lista de Productos</h1>
     <div class="store-wrapper">
         <div class="category_list">
-            <a href="#" id="categoryItem" category="all">Todo</a>
-            <a href="#" id="categoryItem" category="peliculas">Peliculas</a>
-            <a href="#" id="categoryItem" category="figuras">Figuras de Accion</a>
+            <a href="#" id="category_item" category="all">Todo</a>
+            <a href="#" id="category_item" category="peliculas">Peliculas</a>
+            <a href="#" id="category_item" category="figuras">Figuras de Accion</a>
         </div>
         <section class="product-list">
             <div class="product-item" category="peliculas">
