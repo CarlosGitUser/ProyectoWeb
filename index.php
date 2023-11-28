@@ -58,25 +58,25 @@
 
             <div class="swiper-slide slide" style="background:url(image/banner1.jpg) no-repeat">
                 <div class="content">
-                    <span>upto 50% off</span>
+                    <span>Hasta 50% de rebaja</span>
                     <h3>Romance</h3>
-                    <a href="#" class="btn">shop now</a>
+                    <a href="#" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
             <div class="swiper-slide slide" style="background:url(image/banner2.jpg) no-repeat">
                 <div class="content">
-                    <span>upto 50% off</span>
+                    <span>Hasta 50% de rebaja</span>
                     <h3>Ciencia Ficcion</h3>
-                    <a href="#" class="btn">shop now</a>
+                    <a href="#" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
             <div class="swiper-slide slide" style="background:url(image/banner3.jpg) no-repeat">
                 <div class="content">
-                    <span>upto 50% off</span>
+                    <span>Hasta 50% de rebaja</span>
                     <h3>Terror</h3>
-                    <a href="#" class="btn">shop now</a>
+                    <a href="#" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
