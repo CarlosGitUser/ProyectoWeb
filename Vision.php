@@ -39,7 +39,40 @@
 
 
 
+<!-- Vision section starts -->
+<section class="acerca">
+    <div class="vision">
+        <h3>Nuestra Vision</h3>
 
+        <p>La visión de Void Zone, una empresa apasionada por el mundo del entretenimiento, se centra en proporcionar a sus 
+            clientes una experiencia única y envolvente en el universo del cine y la colección
+        </p>
+        <br>
+        <p>no solo buscamos vender películas y figuras coleccionables, sino también cultivar una comunidad donde los aficionados 
+            puedan compartir su entusiasmo, descubrir tesoros cinematográficos y 
+            encontrar piezas exclusivas para enriquecer sus colecciones
+        </p>
+        <img src="visionPROGA.jpg" alt="">
+    </div>
+    <div class="mision">
+        <h3>Nuestra Misión</h3>
+
+        <p>La misión de Void Zone es proporcionar a los aficionados del cine y la colección un refugio donde sus pasiones puedan florecer
+        Buscamos constantemente innovar en la forma en que los aficionados disfrutan y comparten su amor por el entretenimiento.
+        </p>
+        <p>aspiramos a ser el punto de encuentro donde la pasión por el cine y la colección se fusiona con la satisfacción de encontrar tesoros únicos.
+        </p>
+        <img src="misionPROGRA.jpg" alt="">
+    </div>
+    
+    <div class="Objetivo">
+        <h3>Nuestro Objetivo</h3>
+        <p>El objetivo central de Void Zone es convertirse en el destino predilecto para los entusiastas del cine y la colección, 
+            proporcionando una experiencia integral que va más allá de la simple adquisición de productos.
+        </p>
+        <img src="objetivosPROGRA.jpg" alt="">
+    </div>
+</section>
 
 <!-- footer section starts  -->
 
