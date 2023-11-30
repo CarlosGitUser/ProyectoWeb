@@ -21,7 +21,9 @@
 
 <header class="header">
 
-    <a href="#" class="logo"> <i class="fas fa-shopping-cart"></i> The void zone </a>
+    <a href="#" class="logo">
+    <img src="image/logo4.png" alt="The void zone">
+    </a>
 
     <nav class="navbar">
         <a href="index.php">Home</a>
@@ -55,26 +57,26 @@
 
         <div class="swiper-wrapper">
 
-            <div class="swiper-slide slide" style="background:url(image/banner1.jpg) no-repeat">
+            <div class="swiper-slide slide" style="background:url(image/ba1.jpg) no-repeat">
                 <div class="content">
                     <span>Hasta 50% de rebaja</span>
-                    <h3>Romance</h3>
+                    <h3>Peliculas</h3>
                     <a href="#" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
-            <div class="swiper-slide slide" style="background:url(image/banner2.jpg) no-repeat">
+            <div class="swiper-slide slide" style="background:url(image/banne2.jpg) no-repeat">
                 <div class="content">
                     <span>Hasta 50% de rebaja</span>
-                    <h3>Ciencia Ficcion</h3>
+                    <h3>Figuras de acción</h3>
                     <a href="#" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
-            <div class="swiper-slide slide" style="background:url(image/banner3.jpg) no-repeat">
+            <div class="swiper-slide slide" style="background:url(image/banne3.jpg) no-repeat">
                 <div class="content">
                     <span>Hasta 50% de rebaja</span>
-                    <h3>Terror</h3>
+                    <h3>Compra<br>ya!</h3>
                     <a href="#" class="btn">Comprar ahora</a>
                 </div>
             </div>
@@ -95,7 +97,7 @@
 <section class="banner-container">
 
     <div class="banner">
-        <img src="image/shop_banner_img1.jpg" alt="">
+        <img src="image/ima1.jpg" alt="">
         <div class="content">
             <span>Oferta especial</span>
             <h3>Hasta 50%</h3>
@@ -104,7 +106,7 @@
     </div>
     
     <div class="banner">
-        <img src="image/shop_banner_img2.jpg" alt="">
+        <img src="image/ima2.jpg" alt="">
         <div class="content">
             <span>Oferta especial</span>
             <h3>Hasta 50%</h3>
@@ -140,7 +142,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img1.jpg" alt="">
+                <img src="image/peli1.jpg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
@@ -872,7 +874,7 @@
 
         <div class="box">
             <h3>Sobre nosotros</h3>
-            <p>Viviendo la Aventura en cada Fotograma, Transformamos Sueños en Acción!</p>
+            <p>V !</p>
         </div>
 
         <div class="box">
@@ -918,26 +920,6 @@
 </section>
 
 <!-- footer section ends -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
