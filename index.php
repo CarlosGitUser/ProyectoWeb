@@ -170,7 +170,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img2.jpg" alt="">
+                <img src="image/figu1.jpeg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
@@ -198,7 +198,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img3.jpg" alt="">
+                <img src="image/peli2.jpg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
@@ -226,7 +226,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img4.jpg" alt="">
+                <img src="image/figu9.jpg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
@@ -254,7 +254,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img5.jpg" alt="">
+                <img src="image/figu8.jpg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
