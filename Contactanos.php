@@ -32,6 +32,7 @@
     <div id="search-btn" class="fas fa-search"></div>
     <a href="#" class="fas fa-shopping-cart"></a>
     <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-user"></a>
 </div>
 
 <form action="" class="search-form">
@@ -52,20 +53,20 @@
 
         <div class="icons">
             <i class="fas fa-map-marker-alt"></i>
-            <h3>address</h3>
-            <p>jogeshwari, mumbai, india - 400104</p>
+            <h3>Dirección</h3>
+            <p>Universidad Autónoma de Aguascalientes</p>
         </div>
 
         <div class="icons">
             <i class="fas fa-envelope"></i>
-            <h3>email</h3>
-            <p>shaikhanas@gmail.com</p>
-            <p>anasbhai@gmail.com</p>
+            <h3>Email</h3>
+            <p>@gmail.com</p>
+            <p>@gmail.com</p>
         </div>
 
         <div class="icons">
             <i class="fas fa-phone"></i>
-            <h3>phone</h3>
+            <h3>Telefono</h3>
             <p>+123-456-7890</p>
             <p>+111-222-3333</p>
         </div>
@@ -75,21 +76,19 @@
     <div class="row">
 
         <form action="">
-            <h3>get in touch</h3>
+            <h3>Ponerse en contacto</h3>
             <div class="inputBox">
-                <input type="text" placeholder="your name">
-                <input type="email" placeholder="your email">
+                <input type="text" placeholder="tu nombre">
+                <input type="email" placeholder="tu email">
             </div>
             <div class="inputBox">
-                <input type="number" placeholder="your number">
-                <input type="text" placeholder="your subject">
+                <input type="number" placeholder="tu numero">
+                <input type="text" placeholder="tu asunto">
             </div>
-            <textarea placeholder="your message" cols="30" rows="10"></textarea>
-            <input type="submit" value="send message" class="btn">
+            <textarea placeholder="tu mensaje" cols="30" rows="10"></textarea>
+            <input type="submit" value="Enviar mensaje" class="btn">
         </form>
-
-        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d30153.788252261566!2d72.82321484621745!3d19.141690214227783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7b63aceef0c69%3A0x2aa80cf2287dfa3b!2sJogeshwari%20West%2C%20Mumbai%2C%20Maharashtra%20400047!5e0!3m2!1sen!2sin!4v1633431163028!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-
+       <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14806.125242757787!2d-102.33626167245366!3d21.914116910620464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eee23dfea56d%3A0xc2edcc935471e5fa!2sUniversidad%20Aut%C3%B3noma%20de%20Aguascalientes%2C%2020100%20Aguascalientes%2C%20Ags.!5e0!3m2!1ses!2smx!4v1701371735263!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
 
 </section>
