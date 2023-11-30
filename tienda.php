@@ -34,16 +34,25 @@
     <div id="search-btn" class="fas fa-search"></div>
     <a href="#" class="fas fa-shopping-cart"></a>
     <a href="#" class="fas fa-heart"></a>
+    <a href="#" class="fas fa-user"></a>
 </div>
 
 <form action="" class="search-form">
     <input type="search" name="" placeholder="search here..." id="search-box">
     <label for="search-box" class="fas fa-search"></label>
 </form>
-
+<br>
+<br>
+<br>
+<br>
 </header>
 
 <!-- body -->
+<br>
+<br>
+<br>
+<br>
+<br>
 <div class="wrap">
     <h1>Lista de Productos</h1>
     <div class="store-wrapper">
@@ -54,20 +63,68 @@
         </div>
         <section class="product-list">
             <div class="product-item" category="peliculas">
-                <img src="" alt="">
+                <img src="image/pic-1.png" alt="">
                 <a href="#">pelicula terror</a>
             </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-1.png" alt="">
+                <a href="#">Super man</a>
+            </div>
             <div class="product-item" category="peliculas">
-                <img src="" alt="">
+                <img src="image/pic-2.png" alt="">
                 <a href="#">pelicula romance</a>
             </div>
-            <div class="product-item" category="peliculas">
-                <img src="" alt="">
-                <a href="#">pelicula ciencia ficcion</a>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-3.png" alt="">
+                <a href="#">Batman</a>
             </div>
             <div class="product-item" category="peliculas">
-                <img src="" alt="">
+                <img src="image/pic-3.png" alt="">
+                <a href="#">pelicula ciencia ficcion</a>
+            </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-4.png" alt="">
+                <a href="#">Naruto</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="image/pic-4.png" alt="">
                 <a href="#">pelicula comedia</a>
+            </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-2.png" alt="">
+                <a href="#">Goku</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="image/pic-1.png" alt="">
+                <a href="#">pelicula terror</a>
+            </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-1.png" alt="">
+                <a href="#">Super man</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="image/pic-2.png" alt="">
+                <a href="#">pelicula romance</a>
+            </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-3.png" alt="">
+                <a href="#">Batman</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="image/pic-3.png" alt="">
+                <a href="#">pelicula ciencia ficcion</a>
+            </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-4.png" alt="">
+                <a href="#">Naruto</a>
+            </div>
+            <div class="product-item" category="peliculas">
+                <img src="image/pic-4.png" alt="">
+                <a href="#">pelicula comedia</a>
+            </div>
+            <div class="product-item" category="figuras">
+                <img src="image/pic-2.png" alt="">
+                <a href="#">Goku</a>
             </div>
         </section>
     </div>
