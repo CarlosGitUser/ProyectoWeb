@@ -13,7 +13,7 @@
 
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="css/styleproduct.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
@@ -53,83 +53,359 @@
 <br>
 <br>
 <br>
-<div class="wrap">
-    <h1>Lista de Productos</h1>
-    <div class="store-wrapper">
-        <div class="category_list">
-            <a href="#" id="category_item" category="all" style="color: red;">Todo</a>
-            <a href="#" id="category_item" category="peliculas">Peliculas</a>
-            <a href="#" id="category_item" category="figuras">Figuras de Accion</a>
-        </div>
-        <section class="product-list">
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-1.png" alt="">
-                <a href="#">pelicula terror</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-1.png" alt="">
-                <a href="#">Super man</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-2.png" alt="">
-                <a href="#">pelicula romance</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-3.png" alt="">
-                <a href="#">Batman</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-3.png" alt="">
-                <a href="#">pelicula ciencia ficcion</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-4.png" alt="">
-                <a href="#">Naruto</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-4.png" alt="">
-                <a href="#">pelicula comedia</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-2.png" alt="">
-                <a href="#">Goku</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-1.png" alt="">
-                <a href="#">pelicula terror</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-1.png" alt="">
-                <a href="#">Super man</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-2.png" alt="">
-                <a href="#">pelicula romance</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-3.png" alt="">
-                <a href="#">Batman</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-3.png" alt="">
-                <a href="#">pelicula ciencia ficcion</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-4.png" alt="">
-                <a href="#">Naruto</a>
-            </div>
-            <div class="product-item" category="peliculas">
-                <img src="image/pic-4.png" alt="">
-                <a href="#">pelicula comedia</a>
-            </div>
-            <div class="product-item" category="figuras">
-                <img src="image/pic-2.png" alt="">
-                <a href="#">Goku</a>
-            </div>
-        </section>
-    </div>
-</div>
+<section class="products" id="products">
 
+    <h1 class="heading"> Todos los <span>Productos</span> </h1>
+
+    <div class="filter-buttons">
+        <div class="buttons active" data-filter="all">all</div>
+        <div class="buttons" data-filter="arrivals">new arrivals</div>
+        <div class="buttons" data-filter="featured">featured</div>
+        <div class="buttons" data-filter="special">special offer</div>
+        <div class="buttons" data-filter="seller">best seller</div>
+    </div>
+
+    <div class="box-container">
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/peli1.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img2.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img3.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="arrivals">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img4.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img5.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="arrivals">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img7.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img8.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img9.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="featured">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img10.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="special">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img11.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="box" data-item="seller">
+            <div class="icons">
+                <a href="#" class="fas fa-shopping-cart"></a>
+                <a href="#" class="fas fa-heart"></a>
+                <a href="#" class="fas fa-search"></a>
+                <a href="#" class="fas fa-eye"></a>
+            </div>
+            <div class="image">
+                <img src="image/product_img12.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>product name</h3>
+                <div class="price">
+                    <div class="amount">$20.00</div>
+                    <div class="cut">$25.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</section>
 <!-- fin body -->
 
 <!-- footer section starts  -->
