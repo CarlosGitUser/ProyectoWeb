@@ -126,11 +126,11 @@
     <h1 class="heading"> Productos <span>Exclusivos</span> </h1>
 
     <div class="filter-buttons">
-        <div class="buttons active" data-filter="all">all</div>
-        <div class="buttons" data-filter="arrivals">new arrivals</div>
-        <div class="buttons" data-filter="featured">featured</div>
-        <div class="buttons" data-filter="special">special offer</div>
-        <div class="buttons" data-filter="seller">best seller</div>
+        <div class="buttons active" data-filter="all">Todo</div>
+        <div class="buttons" data-filter="arrivals">Recien llegado</div>
+        <div class="buttons" data-filter="featured">Destacados</div>
+        <div class="buttons" data-filter="special">Oferta especial</div>
+        <div class="buttons" data-filter="seller">Mejor vendido</div>
     </div>
 
     <div class="box-container">
@@ -146,10 +146,10 @@
                 <img src="image/peli1.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Mad Max: Fury Road [4K Ultra HD + Blu-ray + Digital HD]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$450.00</div>
+                    <div class="cut">$530.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -174,11 +174,11 @@
                 <img src="image/figu1.jpeg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Star Wars Kylo Ren Starkiller Figura de Accion Excluisva</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
-                    <div class="offer">20% off</div>
+                    <div class="amount">$428.00</div>
+                    <div class="cut">$857.00</div>
+                    <div class="offer">50% off</div>
                 </div>
                 <div class="stars">
                     <i class="fas fa-star"></i>
@@ -202,10 +202,10 @@
                 <img src="image/peli2.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Blade Runner 2049 (BD) [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$643.00</div>
+                    <div class="cut">$728.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -230,10 +230,10 @@
                 <img src="image/figu9.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>PIGGY - Figura de acción Robby Series 2 de 3.5" (incluye artículos DLC)</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$758.00</div>
+                    <div class="cut">$824.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -283,7 +283,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img6.jpg" alt="">
+                <img src="image/peli3.jpg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
@@ -311,7 +311,7 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img7.jpg" alt="">
+                <img src="image/peli4.jpg" alt="">
             </div>
             <div class="content">
                 <h3>product name</h3>
