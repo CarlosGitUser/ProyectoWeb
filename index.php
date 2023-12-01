@@ -258,10 +258,10 @@
                 <img src="image/figu8.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Banpresto Dragon Ball Legends Collab Super Saiyan Gogeta Figura</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$1,287.00</div>
+                    <div class="cut">$1,326.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -286,10 +286,10 @@
                 <img src="image/peli3.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Blade Runner (1982) (4K UHD) [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$919.00</div>
+                    <div class="cut">$924.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -314,10 +314,10 @@
                 <img src="image/peli4.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>2001: A SPACE ODYSSEY (4K UHDBD) [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$603.00</div>
+                    <div class="cut">$610.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -339,13 +339,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img8.jpg" alt="">
+                <img src="image/figu2.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Square Enix Marvel Universe Variant Play Arts - Figura de acción de Kai - Wolverine</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$3,768.00</div>
+                    <div class="cut">$3,773.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -367,13 +367,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img9.jpg" alt="">
+                <img src="image/figu3.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$149.00</div>
+                    <div class="cut">$153.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -395,13 +395,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img10.jpg" alt="">
+                <img src="image/peli5.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>The Lost Boys [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$579.00</div>
+                    <div class="cut">$583.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -423,13 +423,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img11.jpg" alt="">
+                <img src="image/peli6.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray] [Region Free] (IMPORT) (Keine deutsche Version)</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$959.00</div>
+                    <div class="cut">$963.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -451,13 +451,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img12.jpg" alt="">
+                <img src="image/peli7.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Spider-Man: Across The Spider-Verse - UHD/BD Combo + Digital [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$519.00</div>
+                    <div class="cut">$524.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -482,7 +482,7 @@
 <section class="deal">
 
     <div class="image">
-        <img src="image/tranding_img.png" alt="">
+        <img src="image/tranding.png" alt="">
     </div>
 
     <div class="content">
@@ -500,7 +500,7 @@
 
 <section class="featured" id="featured">
 
-    <h1 class="heading"> <span>featured</span> products </h1>
+    <h1 class="heading"> <span>Productos</span> Destacados </h1>
 
     <div class="swiper featured-slider">
         
@@ -689,7 +689,7 @@
 
 <section class="review" id="review">
 
-    <h1 class="heading"> client's <span>review</span> </h1>
+    <h1 class="heading"> Opinión <span>del cliente</span> </h1>
 
     <div class="swiper review-slide">
 
@@ -775,7 +775,7 @@
 
 <section class="blogs" id="blogs">
     
-    <h1 class="heading"> our <span>blogs</span></h1>
+    <h1 class="heading"> Nuestros <span>blogs</span></h1>
 
     <div class="swiper blogs-slider">
 
