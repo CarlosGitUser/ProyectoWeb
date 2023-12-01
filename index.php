@@ -140,10 +140,10 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="producto1.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/peli1.jpg" alt="">
+            <a href="producto1.php"><img src="image/peli1.jpg" alt=""></a>
             </div>
             <div class="content">
                 <h3>product name</h3>
