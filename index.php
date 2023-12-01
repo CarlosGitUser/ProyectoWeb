@@ -486,10 +486,10 @@
     </div>
 
     <div class="content">
-        <span>new season trending!</span>
-        <h3>best summer collection</h3>
-        <p>sale get up to 50% off</p>
-        <a href="#" class="btn">shop now</a>
+        <span>tendencias para nuevas temporadas!</span>
+        <h3>La mejor colección de invierno</h3>
+        <p>rebajas hasta el 50% de descuento</p>
+        <a href="#" class="btn">Comprar ahora</a>
     </div>
 
 </section>
