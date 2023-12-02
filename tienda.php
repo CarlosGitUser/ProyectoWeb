@@ -49,7 +49,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product_Figura1.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu3.jpg" alt="">
