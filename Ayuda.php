@@ -19,6 +19,29 @@
 
 <?php include "header.php"; ?>
 
+<div id="qa-container">
+        <h1>Preguntas y Respuestas - Tienda de Películas y Figuras de Acción</h1>
+
+        <div class="question">
+            <strong>Pregunta 1:</strong>
+            <p>¿Cuáles son las películas más populares en la tienda?</p>
+            <p><strong>Respuesta:</strong> Nuestras películas más populares incluyen títulos como "Aventuras en la Ciudad" y "Héroes del Espacio".</p>
+        </div>
+
+        <div class="question">
+            <strong>Pregunta 2:</strong>
+            <p>¿Tienen figuras de acción de superhéroes?</p>
+            <p><strong>Respuesta:</strong> Sí, contamos con una amplia selección de figuras de acción de superhéroes, incluyendo personajes icónicos como Superman, Batman y Spider-Man.</p>
+        </div>
+
+        <form>
+            <label for="ask">Haz una pregunta sobre películas o figuras de acción:</label>
+            <textarea id="ask" name="ask" rows="4" required></textarea>
+            <button type="submit">Enviar Pregunta</button>
+        </form>
+</div>
+
+
 <!-- footer section starts  -->
 
 <section class="footer">
