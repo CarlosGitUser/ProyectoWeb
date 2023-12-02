@@ -304,13 +304,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/figu3.jpg" alt="">
+                <img src="image/figu22.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
+                <h3>Figma-figura DE ACCIÓN DE Demon Slayer de 14cm, muñeco MODELO DE Kyojuro Rengoku Kimetsu no Yaiba, 508-DX, Nezuko, juguetes, n. ° 553</h3>
                 <div class="price">
-                    <div class="amount">$149.00</div>
-                    <div class="cut">$153.00</div>
+                    <div class="amount">$549.00</div>
+                    <div class="cut">$439.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
