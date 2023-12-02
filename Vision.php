@@ -48,7 +48,7 @@
 <!-- Vision section starts -->
 <section class="acerca">
     <article id="vision">
-        <img src="image/visionPROGA.jpg" alt="" width="700">
+        <img src="image/visionPROGRA.jpg" alt="" width="700">
         <h2>Nuestra Vision</h2>
         <p>La visión de Void Zone, una empresa apasionada por el mundo del entretenimiento, se centra en proporcionar a sus 
         clientes una experiencia única y envolvente en el universo del cine y la colección
