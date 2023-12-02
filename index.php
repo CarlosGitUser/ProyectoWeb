@@ -783,12 +783,12 @@
 
             <div class="swiper-slide slide">
                 <div class="image">
-                    <img src="image/blog-1.jpg" alt="">
+                    <img src="image/blog1.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>Historia del Cine.es</h3>
-                    <p>Nos gusta compartir </p>
-                    <a href="https://historiadelcine.es/noticias-cine/" class="btn">Leer más</a>
+                    <h3>Tooys</h3>
+                    <p>Visitanos y conoce todas las categorias que tenemos en figuras de acción.</p>
+                    <a href="https://tooys.mx/coleccion/figuras-de-accion.html" class="btn">Leer más</a>
                     <div class="icons">
                         <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
@@ -813,12 +813,12 @@
 
             <div class="swiper-slide slide">
                 <div class="image">
-                    <img src="image/blog-3.jpg" alt="">
+                    <img src="image/blog3.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
-                    <a href="#" class="btn">Leer más</a>
+                    <h3>Toogeek</h3>
+                    <p>Tenemos figuras de acción de todo los diferentes tamaños y categorias.</p>
+                    <a href="https://toogeek.co/productos/juguetes/figuras-de-accion/" class="btn">Leer más</a>
                     <div class="icons">
                         <a href="#"> <i class="fas fa-calendar"></i> 21 may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
@@ -828,12 +828,12 @@
 
             <div class="swiper-slide slide">
                 <div class="image">
-                    <img src="image/blog-4.jpg" alt="">
+                    <img src="image/blog4.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
-                    <a href="#" class="btn">Leer más</a>
+                    <h3>Historia del Cine.es</h3>
+                    <p>Conoce más sobre la historia del cine y cada una de las películas que hay.</p>
+                    <a href="https://historiadelcine.es/noticias-cine/" class="btn">Leer más</a>
                     <div class="icons">
                         <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
@@ -843,12 +843,12 @@
 
             <div class="swiper-slide slide">
                 <div class="image">
-                    <img src="image/blog-5.jpg" alt="">
+                    <img src="image/blog5.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
-                    <a href="#" class="btn">Leer más</a>
+                    <h3>El palacio de hierro</h3>
+                    <p>Nos encanta coleccionar diferentes figuras de acción.</p>
+                    <a href="https://www.elpalaciodehierro.com/juguetes/figuras-de-accion/" class="btn">Leer más</a>
                     <div class="icons">
                         <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
