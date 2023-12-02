@@ -26,10 +26,8 @@
         <img src="image/visionPROGRA.jpg" alt="" width="700">
         <h1>Nuestra Vision</h1>
         <p>La visión de Void Zone, una empresa apasionada por el mundo del entretenimiento, se centra en proporcionar a sus 
-        clientes una experiencia única y envolvente en el universo del cine y la colección
-        </p>
-        <br>
-        <p>no solo buscamos vender películas y figuras coleccionables, sino también cultivar una comunidad donde los aficionados 
+        clientes una experiencia única y envolvente en el universo del cine y la colección.</p>
+        <p>No solo buscamos vender películas y figuras coleccionables, sino también cultivar una comunidad donde los aficionados 
         puedan compartir su entusiasmo, descubrir tesoros cinematográficos y 
         encontrar piezas exclusivas para enriquecer sus colecciones
         </p>
@@ -53,6 +51,9 @@
         </p>
     </article>
     
+</section>
+<section class="autores">
+
 </section>
 
 <!-- footer section starts  -->
