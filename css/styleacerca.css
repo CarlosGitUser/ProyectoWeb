@@ -21,6 +21,7 @@ article{
   
   body{
     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 50px;
     padding: 10px;
     margin: 15px;
 }
