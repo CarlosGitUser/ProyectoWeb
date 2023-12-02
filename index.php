@@ -133,6 +133,8 @@
         <div class="buttons" data-filter="seller">Mejor vendido</div>
     </div>
 
+ <!-- Aqui inician los productos-->
+
     <div class="box-container">
 
         <div class="box" data-item="featured">
@@ -475,7 +477,7 @@
 
 </section>
 
-<!-- products section ends -->
+<!-- Aqui terminan los productos  -->
 
 <!-- deal section starts  -->
 
@@ -496,7 +498,7 @@
 
 <!-- deal section ends -->
 
-<!-- featured section starts  -->
+<!-- aqui de nuevo inicia otra seccion de productos  -->
 
 <section class="featured" id="featured">
 
@@ -683,7 +685,7 @@
 
 </section>
 
-<!-- featured section ends -->
+<!-- Aqui termina otra seccion de productos -->
 
 <!-- reviews section starts  -->
 
@@ -875,26 +877,22 @@
 
         <div class="box">
             <h3>Sobre nosotros</h3>
-            <p>V !</p>
+            <p>Contactanos</p>
         </div>
 
         <div class="box">
-            <h3>Categoria</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Terror </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Romance </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Accion </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Ciencia Ficcion </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Comedia </a>
+            <h3>Categorias</h3>
+            <a href="tienda.php"> <i class="fas fa-arrow-right"></i> Peliculas </a>
+            <a href="tienda.php"> <i class="fas fa-arrow-right"></i> Figuras de acción </a>
         </div>
 
         <div class="box">
             <h3>Enlaces Rapidos</h3>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Home </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Productos </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Destacados </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Revisar </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Contacto </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Blogs </a>
+            <a href="index.php"> <i class="fas fa-arrow-right"></i> Home </a>
+            <a href="tienda.php"> <i class="fas fa-arrow-right"></i> Productos </a>
+            <a href="Vision.php"> <i class="fas fa-arrow-right"></i> Acerca de </a>
+            <a href="Contactanos.php"> <i class="fas fa-arrow-right"></i> Contacto </a>
+            <a href="Ayuda.php"> <i class="fas fa-arrow-right"></i> Ayuda </a>
         </div>
 
         <div class="box">
@@ -902,8 +900,6 @@
             <a href="#"> <i class="fas fa-arrow-right"></i> Mi pedido </a>
             <a href="#"> <i class="fas fa-arrow-right"></i> Mi cuenta </a>
             <a href="#"> <i class="fas fa-arrow-right"></i> Mi listado </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Vende ahora </a>
-            <a href="#"> <i class="fas fa-arrow-right"></i> Nuevas ofertas </a>
         </div>
 
     </div>
