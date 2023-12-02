@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 28-11-2023 a las 16:44:07
+-- Tiempo de generación: 02-12-2023 a las 01:53:42
 -- Versión del servidor: 10.4.28-MariaDB
 -- Versión de PHP: 8.0.28
 
@@ -51,7 +51,21 @@ CREATE TABLE `usuario` (
   `correo` varchar(32) NOT NULL,
   `password` text NOT NULL,
   `preg_sec` text NOT NULL,
-  `res_preg` text NOT NULL
+  `res_preg` text NOT NULL,
+  `intentos ` int(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `ventas`
+--
+
+CREATE TABLE `ventas` (
+  `id_venta` int(255) NOT NULL,
+  `id_usuario` int(255) NOT NULL,
+  `id_prod` int(255) NOT NULL,
+  `fecha_venta` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -71,6 +85,14 @@ ALTER TABLE `usuario`
   ADD PRIMARY KEY (`id_usr`);
 
 --
+-- Indices de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  ADD PRIMARY KEY (`id_venta`),
+  ADD KEY `id_usuario` (`id_usuario`),
+  ADD KEY `id_prod` (`id_prod`);
+
+--
 -- AUTO_INCREMENT de las tablas volcadas
 --
 
@@ -85,6 +107,28 @@ ALTER TABLE `producto`
 --
 ALTER TABLE `usuario`
   MODIFY `id_usr` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `ventas`
+--
+ALTER TABLE `ventas`
+  MODIFY `id_venta` int(255) NOT NULL AUTO_INCREMENT;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `producto`
+--
+ALTER TABLE `producto`
+  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_prod`) REFERENCES `ventas` (`id_prod`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `usuario`
+--
+ALTER TABLE `usuario`
+  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_usr`) REFERENCES `ventas` (`id_usuario`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
