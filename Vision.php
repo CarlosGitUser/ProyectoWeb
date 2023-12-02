@@ -36,7 +36,7 @@
     </article>
 
     <article id="mision">
-        <img src="image/misionPROGRA.jpg" alt="" width="700">
+        <img src="image/misionPROGRA.jpg" alt="" width="650">
         <h1>Nuestra Mision</h1>
         <p>La misión de Void Zone es proporcionar a los aficionados del cine y la colección un refugio donde sus pasiones puedan florecer
         Buscamos constantemente innovar en la forma en que los aficionados disfrutan y comparten su amor por el entretenimiento.
