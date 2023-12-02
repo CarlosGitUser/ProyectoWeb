@@ -338,7 +338,7 @@
                 <h3>The Lost Boys [Blu-ray]</h3>
                 <div class="price">
                     <div class="amount">$579.00</div>
-                    <div class="cut">$583.00</div>
+                    <div class="cut">$463.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -366,7 +366,7 @@
                 <h3>Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray](Keine deutsche Version)</h3>
                 <div class="price">
                     <div class="amount">$959.00</div>
-                    <div class="cut">$963.00</div>
+                    <div class="cut">$769.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
