@@ -101,6 +101,9 @@
         bottom: 0;
         width: 100%;
         }
+        p{
+            font-size: 15px;
+        }
     </style>
 </head>
 <body>
