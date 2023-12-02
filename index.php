@@ -258,10 +258,10 @@
                 <img src="image/figu8.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Banpresto Dragon Ball Legends Collab Super Saiyan Gogeta Figura</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$1,287.00</div>
+                    <div class="cut">$1,326.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -286,10 +286,10 @@
                 <img src="image/peli3.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Blade Runner (1982) (4K UHD) [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$919.00</div>
+                    <div class="cut">$924.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -314,10 +314,10 @@
                 <img src="image/peli4.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>2001: A SPACE ODYSSEY (4K UHDBD) [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$603.00</div>
+                    <div class="cut">$610.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -339,13 +339,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img8.jpg" alt="">
+                <img src="image/figu2.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Square Enix Marvel Universe Variant Play Arts - Figura de acción de Kai - Wolverine</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$3,768.00</div>
+                    <div class="cut">$3,773.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -367,13 +367,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img9.jpg" alt="">
+                <img src="image/figu3.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$149.00</div>
+                    <div class="cut">$153.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -395,13 +395,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img10.jpg" alt="">
+                <img src="image/peli5.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>The Lost Boys [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$579.00</div>
+                    <div class="cut">$583.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -423,13 +423,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img11.jpg" alt="">
+                <img src="image/peli6.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray](Keine deutsche Version)</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$959.00</div>
+                    <div class="cut">$963.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -451,13 +451,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/product_img12.jpg" alt="">
+                <img src="image/peli7.jpg" alt="">
             </div>
             <div class="content">
-                <h3>product name</h3>
+                <h3>Spider-Man: Across The Spider-Verse - UHD/BD Combo + Digital [Blu-ray]</h3>
                 <div class="price">
-                    <div class="amount">$20.00</div>
-                    <div class="cut">$25.00</div>
+                    <div class="amount">$519.00</div>
+                    <div class="cut">$524.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -482,14 +482,14 @@
 <section class="deal">
 
     <div class="image">
-        <img src="image/tranding_img.png" alt="">
+        <img src="image/tranding.png" alt="">
     </div>
 
     <div class="content">
-        <span>new season trending!</span>
-        <h3>best summer collection</h3>
-        <p>sale get up to 50% off</p>
-        <a href="#" class="btn">shop now</a>
+        <span>tendencias para nuevas temporadas!</span>
+        <h3>La mejor colección de invierno</h3>
+        <p>rebajas hasta el 50% de descuento</p>
+        <a href="#" class="btn">Comprar ahora</a>
     </div>
 
 </section>
@@ -500,7 +500,7 @@
 
 <section class="featured" id="featured">
 
-    <h1 class="heading"> <span>featured</span> products </h1>
+    <h1 class="heading"> <span>Productos</span> Destacados </h1>
 
     <div class="swiper featured-slider">
         
@@ -514,14 +514,42 @@
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/product_img1.jpg" alt="">
+                <img src="image/peli6.jpg" alt="">
+            </div>
+            <div class="content">
+                <h3>Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray](Keine deutsche Version)</h3>
+                <div class="price">
+                    <div class="amount">$959.00</div>
+                    <div class="cut">$963.00</div>
+                    <div class="offer">20% off</div>
+                </div>
+                    <div class="stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                        <span>(50)</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="swiper-slide slide">
+                <div class="icons">
+                    <a href="#" class="fas fa-shopping-cart"></a>
+                    <a href="#" class="fas fa-heart"></a>
+                    <a href="#" class="fas fa-search"></a>
+                    <a href="#" class="fas fa-eye"></a>
+                </div>
+                <div class="image">
+                    <img src="image/figu1.jpeg" alt="">
                 </div>
                 <div class="content">
-                    <h3>product name</h3>
+                    <h3>Star Wars Kylo Ren Starkiller Figura de Accion Excluisva</h3>
                     <div class="price">
-                        <div class="amount">$20.00</div>
-                        <div class="cut">$25.00</div>
-                        <div class="offer">20% off</div>
+                        <div class="amount">$428.00</div>
+                        <div class="cut">$857.00</div>
+                        <div class="offer">50% de descuento</div>
                     </div>
                     <div class="stars">
                         <i class="fas fa-star"></i>
@@ -542,13 +570,13 @@
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/product_img2.jpg" alt="">
+                    <img src="image/figu2.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>product name</h3>
+                    <h3>Square Enix Marvel Universe Variant Play Arts - Figura De Acción De Kai - Wolverine</h3>
                     <div class="price">
-                        <div class="amount">$20.00</div>
-                        <div class="cut">$25.00</div>
+                        <div class="amount">$3,768.00</div>
+                        <div class="cut">$3,773.00</div>
                         <div class="offer">20% de descuento</div>
                     </div>
                     <div class="stars">
@@ -570,41 +598,13 @@
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/product_img3.jpg" alt="">
+                    <img src="image/figu6.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>product name</h3>
+                    <h3>Marvel Legends Series: X Men 60 Aniversario - Villanos Figuras De Accion 6 Pulgadas</h3>
                     <div class="price">
-                        <div class="amount">$20.00</div>
-                        <div class="cut">$25.00</div>
-                        <div class="offer">20% de descuento</div>
-                    </div>
-                    <div class="stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="far fa-star"></i>
-                        <span>(50)</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
-                <div class="image">
-                    <img src="image/product_img4.jpg" alt="">
-                </div>
-                <div class="content">
-                    <h3>product name</h3>
-                    <div class="price">
-                        <div class="amount">$20.00</div>
-                        <div class="cut">$25.00</div>
+                        <div class="amount">$3599.00</div>
+                        <div class="cut">$3603.00</div>
                         <div class="offer">20% off</div>
                     </div>
                     <div class="stars">
@@ -626,13 +626,13 @@
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/product_img5.jpg" alt="">
+                    <img src="image/peli14.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>product name</h3>
+                    <h3>The Nun II (Blu-ray + Digital)</h3>
                     <div class="price">
-                        <div class="amount">$20.00</div>
-                        <div class="cut">$25.00</div>
+                        <div class="amount">$644.00</div>
+                        <div class="cut">$648.00</div>
                         <div class="offer">20% off</div>
                     </div>
                     <div class="stars">
@@ -654,13 +654,13 @@
                     <a href="#" class="fas fa-eye"></a>
                 </div>
                 <div class="image">
-                    <img src="image/product_img6.jpg" alt="">
+                    <img src="image/peli21.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>product name</h3>
+                    <h3>Yo Antes de Ti [Blu-ray]</h3>
                     <div class="price">
-                        <div class="amount">$20.00</div>
-                        <div class="cut">$25.00</div>
+                        <div class="amount">$437.00</div>
+                        <div class="cut">$442.00</div>
                         <div class="offer">20% off</div>
                     </div>
                     <div class="stars">
@@ -689,14 +689,14 @@
 
 <section class="review" id="review">
 
-    <h1 class="heading"> client's <span>review</span> </h1>
+    <h1 class="heading"> Opinión <span>del cliente</span> </h1>
 
     <div class="swiper review-slide">
 
         <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <p>¡Esta tienda en línea es un hallazgo! La variedad de películas y figuras de acción es increíble, y el proceso de compra fue sencillo. El seguimiento del pedido también fue excelente. ¡Muy feliz con mi experiencia de compra</p>
                 <div class="user">
                     <img src="image/pic-1.png" alt="">
                     <div class="info">
@@ -707,55 +707,55 @@
             </div>
 
             <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <p>Increíble servicio en esta tienda en línea. La variedad de productos es asombrosa, y la página web es fácil de navegar. Mi pedido llegó en perfectas condiciones y en tiempo récord. ¡Gracias por la excelente atención</p>
                 <div class="user">
                     <img src="image/pic-2.png" alt="">
                     <div class="info">
-                        <h3>john deo</h3>
+                        <h3>amy paulette</h3>
                         <span>happy client</span>
                     </div>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <p>Esta tienda virtual es genial. Encontré ediciones exclusivas y difíciles de conseguir de películas y figuras de acción. El sistema de compra fue fluido,  la entrega fue rápida y el servicio al cliente es de primera. ¡Muy satisfecho con mi experiencia!</p>
                 <div class="user">
                     <img src="image/pic-3.png" alt="">
                     <div class="info">
-                        <h3>john deo</h3>
+                        <h3>teo olivares</h3>
                         <span>happy client</span>
                     </div>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <p>Hoy recibí mi pedido de esta tienda en línea y estoy emocionado. Las figuras de acción son de alta calidad, y las películas son exactamente lo que esperaba. La atención al cliente también fue excelente. ¡Recomiendo esta tienda a todos los aficionados</p>
                 <div class="user">
                     <img src="image/pic-4.png" alt="">
                     <div class="info">
-                        <h3>john deo</h3>
+                        <h3>valeria dondiego</h3>
                         <span>happy client</span>
                     </div>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <p>La tienda en línea tiene una selección increíble. Encontré productos que no había visto en ningún otro lugar. La información detallada de cada artículo hizo que mi elección fuera más fácil. ¡Definitivamente compraré aquí de nuevo!</p>
                 <div class="user">
                     <img src="image/pic-5.png" alt="">
                     <div class="info">
-                        <h3>john deo</h3>
+                        <h3>Paul davila</h3>
                         <span>happy client</span>
                     </div>
                 </div>
             </div>
 
             <div class="swiper-slide slide">
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur veniam deserunt praesentium natus quibusdam ea nam commodi.</p>
+                <p>Mi experiencia de compra en esta tienda en línea fue perfecta. Encontré productos exclusivos, el proceso de pago fue seguro, y mi pedido llegó en excelentes condiciones. ¡Recomendaré esta tienda a mis amigos!</p>
                 <div class="user">
                     <img src="image/pic-6.png" alt="">
                     <div class="info">
-                        <h3>john deo</h3>
+                        <h3>Hanna Yao</h3>
                         <span>happy client</span>
                     </div>
                 </div>
@@ -775,7 +775,7 @@
 
 <section class="blogs" id="blogs">
     
-    <h1 class="heading"> our <span>blogs</span></h1>
+    <h1 class="heading"> Nuestros <span>blogs</span></h1>
 
     <div class="swiper blogs-slider">
 
@@ -798,14 +798,14 @@
 
             <div class="swiper-slide slide">
                 <div class="image">
-                    <img src="image/blog-2.jpg" alt="">
+                    <img src="image/blog2.jpg" alt="">
                 </div>
                 <div class="content">
-                    <h3>blog title goes here</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
-                    <a href="#" class="btn">read more</a>
+                    <h3>Soy de Cine</h3>
+                    <p>Nos gusta hablar de peliculas de todo tipo de genero.</p>
+                    <a href="https://soydecine.com/" class="btn">read more</a>
                     <div class="icons">
-                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 21 may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
                 </div>
@@ -820,7 +820,7 @@
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolore.</p>
                     <a href="#" class="btn">read more</a>
                     <div class="icons">
-                        <a href="#"> <i class="fas fa-calendar"></i> 21st may, 2021 </a>
+                        <a href="#"> <i class="fas fa-calendar"></i> 21 may, 2021 </a>
                         <a href="#"> <i class="fas fa-user"></i> by admin </a>
                     </div>
                 </div>
@@ -916,7 +916,7 @@
         <a href="#" class="fab fa-instagram"></a>
     </div>
 
-    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de peliculas</a></span> </div>
+    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de peliculas y figuras de accion</a></span> </div>
     
 </section>
 
