@@ -2,6 +2,8 @@ article{
     padding: 5px;
     text-align: center;
     width: 100%;
+    font-size: 200px;
+
   }
   #vision{
     background-color: whitesmoke;
@@ -14,14 +16,8 @@ article{
   }
   p{
     text-align: justify;
+    font-size: 50px;
   }
   h2{
     text-align: center;
   }
-  
-  body{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 50px;
-    padding: 10px;
-    margin: 15px;
-}
