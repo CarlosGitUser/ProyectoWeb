@@ -19,37 +19,10 @@
     
 <!-- header section starts  -->
 
-<header class="header">
-
-    <a href="#" class="logo">
-    <img src="image/logo4.png" alt="The void zone">
-    </a>
-
-    <nav class="navbar">
-        <a href="index.php">Home</a>
-        <a href="tienda.php">Productos</a>
-        <a href="Vision.php">Acerca De</a>
-        <a href="Contactanos.php">Contacto</a>
-        <a href="Ayuda.php">Ayuda</a>
-    </nav>
-
-    <div class="icons">
-        <div id="menu-btn" class="fas fa-bars"></div>
-        <div id="search-btn" class="fas fa-search"></div>
-        <a href="#" class="fas fa-shopping-cart"></a>
-        <a href="#" class="fas fa-heart"></a>
-        <a href="#" class="fas fa-user"></a>
-    </div>
-
-    <form action="" class="search-form">
-        <input type="search" name="" placeholder="search here..." id="search-box">
-        <label for="search-box" class="fas fa-search"></label>
-    </form>
-
-</header>
+<?php include "header.php"; ?>
 
 <!-- header section ends -->
-<h1></h1>
+
 <!-- home section starts  -->
 
 <section class="home" id="home">
