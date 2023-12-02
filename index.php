@@ -48,8 +48,11 @@
 
 </header>
 
+<?php include "header.php"; ?>
+
+
 <!-- header section ends -->
-<h1></h1>
+
 <!-- home section starts  -->
 
 <section class="home" id="home">
