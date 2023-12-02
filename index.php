@@ -849,8 +849,8 @@
     <div class="box-container">
 
         <div class="box">
-            <h3>Sobre nosotros</h3>
-            <p>Contactanos</p>
+            <h3>Nuestro lema</h3>
+            <p>¡Transforma tu mundo cinéfilo con nuestra colección de películas y figuras de acción extraordinarias!</p>
         </div>
 
         <div class="box">
