@@ -96,15 +96,12 @@ section {
   background: #fff;
 }
 
-.header .logo {
-  font-size: 2.5rem;
-  color: #130f40;
-  font-weight: bolder;
+.header .logo  img{
+  max-width: 100%; /* Asegura que el logo no sea más ancho que su contenedor */
+  height: auto; /* Mantiene la proporción del logo al cambiar el ancho */
+  display: block; /* Elimina espacios en blanco debajo del logo si es una etiqueta 'img' */
 }
 
-.header .logo i {
-  color: #eb4d4b;
-}
 
 .header .navbar a {
   font-size: 1.7rem;

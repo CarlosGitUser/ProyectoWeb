@@ -22,7 +22,7 @@
 <header class="header">
 
     <a href="#" class="logo">
-    <img src="image/logo4.png" alt="The void zone">
+    <img style=" max-width: 80%; display: block; width:170px; height: 110px;" src="image/logo1.png" alt="The void zone">
     </a>
 
     <nav class="navbar">
@@ -62,7 +62,7 @@
                 <div class="content">
                     <span>Hasta 50% de rebaja</span>
                     <h3>Peliculas</h3>
-                    <a href="#" class="btn">Comprar ahora</a>
+                    <a href="tienda.php" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
@@ -70,7 +70,7 @@
                 <div class="content">
                     <span>Hasta 50% de rebaja</span>
                     <h3>Figuras de acción</h3>
-                    <a href="#" class="btn">Comprar ahora</a>
+                    <a href="tienda.php" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
@@ -78,7 +78,7 @@
                 <div class="content">
                     <span>Hasta 50% de rebaja</span>
                     <h3>Compra<br>ya!</h3>
-                    <a href="#" class="btn">Comprar ahora</a>
+                    <a href="tienda.php" class="btn">Comprar ahora</a>
                 </div>
             </div>
 
