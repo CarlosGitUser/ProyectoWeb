@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $respuesta = $_POST['respuestaSeguridad'];
     $contra = $_POST['contraseña'];
     
-    $contraseña_encriptada = password_hash($contra, PASSWORD_DEFAULT);
+    $contraseña_encriptada = md5($contra);
 
     $sql = "INSERT INTO usuario (nombre, cuenta, correo, password, preg_sec, res_preg) VALUES ('$usuario','$nomCuenta','$correo','$contraseña_encriptada','$pregunta','$respuesta')";
     
