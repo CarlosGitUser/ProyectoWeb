@@ -26,6 +26,10 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 <section class="products" id="products">
 
     <h1 class="heading"> Todos los <span>Productos</span> </h1>
