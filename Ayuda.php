@@ -119,7 +119,7 @@
 <br>
 <section id="preguntas">
     <div id="qa-container">
-            <h1>Preguntas y Respuestas</h1>
+            <h1>Preguntas frecuentes</h1>
             <br>
             <br>
             <div class="question">
