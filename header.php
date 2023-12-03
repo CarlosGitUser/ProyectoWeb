@@ -28,6 +28,10 @@ session_start();
             <a href="Vision.php">Acerca De</a>
             <a href="Contactanos.php">Contacto</a>
             <a href="Ayuda.php">Ayuda</a>
+            <?php
+                if($_SESSION["usuario"]=="admin")
+                    echo '<a href="#">Altas y bajas</a>';
+            ?>
         </nav>
 
         <div class="icons">
