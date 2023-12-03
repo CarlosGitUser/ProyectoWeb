@@ -14,10 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Mostrar el resultado de la validación
     echo $resultadoValidacion;
 }
-if(isset($_COOKIE['usuario']) && isset($_COOKIE['password'])) {
-    $username_cookie = $_COOKIE['usuario'];
-    $password_cookie = $_COOKIE['contrasena'];
-    ?>
+ ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -88,38 +85,20 @@ if(isset($_COOKIE['usuario']) && isset($_COOKIE['password'])) {
 
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
-    
+        
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario" value="<?php echo $username_cookie; ?>" required>
+            <input type="text" id="usuario" name="usuario" value="<?php if(isset($_COOKIE['usuario'])){ echo $_COOKIE['usuario']; } ?>" required>
 
             <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" value="<?php echo $password_cookie; ?>" required>
+            <input type="password" id="contrasena" name="contrasena" value="<?php if (isset($_COOKIE['contrasena'])){ echo $_COOKIE['contrasena']; } ?>" required>
 
-            <input type="checkbox" id="remember" name="remember">
             <label for="remember">Recordar nombre y contraseña</label>
+            <input type="checkbox" id="remember" name="remember">
 
             <button type="submit">Iniciar Sesión</button>
         </form>
-        <?php
-            } else {
-                // Si no hay cookies, mostrar el formulario vacío para iniciar sesión
-        ?>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario" required>
-
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
-
-            <input type="checkbox" id="remember" name="remember">
-            <label for="remember">Recordar nombre y contraseña</label>
-
-            <button type="submit">Iniciar Sesión</button>
-        </form>
-        <?php
-    }
-    ?>
+        
     </div>
 
 </body>

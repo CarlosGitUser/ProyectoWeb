@@ -49,7 +49,7 @@ function validarUsuarioContraseña($usuario, $contrasena) {
                 }
             }
             
-            return "<p style='color: green;'>Inicio de sesión exitoso. ¡Bienvenido!</p>";
+            header("Location:index.php");
         } else{
             
             // Incrementa el contador de intentos y actualiza la base de datos
