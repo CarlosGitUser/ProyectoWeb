@@ -60,7 +60,7 @@
                 <div class="dropdown">
                     <button class="dropbtn" style="background-color: #4caf50; color:white">login</button>
                     <div class="dropdown-content">
-                        <a href="#">Iniciar Sesión</a>
+                        <a href="login.php">Iniciar Sesión</a>
                         <a href="registro.php">Registrarse</a>
                     </div>
                 </div>
