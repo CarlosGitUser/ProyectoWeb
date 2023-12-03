@@ -38,7 +38,7 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/figu3.jpg" alt="imagen-producto" />
+				<img style="" src="image/peli1.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
@@ -156,7 +156,7 @@
 
 <section class="featured" id="featured">
 
-<h1 class="heading"> <span>Productos</span> Destacados </h1>
+<h1 class="heading"> <span>Productos</span> Relacionados </h1>
 
 <div class="swiper featured-slider">
     
@@ -340,23 +340,15 @@
 </section>
 
 <!-- Aqui termina otra seccion de productos -->
-
-        
-
-
-
-
-
-
-
-<script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
-
 <br>
-<br>
-<br>
+
 <!-- footer section starts  -->
 <?php include "footer.php"; ?>
 <!-- footer section ends -->
+
+<script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
+
+
 
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
@@ -367,4 +359,3 @@
 
 </body>
 </html>
-

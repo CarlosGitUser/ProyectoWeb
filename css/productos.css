@@ -14,6 +14,9 @@ body {
 
 img {
 	max-width: 100%;
+	width: 100%;
+    height: 100%;
+    object-fit: cover; 
 }
 
 .container-title {
@@ -32,6 +35,7 @@ main {
 .container-img {
 	background-color: #f7f7f9;
 	flex: 1;
+	
 }
 
 .container-info-product {
@@ -79,6 +83,27 @@ main {
 	color: #666;
 }
 
+.container-info-product {
+	display: flex;
+
+  }
+
+  .container-price {
+	display: flex;
+	align-items: center;
+	margin-right: 400px; /* Espaciado entre el precio y el precio tachado */
+  }
+
+  .precio-normal {
+	margin-right: 5px; /* Espaciado entre el símbolo de moneda y el precio */
+  }
+
+  .precio-tachado {
+	text-decoration: line-through;
+	color: #888;
+  }
+
+  
 .btn-clean {
 	border: none;
 	background: none;
@@ -90,6 +115,7 @@ main {
 .btn-clean:hover {
 	color: #1bbeb4;
 }
+
 
 .container-add-cart {
 	display: flex;
