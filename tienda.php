@@ -26,6 +26,10 @@
 <br>
 <br>
 <br>
+<br>
+<br>
+<br>
+<br>
 <section class="products" id="products">
 
     <h1 class="heading"> Todos los <span>Productos</span> </h1>
@@ -45,7 +49,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product1_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu3.jpg" alt="">
@@ -73,7 +77,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="producto1.php" class="fas fa-eye"></a>
+                <a href="product1_P.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
             <a href="producto1.php"><img src="image/peli1.jpg" alt=""></a>
@@ -300,13 +304,13 @@
                 <a href="#" class="fas fa-eye"></a>
             </div>
             <div class="image">
-                <img src="image/figu3.jpg" alt="">
+                <img src="image/figu22.jpg" alt="">
             </div>
             <div class="content">
-                <h3>Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
+                <h3>Figma-figura DE ACCIÓN DE Demon Slayer de 14cm, muñeco MODELO DE Kyojuro Rengoku Kimetsu no Yaiba, 508-DX, Nezuko, juguetes, n. ° 553</h3>
                 <div class="price">
-                    <div class="amount">$149.00</div>
-                    <div class="cut">$153.00</div>
+                    <div class="amount">$549.00</div>
+                    <div class="cut">$439.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -334,7 +338,7 @@
                 <h3>The Lost Boys [Blu-ray]</h3>
                 <div class="price">
                     <div class="amount">$579.00</div>
-                    <div class="cut">$583.00</div>
+                    <div class="cut">$463.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
@@ -362,7 +366,7 @@
                 <h3>Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray](Keine deutsche Version)</h3>
                 <div class="price">
                     <div class="amount">$959.00</div>
-                    <div class="cut">$963.00</div>
+                    <div class="cut">$769.00</div>
                     <div class="offer">20% off</div>
                 </div>
                 <div class="stars">
