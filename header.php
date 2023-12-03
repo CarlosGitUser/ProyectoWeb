@@ -1,7 +1,7 @@
 <?php
-//if (session_status() == PHP_SESSION_NONE) {
-  //  session_start();
-//}
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -30,6 +30,10 @@
             <a href="Vision.php">Acerca De</a>
             <a href="Contactanos.php">Contacto</a>
             <a href="Ayuda.php">Ayuda</a>
+            <?php
+                if(isset($_SESSION["usuario"]) && $_SESSION["usuario"]=="admin")
+                    echo '<a href="#">Altas y bajas</a>';
+            ?>
         </nav>
 
         <div class="icons">
@@ -51,7 +55,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">'. $_SESSION["usuario"] .'</button>
                     <div class="dropdown-content">
-                        <a href="#">Cerrar Sesion</a>
+                        <a href="cerrar.php">Cerrar Sesion</a>
                     </div>
                 </div>
                 ';

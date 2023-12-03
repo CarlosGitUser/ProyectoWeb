@@ -34,7 +34,22 @@ function validarUsuarioContraseña($usuario, $contrasena) {
             $conexion->query("UPDATE usuario SET intentos = 0 WHERE cuenta = '$usuario'");
             unset($_SESSION["intentos_sesion"]);
             $_SESSION["usuario"] = $fila['cuenta'];
-            return "<p style='color: green;'>Inicio de sesión exitoso. ¡Bienvenido!</p>";
+            if (isset($_POST['remember']) && $_POST['remember'] === 'on') {
+                // Establecer cookies para recordar el nombre de usuario y la contraseña (no es seguro almacenar contraseñas en texto plano)
+                setcookie('usuario', $usuario, time() + (86400 * 30), "/"); // Cookie para el nombre de usuario
+                setcookie('contrasena', $contrasena, time() + (86400 * 30), "/"); // Cookie para el nombre de usuario
+                // Cookie para la contraseña (NO RECOMENDADO en producción)
+            } else {
+                // Si el checkbox no está marcado, eliminar las cookies previas (si existen)
+                if(isset($_COOKIE['usuario'])) {
+                    setcookie('usuario', '', time() - 3600, '/');
+                }
+                if(isset($_COOKIE['contrasena'])) {
+                    setcookie('contrasena', '', time() - 3600, '/');
+                }
+            }
+            
+            header("Location:index.php");
         } else{
             
             // Incrementa el contador de intentos y actualiza la base de datos

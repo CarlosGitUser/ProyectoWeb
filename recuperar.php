@@ -40,6 +40,7 @@ if ($resultado && $resultado->num_rows == 1) {
             if ($nueva_contrasena === $confirmar_contrasena) {
                 $encriptada = md5($nueva_contrasena);
                 $conexion->query("UPDATE usuario SET password = '$encriptada', intentos = 0 WHERE cuenta = '$usuario'");
+                header("Location: index.php");
             } else {
                 // Contraseñas no coinciden, mostrar mensaje de error
                 echo "<p style='color: red;'>Las contraseñas no coinciden.</p>";
