@@ -16,7 +16,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 }
 if(isset($_COOKIE['usuario']) && isset($_COOKIE['password'])) {
     $username_cookie = $_COOKIE['usuario'];
-?>
+    $password_cookie = $_COOKIE['contrasena'];
+    ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -93,7 +94,7 @@ if(isset($_COOKIE['usuario']) && isset($_COOKIE['password'])) {
             <input type="text" id="usuario" name="usuario" value="<?php echo $username_cookie; ?>" required>
 
             <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" required>
+            <input type="password" id="contrasena" name="contrasena" value="<?php echo $password_cookie; ?>" required>
 
             <input type="checkbox" id="remember" name="remember">
             <label for="remember">Recordar nombre y contraseña</label>

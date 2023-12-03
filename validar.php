@@ -37,18 +37,18 @@ function validarUsuarioContraseña($usuario, $contrasena) {
             if (isset($_POST['remember']) && $_POST['remember'] === 'on') {
                 // Establecer cookies para recordar el nombre de usuario y la contraseña (no es seguro almacenar contraseñas en texto plano)
                 setcookie('usuario', $usuario, time() + (86400 * 30), "/"); // Cookie para el nombre de usuario
-                
+                setcookie('contrasena', $contrasena, time() + (86400 * 30), "/"); // Cookie para el nombre de usuario
                 // Cookie para la contraseña (NO RECOMENDADO en producción)
             } else {
                 // Si el checkbox no está marcado, eliminar las cookies previas (si existen)
                 if(isset($_COOKIE['usuario'])) {
                     setcookie('usuario', '', time() - 3600, '/');
                 }
-                if(isset($_COOKIE['password'])) {
-                    setcookie('password', '', time() - 3600, '/');
+                if(isset($_COOKIE['contrasena'])) {
+                    setcookie('contrasena', '', time() - 3600, '/');
                 }
             }
-    
+            
             return "<p style='color: green;'>Inicio de sesión exitoso. ¡Bienvenido!</p>";
         } else{
             
