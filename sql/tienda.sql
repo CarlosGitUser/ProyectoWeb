@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 02-12-2023 a las 01:53:42
+-- Tiempo de generación: 03-12-2023 a las 18:47:58
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -52,8 +52,18 @@ CREATE TABLE `usuario` (
   `password` text NOT NULL,
   `preg_sec` text NOT NULL,
   `res_preg` text NOT NULL,
-  `intentos ` int(255) NOT NULL
+  `intentos` int(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `usuario`
+--
+
+INSERT INTO `usuario` (`id_usr`, `nombre`, `cuenta`, `correo`, `password`, `preg_sec`, `res_preg`, `intentos`) VALUES
+(1, 'Napoleon', 'Napo', 'napo@hotmail.com', '$2y$10$SFfjPBqQRc2w.IZnhPCxLOwYFDJnVn2ed4VFESZX.Mw4TYkb2sepC', 'Mascota', 'Perro', 0),
+(2, 'Pedro', 'pedro', 'pedro@hotmail.com', 'b104ab9a0e58c861b9628208b3fecd58', 'Mascota', 'Perro', 0),
+(5, 'pablo', 'pablo', 'palbo@hotmail.com', 'cd0acfe085eeb0f874391fb9b8009bed', 'Deporte', 'pas', 0),
+(6, 'Carlos', 'charly', 'carlos@gmail.com', '627a1f8f3e1f8a2a0cbb9aedc33ade8c', 'Deporte', 'Futbo', 0);
 
 -- --------------------------------------------------------
 
@@ -88,9 +98,7 @@ ALTER TABLE `usuario`
 -- Indices de la tabla `ventas`
 --
 ALTER TABLE `ventas`
-  ADD PRIMARY KEY (`id_venta`),
-  ADD KEY `id_usuario` (`id_usuario`),
-  ADD KEY `id_prod` (`id_prod`);
+  ADD PRIMARY KEY (`id_venta`);
 
 --
 -- AUTO_INCREMENT de las tablas volcadas
@@ -106,29 +114,13 @@ ALTER TABLE `producto`
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id_usr` int(255) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_usr` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT de la tabla `ventas`
 --
 ALTER TABLE `ventas`
   MODIFY `id_venta` int(255) NOT NULL AUTO_INCREMENT;
-
---
--- Restricciones para tablas volcadas
---
-
---
--- Filtros para la tabla `producto`
---
-ALTER TABLE `producto`
-  ADD CONSTRAINT `producto_ibfk_1` FOREIGN KEY (`id_prod`) REFERENCES `ventas` (`id_prod`) ON UPDATE CASCADE;
-
---
--- Filtros para la tabla `usuario`
---
-ALTER TABLE `usuario`
-  ADD CONSTRAINT `usuario_ibfk_1` FOREIGN KEY (`id_usr`) REFERENCES `ventas` (`id_usuario`) ON UPDATE CASCADE;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
