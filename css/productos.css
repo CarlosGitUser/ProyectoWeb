@@ -37,6 +37,9 @@ main {
 	flex: 1;
 	
 }
+.nom-product{
+	font-size: 20px;
+}
 
 .container-info-product {
 	flex: 1;

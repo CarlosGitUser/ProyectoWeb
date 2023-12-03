@@ -73,22 +73,15 @@
 				</div>-->
 
 				<div class="container-description">
+                <h3 class="nom-product">Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
+                <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-						<p>
-							Lorem ipsum dolor, sit amet consectetur adipisicing
-							elit. Laboriosam iure provident atque voluptatibus
-							reiciendis quae rerum, maxime placeat enim cupiditate
-							voluptatum, temporibus quis iusto. Enim eum qui delectus
-							deleniti similique? Lorem, ipsum dolor sit amet
-							consectetur adipisicing elit. Sint autem magni earum est
-							dolorem saepe perferendis repellat ipsam laudantium cum
-							assumenda quidem quam, vero similique? Iusto officiis
-							quod blanditiis iste?
-						</p>
+						<p>THOR: ¡Thor desata el poder de Stormbreaker para derrotar a todos sus enemigos! <br> FIGURA DE 30 CM: Inspirada en Thor: Love and Thunder, parte del Universo Cinematográfico de Marvel, esta figura de Thor de gran escala ofrecen acción y aventuras para niños a partir de 4 años
+                        <br>ACCESORIO DE PELÍCULA: La figura de acción Titan Hero Series de Thor incluye un accesorio desmontable (Stormbreaker) inspirado en la película <br> FIGURA ARTICULADA: Esta figura de 30 cm cuenta con múltiples puntos de articulación para que los niños puedan colocarla en distintas poses e imaginar todo tipo de aventuras <br> COLECCIONA OTRAS FIGURAS MARVEL TITAN: Colecciona otras figuras Avengers Titan Hero Series inspiradas en el Universo Marvel. Los productos adicionales se venden por separado. Sujeto a disponibilidad</p>
 					</div>
 				</div>
                 <br>
