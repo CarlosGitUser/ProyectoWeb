@@ -12,6 +12,20 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="css/productos.css">
+    <style>
+    .container-reviews .title-reviews .stars {
+	font-size: 1.7rem;
+    }
+  
+   .container-reviews .title-reviews .stars i {
+	color: gold;
+    }
+  
+   .container-reviews .title-reviews .stars span {
+	color: gold; /* Reemplaza con tu color deseado */
+    }
+</style>
+
 </head>
 
 <body>
@@ -80,8 +94,13 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-						<p>THOR: ¡Thor desata el poder de Stormbreaker para derrotar a todos sus enemigos! <br> FIGURA DE 30 CM: Inspirada en Thor: Love and Thunder, parte del Universo Cinematográfico de Marvel, esta figura de Thor de gran escala ofrecen acción y aventuras para niños a partir de 4 años
-                        <br>ACCESORIO DE PELÍCULA: La figura de acción Titan Hero Series de Thor incluye un accesorio desmontable (Stormbreaker) inspirado en la película <br> FIGURA ARTICULADA: Esta figura de 30 cm cuenta con múltiples puntos de articulación para que los niños puedan colocarla en distintas poses e imaginar todo tipo de aventuras <br> COLECCIONA OTRAS FIGURAS MARVEL TITAN: Colecciona otras figuras Avengers Titan Hero Series inspiradas en el Universo Marvel. Los productos adicionales se venden por separado. Sujeto a disponibilidad</p>
+                    <ul>
+                       <li>THOR: ¡Thor desata el poder de Stormbreaker para derrotar a todos sus enemigos!</li>
+                       <li>FIGURA DE 30 CM: Inspirada en Thor: Love and Thunder, parte del Universo Cinematográfico de Marvel, esta figura de Thor de gran escala ofrece acción y aventuras para niños a partir de 4 años</li>
+                       <li>ACCESORIO DE PELÍCULA: La figura de acción Titan Hero Series de Thor incluye un accesorio desmontable (Stormbreaker) inspirado en la película</li>
+                       <li>FIGURA ARTICULADA: Esta figura de 30 cm cuenta con múltiples puntos de articulación para que los niños puedan colocarla en distintas poses e imaginar todo tipo de aventuras</li>
+                       <li>COLECCIONA OTRAS FIGURAS MARVEL TITAN: Colecciona otras figuras Avengers Titan Hero Series inspiradas en el Universo Marvel. Los productos adicionales se venden por separado. Sujeto a disponibilidad</li>
+                    </ul>
 					</div>
 				</div>
                 <br>
@@ -107,25 +126,27 @@
 					</button>
 				</div>
 <br>
-
 				<div class="container-additional-information">
 					<div class="title-additional-information">
-						<h4>Información adicional</h4>
+						<h4>Información importante</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Similique nobis error laudantium, enim dolorem expedita deserunt velit sequi rem quia est, tempore asperiores, ut odit? Ex illo quibusdam similique nulla.
-                        Dicta voluptatibus id voluptate deserunt, commodi aliquam velit nobis veritatis praesentium aperiam ex beatae animi aspernatur sed quos sunt quis itaque esse cumque reiciendis. Quaerat debitis ab voluptas aperiam nostrum.</p>
+						<p>ADVERTENCIA: Pueden producirse piezas pequeñas. No es apto para niños menores de 3 años.</p>
 					</div>
 				</div>
 
 				<div class="container-reviews">
 					<div class="title-reviews">
 						<h4>Reseñas</h4>
-						<i class="fa-solid fa-chevron-down"></i>
-					</div>
-					<div class="text-reviews hidden">
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt voluptates, ipsum expedita, nihil eveniet error quae odit sapiente quisquam rerum earum est? Maiores, totam iusto minima facere atque molestias laborum!</p>
+						<div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(50)</span>
+                </div>
 					</div>
 				</div>
 
