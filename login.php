@@ -1,5 +1,6 @@
 <?php
 session_start();
+
 if (!isset($_SESSION["intentos_sesion"])) {
     $_SESSION["intentos_sesion"] = 0;
 }
@@ -13,6 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Mostrar el resultado de la validación
     echo $resultadoValidacion;
 }
+if(isset($_COOKIE['usuario']) && isset($_COOKIE['password'])) {
+    $username_cookie = $_COOKIE['usuario'];
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,13 +31,35 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
             <label for="usuario">Usuario:</label>
+            <input type="text" id="usuario" name="usuario" value="<?php echo $username_cookie; ?>" required>
+
+            <label for="contrasena">Contraseña:</label>
+            <input type="password" id="contrasena" name="contrasena" required>
+
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Recordar nombre y contraseña</label>
+
+            <button type="submit">Iniciar Sesión</button>
+        </form>
+        <?php
+            } else {
+                // Si no hay cookies, mostrar el formulario vacío para iniciar sesión
+        ?>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
+            <label for="usuario">Usuario:</label>
             <input type="text" id="usuario" name="usuario" required>
 
             <label for="contrasena">Contraseña:</label>
             <input type="password" id="contrasena" name="contrasena" required>
 
+            <input type="checkbox" id="remember" name="remember">
+            <label for="remember">Recordar nombre y contraseña</label>
+
             <button type="submit">Iniciar Sesión</button>
         </form>
+        <?php
+    }
+    ?>
     </div>
 
 </body>
