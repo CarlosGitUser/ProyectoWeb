@@ -1,7 +1,5 @@
 <?php
-//if (session_status() == PHP_SESSION_NONE) {
-  //  session_start();
-//}
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -51,7 +49,7 @@
                 <div class="dropdown">
                     <button class="dropbtn">'. $_SESSION["usuario"] .'</button>
                     <div class="dropdown-content">
-                        <a href="#">Cerrar Sesion</a>
+                        <a href="cerrar.php">Cerrar Sesion</a>
                     </div>
                 </div>
                 ';
