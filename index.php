@@ -105,343 +105,60 @@
  <!-- Aqui inician los productos-->
 
     <div class="box-container">
+        <?php 
+            $servername = "localhost";
+            $username = "root";
+            $password = "";
+            $dbname = "tienda";
+        
+            // Crear una conexión
+            $conn = new mysqli($servername, $username, $password, $dbname);
+        
+            // Verificar la conexión
+            if ($conn->connect_error) {
+                die("Conexión fallida: " . $conn->connect_error);
+            }
+            $sql = "SELECT descripcion, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen FROM producto LIMIT 12";
 
-        <div class="box" data-item="featured">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="producto1.php" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-            <a href="producto1.php"><img src="image/peli1.jpg" alt=""></a>
-            </div>
-            <div class="content">
-                <h3>Mad Max: Fury Road [4K Ultra HD + Blu-ray + Digital HD]</h3>
-                <div class="price">
-                    <div class="amount">$450.00</div>
-                    <div class="cut">$530.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="special">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/figu1.jpeg" alt="">
-            </div>
-            <div class="content">
-                <h3>Star Wars Kylo Ren Starkiller Figura de Accion Excluisva</h3>
-                <div class="price">
-                    <div class="amount">$428.00</div>
-                    <div class="cut">$857.00</div>
-                    <div class="offer">50% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="seller">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/peli2.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Blade Runner 2049 (BD) [Blu-ray]</h3>
-                <div class="price">
-                    <div class="amount">$643.00</div>
-                    <div class="cut">$728.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="arrivals">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/figu9.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>PIGGY - Figura de acción Robby Series 2 de 3.5" (incluye artículos DLC)</h3>
-                <div class="price">
-                    <div class="amount">$758.00</div>
-                    <div class="cut">$824.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="featured">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/figu8.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Banpresto Dragon Ball Legends Collab Super Saiyan Gogeta Figura</h3>
-                <div class="price">
-                    <div class="amount">$1,287.00</div>
-                    <div class="cut">$1,326.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="arrivals">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/peli3.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Blade Runner (1982) (4K UHD) [Blu-ray]</h3>
-                <div class="price">
-                    <div class="amount">$919.00</div>
-                    <div class="cut">$924.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="special">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/peli4.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>2001: A SPACE ODYSSEY (4K UHDBD) [Blu-ray]</h3>
-                <div class="price">
-                    <div class="amount">$603.00</div>
-                    <div class="cut">$610.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="seller">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/figu2.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Square Enix Marvel Universe Variant Play Arts - Figura de acción de Kai - Wolverine</h3>
-                <div class="price">
-                    <div class="amount">$3,768.00</div>
-                    <div class="cut">$3,773.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="seller">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/figu3.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
-                <div class="price">
-                    <div class="amount">$149.00</div>
-                    <div class="cut">$153.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="featured">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/peli5.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>The Lost Boys [Blu-ray]</h3>
-                <div class="price">
-                    <div class="amount">$579.00</div>
-                    <div class="cut">$583.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="special">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/peli6.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray](Keine deutsche Version)</h3>
-                <div class="price">
-                    <div class="amount">$959.00</div>
-                    <div class="cut">$963.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
-        <div class="box" data-item="seller">
-            <div class="icons">
-                <a href="#" class="fas fa-shopping-cart"></a>
-                <a href="#" class="fas fa-heart"></a>
-                <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
-            </div>
-            <div class="image">
-                <img src="image/peli7.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>Spider-Man: Across The Spider-Verse - UHD/BD Combo + Digital [Blu-ray]</h3>
-                <div class="price">
-                    <div class="amount">$519.00</div>
-                    <div class="cut">$524.00</div>
-                    <div class="offer">20% off</div>
-                </div>
-                <div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-            </div>
-        </div>
-
+            $result = $conn->query($sql);
+            
+            if ($result->num_rows > 0) {
+                // Imprimir los datos de cada fila
+                while ($row = $result->fetch_assoc()){
+                    echo '<div class="box" data-item="featured">
+                    <div class="icons">
+                        <a href="#" class="fas fa-shopping-cart"></a>
+                        <a href="#" class="fas fa-heart"></a>
+                        <a href="#" class="fas fa-search"></a>
+                        <a href="producto1.php" class="fas fa-eye"></a>
+                    </div>';
+                    echo '<div class="image">';
+                    echo '<a href="producto1.php"><img src="image/'.$row["imagen"].'" alt=""></a>';
+                    echo '</div>
+                        <div class="content">
+                            <h3>'.$row["descripcion"].'</h3>
+                            <div class="price">
+                                <div class="amount">$'. $row["precio"] .'</div>
+                                <div class="cut">';
+                                if ($row["descuento"] !== NULL) {
+                                    echo "$".$row["descuento"]*$row["precio"];
+                                }
+                                echo '</div>';
+                                //<div class="offer">20% off</div>
+                            echo '</div>
+                            <div class="stars">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <span>(50)</span>
+                            </div>
+                        </div>
+                    </div>';
+                }
+            }
+        ?>
     </div>
 
 </section>
