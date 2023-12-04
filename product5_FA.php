@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelicula</title>
+    <title>Figura de Accion</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli1.jpg" alt="imagen-producto" />
+				<img src="image/figu22.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$450.00</span>
-                    <span class="precio-tachado">$530.00</span>
+					<span>$549.00</span>
+                    <span class="precio-tachado">$439.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,26 +87,14 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Mad Max: Fury Road [4K Ultra HD + Blu-Ray + Digital HD]</h3>
+                <h3 class="nom-product">Square Enix Marvel Universe Variant Play Arts - Figura De Acción De Kai - Wolverine</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p>Producto descontinuado por el fabricante : No <br>
-                           Idioma  :  Inglés <br>
-                           Dimensiones del producto  :  1,78 x 19,05 x 13,72 cm; 72,01 g <br>
-                           Número de modelo del producto  :  883929537631 <br>
-                           Director  :  George Miller <br>
-                           Formato de medios  :  4K, Dolby, NTSC <br>
-                           Tiempo de ejecución  :  2 horas <br>
-                           Fecha de lanzamiento  :  16 septiembre 2016  <br>
-                           Actores  :  Tom Hardy, Charlize Theron, Nicholas Hoult <br>
-                           Doblados:  :  Español <br>
-                           Subtítulos:  :  Inglés, Francés <br>
-                           Estudio  :  Warner Bros. Home Video <br>
-                           Productores  :  George Miller</p>
+                        <p>De Square Enix. Con un gran poder viene una gran irresponsabilidad. La piscina muerta, basada en el antihéroe más poco convencional de Marvel Comics, desciende sobre nosotros como una figura de acción de Play Arts Kai. Se incluyen tres cabezas intercambiables con diferentes expresiones faciales y una variedad de manos intercambiables para que el coleccionista pueda disfrutar del carácter cómico y expresivo de Dead pool. Con una amplia gama de movimiento, es fácil recrear posturas desde gestos traviesos hasta poderosas posturas de acción. La pintura se mantiene en línea con la imagen de Dead pool retratada en la película, con la aplicación de gradación roja profunda sobre un color metálico más vivo. Los efectos meteorológicos en la armadura evocan el agudo contraste entre la actitud tonta de Dead Pool y la seria rudeza</p>
 					</div>
 				</div>
                 <br>
@@ -138,7 +126,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Tenga en cuenta que el elemento se reproducirá solo en un reproductor 4K.</p>
+						<p>Este producto proviene de una marca de pequeña empresa. Apoya a las pequeñas empresas</p>
 					</div>
 				</div>
 
@@ -358,14 +346,17 @@
 </div>
 
 </section>
-<br>
-<br>
+
 <!-- Aqui termina otra seccion de productos -->
+
+        
 <script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
+
 
 <!-- footer section starts  -->
 <?php include "footer.php"; ?>
 <!-- footer section ends -->
+
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 

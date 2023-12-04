@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli1.jpg" alt="imagen-producto" />
+				<img src="image/peli4.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$450.00</span>
-                    <span class="precio-tachado">$530.00</span>
+					<span>$603.00</span>
+                    <span class="precio-tachado">$610.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,26 +87,23 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Mad Max: Fury Road [4K Ultra HD + Blu-Ray + Digital HD]</h3>
+                <h3 class="nom-product">2001: A SPACE ODYSSEY (4K UHDBD) [Blu-Ray]</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p>Producto descontinuado por el fabricante : No <br>
-                           Idioma  :  Inglés <br>
-                           Dimensiones del producto  :  1,78 x 19,05 x 13,72 cm; 72,01 g <br>
-                           Número de modelo del producto  :  883929537631 <br>
-                           Director  :  George Miller <br>
-                           Formato de medios  :  4K, Dolby, NTSC <br>
-                           Tiempo de ejecución  :  2 horas <br>
-                           Fecha de lanzamiento  :  16 septiembre 2016  <br>
-                           Actores  :  Tom Hardy, Charlize Theron, Nicholas Hoult <br>
-                           Doblados:  :  Español <br>
-                           Subtítulos:  :  Inglés, Francés <br>
-                           Estudio  :  Warner Bros. Home Video <br>
-                           Productores  :  George Miller</p>
+                        <p>Dimensiones del producto  :  0,7 x 7,5 x 5,4 pulgadas; 10,72 Onzas <br>
+                        Número de modelo del producto  :  AntiyL <br>
+                        Director  :  Stanley Kubrick <br>
+                        Formato multimedia  :  4K <br>
+                        Fecha de lanzamiento  :  Octubre 30, 2018 <br>
+                        Actores  :  Douglas Rain, Frank Miller, Keir Dullea, Gary Lockwood, William Sylvester <br>
+                        Doblado:  :  Español <br>
+                        Subtítulos:  :  Español, Francés <br>
+                        Productores  :  Stanley Kubrick <br>
+                        Estudio  :  WarnerBrothers<br>
 					</div>
 				</div>
                 <br>
@@ -138,7 +135,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Tenga en cuenta que el elemento se reproducirá solo en un reproductor 4K.</p>
+						<p>No se reproducirá en la mayoría de los reproductores de Blu-ray vendidos en Norte América, Centroamérica, Sudamérica, Japón, Corea del Norte, Corea del Sur, Taiwan, Hong Kong y Sureste Asiático. </p>
 					</div>
 				</div>
 
