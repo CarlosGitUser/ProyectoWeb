@@ -105,7 +105,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product2_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu1.jpeg" alt="">
@@ -133,7 +133,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product2_P.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/peli2.jpg" alt="">
@@ -161,7 +161,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product3_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu9.jpg" alt="">
@@ -189,7 +189,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product4_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu8.jpg" alt="">
@@ -217,7 +217,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product3_P.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/peli3.jpg" alt="">
@@ -245,7 +245,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product4_P.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/peli4.jpg" alt="">
@@ -273,7 +273,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product5_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu2.jpg" alt="">
@@ -301,7 +301,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product5_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu22.jpg" alt="">
@@ -329,7 +329,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product5_P.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/peli5.jpg" alt="">
@@ -357,7 +357,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product6_P.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/peli6.jpg" alt="">
@@ -385,7 +385,7 @@
                 <a href="#" class="fas fa-shopping-cart"></a>
                 <a href="#" class="fas fa-heart"></a>
                 <a href="#" class="fas fa-search"></a>
-                <a href="#" class="fas fa-eye"></a>
+                <a href="product7_FA.php" class="fas fa-eye"></a>
             </div>
             <div class="image">
                 <img src="image/figu11.jpg" alt="">

@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli1.jpg" alt="imagen-producto" />
+				<img src="image/peli2.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$450.00</span>
-                    <span class="precio-tachado">$530.00</span>
+					<span>$643.00</span>
+                    <span class="precio-tachado">$728.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,7 +87,7 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Mad Max: Fury Road [4K Ultra HD + Blu-Ray + Digital HD]</h3>
+                <h3 class="nom-product">Blade Runner 2049 (BD) [Blu-Ray]</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
@@ -97,16 +97,15 @@
                         <p>Producto descontinuado por el fabricante : No <br>
                            Idioma  :  Inglés <br>
                            Dimensiones del producto  :  1,78 x 19,05 x 13,72 cm; 72,01 g <br>
-                           Número de modelo del producto  :  883929537631 <br>
-                           Director  :  George Miller <br>
-                           Formato de medios  :  4K, Dolby, NTSC <br>
-                           Tiempo de ejecución  :  2 horas <br>
-                           Fecha de lanzamiento  :  16 septiembre 2016  <br>
-                           Actores  :  Tom Hardy, Charlize Theron, Nicholas Hoult <br>
-                           Doblados:  :  Español <br>
-                           Subtítulos:  :  Inglés, Francés <br>
-                           Estudio  :  Warner Bros. Home Video <br>
-                           Productores  :  George Miller</p>
+                           Número de modelo del producto  : B075DHS7JK <br>
+                           Director  :  Denis Villeneuve <br>
+                           Formato de medios  :  Subtitled, NTSC <br>
+                           Tiempo de ejecución  :  2 horas y 43 minutos <br>
+                           Fecha de lanzamiento  :  16 enero 2018  <br>
+                           Actores  :  Harrison Ford, Ryan Gosling, Ana de Armas, Jared Leto, Robin Wright <br>
+                           Doblados:  :  Español, Francés <br>
+                           Subtítulos:  : Español, Inglés, Francés <br>
+                           Estudio  :  WarnerBrothers <br>
 					</div>
 				</div>
                 <br>

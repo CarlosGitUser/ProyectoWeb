@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli1.jpg" alt="imagen-producto" />
+				<img src="image/peli6.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$450.00</span>
-                    <span class="precio-tachado">$530.00</span>
+					<span>$959.00</span>
+                    <span class="precio-tachado">$769.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,26 +87,19 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Mad Max: Fury Road [4K Ultra HD + Blu-Ray + Digital HD]</h3>
+                <h3 class="nom-product">Oppenheimer [Blu-Ray 4K]+ [2Blu-Ray](Keine Deutsche Version)</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p>Producto descontinuado por el fabricante : No <br>
-                           Idioma  :  Inglés <br>
-                           Dimensiones del producto  :  1,78 x 19,05 x 13,72 cm; 72,01 g <br>
-                           Número de modelo del producto  :  883929537631 <br>
-                           Director  :  George Miller <br>
-                           Formato de medios  :  4K, Dolby, NTSC <br>
-                           Tiempo de ejecución  :  2 horas <br>
-                           Fecha de lanzamiento  :  16 septiembre 2016  <br>
-                           Actores  :  Tom Hardy, Charlize Theron, Nicholas Hoult <br>
-                           Doblados:  :  Español <br>
-                           Subtítulos:  :  Inglés, Francés <br>
-                           Estudio  :  Warner Bros. Home Video <br>
-                           Productores  :  George Miller</p>
+                        Relación de aspecto  :  Unknown
+                        Formato de medios  :  Import, PAL, Blu-ray
+                        Tiempo de ejecución  :  180 minutos
+                        Subtítulos:  :  Polaco, Inglés, Español
+                        Idioma  :  Polaco (Dolby Digital 5.1), Español (Dolby Digital 5.1), Inglés (Dolby Digital 5.1)
+                        Estudio  :  Warner Bros. Entertainment Nordic AB
 					</div>
 				</div>
                 <br>
@@ -138,7 +131,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Tenga en cuenta que el elemento se reproducirá solo en un reproductor 4K.</p>
+						<p>Edición polaca, la portada puede contener marcas polacas. Este artículo NO tiene subtítulos ni idioma alemán.</p>
 					</div>
 				</div>
 
