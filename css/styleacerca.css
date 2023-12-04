@@ -22,3 +22,7 @@ article{
     text-align: center;
     font-size: 30px;
   }
+  #autores{
+    text-align: justify;
+    background-color: tomato;
+  }
