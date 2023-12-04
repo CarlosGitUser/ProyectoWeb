@@ -51,7 +51,7 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/figu22.jpg" alt="imagen-producto" />
+				<img src="image/figu2.jpg" alt="imagen-producto"/>
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
