@@ -21,7 +21,7 @@ $colorFondo = imagecolorallocate($imagen, 255, 255, 255);
 imagefill($imagen, 0, 0, $colorFondo);
 $colorTexto = imagecolorallocate($imagen, 0, 0, 0);
 
-imagettftext($imagen, 25, 0, 20, 40, $colorTexto, 'ArialTh.ttf', $captchaTexto);
+imagettftext($imagen, 25, 12, 20, 40, $colorTexto, 'ArialTh.ttf', $captchaTexto);
 
 imagefilter($imagen, IMG_FILTER_SMOOTH, -3);
 imagefilter($imagen, IMG_FILTER_SMOOTH, -3);
