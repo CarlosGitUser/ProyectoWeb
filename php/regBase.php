@@ -1,8 +1,7 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Conexión a la base de datos (debes tener tus propias credenciales aquí)
-    $servername = "127.0.0.1:33065
-";
+    $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "tienda";
