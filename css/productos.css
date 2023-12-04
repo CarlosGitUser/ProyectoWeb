@@ -10,6 +10,7 @@ body {
 	font-family: 'Ubuntu';
 	max-width: 1200px;
 	margin: 0 auto;
+	
 }
 
 img {
@@ -45,6 +46,7 @@ main {
 	flex: 1;
 	display: flex;
 	flex-direction: column;
+	
 }
 
 .container-price {
@@ -88,7 +90,7 @@ main {
 
 .container-info-product {
 	display: flex;
-
+    
   }
 
   .container-price {

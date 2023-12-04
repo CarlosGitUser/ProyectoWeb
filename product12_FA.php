@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelicula</title>
+    <title>Figura de Accion</title>
     <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli3.jpg" alt="imagen-producto" />
+				<img src="image/figu15.jpeg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$919.00</span>
-                    <span class="precio-tachado">$924.00</span>
+					<span>$557.00</span>
+                    <span class="precio-tachado">$562.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,25 +87,19 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Blade Runner (1982) (4K UHD) [Blu-Ray]</h3>
+                <h3 class="nom-product">Anime One Piece Zoro Figura PVC One Piece Figuras De Acción Anime Toys Roronoa Zoro Modelo 18cm</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p>Descatalogado por el fabricante  :  No <br>
-                        Clasificación de MPAA  :  R (Restricted) <br>
-                        Dimensiones del producto  :  0,7 x 7,5 x 5,4 pulgadas; 2,4 Onzas <br>
-                        Director  :  Denis Villeneuve, Denis Villenueve <br>
-                        Formato multimedia  :  4K <br>
-                        Tiempo de ejecución  :  2 horas y 43 minutos <br>
-                        Fecha de lanzamiento  :  Enero 16, 2018 <br>
-                        Actores  :  Ryan Gosling, Harrison Ford, Ana de Armas, Sylvia Hoeks, Robin Wright <br>
-                        Doblado:  :  Francés, Español <br>
-                        Productores  :  Ridley Scott, Andrew A. Kosove, Broderick Johnson, Tim Gamble, Bud Yorkin <br>
-                        Idioma  :  Inglés (Dolby Digital 5.1), Español (Dolby Digital 5.1) <br>
-                        Estudio  :  Studio Distribution Services<br>
+                    <ul> 
+                       <li>Hecho a mano: protección del medio ambiente, no daña el cuerpo humano, muy digno de la serie de decoración de animación modelo.</li>
+                       <li>Material: PVC. Materiales y diseño de alta calidad. 360grados sin zona ciega, forma perfecta.</li>
+                       <li>Mantenimiento: limpiar con un paño húmedo. Regala regalos de alta calidad a niños, fanáticos, coleccionistas, bebés, regalos de cumpleaños o Navidad.</li>
+                       <li>Regalo: el regalo perfecto para amigos y niños, una bonita colección, es una gran opción para tu familia y amigos.</li>
+                    </ul> 
 					</div>
 				</div>
                 <br>
@@ -118,8 +112,7 @@
 							placeholder="1"
 							value="1"
 							min="1"
-							class="input-quantity"
-						/>
+							class="input-quantity"/>
 						<div class="btn-increment-decrement">
 							<i class="fa-solid fa-chevron-up" id="increment"></i>
 							<i class="fa-solid fa-chevron-down" id="decrement"></i>
@@ -137,7 +130,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Tenga en cuenta que el elemento se reproducirá solo en un reproductor 4K.</p>
+						<p>Sin advertencia</p>
 					</div>
 				</div>
 
@@ -357,14 +350,17 @@
 </div>
 
 </section>
-<br>
-<br>
+
 <!-- Aqui termina otra seccion de productos -->
+
+        
 <script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
+
 
 <!-- footer section starts  -->
 <?php include "footer.php"; ?>
 <!-- footer section ends -->
+
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 

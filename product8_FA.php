@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figura de Accion</title>
-
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
     <link rel="stylesheet" href="css/style.css">
@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/figu22.jpg" alt="imagen-producto" />
+				<img src="image/figu14.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$3,768.00</span>
-                    <span class="precio-tachado">$3,773.00</span>
+					<span>$886.00</span>
+                    <span class="precio-tachado">$891.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -94,7 +94,10 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p></p>
+                    <ul>
+                       <li>SEGA Figura de Demon Slayer: Kimetsu no Yaiba!</li>
+                       <li>Soporte base incluido</li>
+                    </ul> 
 					</div>
 				</div>
                 <br>
@@ -107,8 +110,7 @@
 							placeholder="1"
 							value="1"
 							min="1"
-							class="input-quantity"
-						/>
+							class="input-quantity"/>
 						<div class="btn-increment-decrement">
 							<i class="fa-solid fa-chevron-up" id="increment"></i>
 							<i class="fa-solid fa-chevron-down" id="decrement"></i>
@@ -126,7 +128,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Este producto proviene de una marca de pequeña empresa. Apoya a las pequeñas empresas</p>
+						<p>Algunos de estos productos se envian antes que los otros.</p>
 					</div>
 				</div>
 
