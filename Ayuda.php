@@ -83,7 +83,7 @@
         border-radius: 5px;
         }
 
-        button {
+        .enviar {
         background-color: #4caf50;
         color: white;
         padding: 12px 20px;
@@ -189,7 +189,7 @@
             <form>
                 <label for="ask" style="font-size: 18px;">Déjanos tu pregunta:</label>
                 <textarea id="ask" name="ask" rows="4" required></textarea>
-                <button type="submit">Enviar Pregunta</button>
+                <button type="submit" class="enviar">Enviar Pregunta</button>
             </form>
     </div>
 </section>
