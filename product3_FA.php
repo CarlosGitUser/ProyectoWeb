@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pelicula</title>
+    <title>Figura de Accion</title>
 
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli1.jpg" alt="imagen-producto" />
+				<img src="image/figu9.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$450.00</span>
-                    <span class="precio-tachado">$530.00</span>
+					<span>$758.00</span>
+                    <span class="precio-tachado">$824.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,26 +87,20 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Mad Max: Fury Road [4K Ultra HD + Blu-Ray + Digital HD]</h3>
+                <h3 class="nom-product">PIGGY - Figura De Acción Robby Series 2 De 3.5" (Incluye Artículos DLC)</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p>Producto descontinuado por el fabricante : No <br>
-                           Idioma  :  Inglés <br>
-                           Dimensiones del producto  :  1,78 x 19,05 x 13,72 cm; 72,01 g <br>
-                           Número de modelo del producto  :  883929537631 <br>
-                           Director  :  George Miller <br>
-                           Formato de medios  :  4K, Dolby, NTSC <br>
-                           Tiempo de ejecución  :  2 horas <br>
-                           Fecha de lanzamiento  :  16 septiembre 2016  <br>
-                           Actores  :  Tom Hardy, Charlize Theron, Nicholas Hoult <br>
-                           Doblados:  :  Español <br>
-                           Subtítulos:  :  Inglés, Francés <br>
-                           Estudio  :  Warner Bros. Home Video <br>
-                           Productores  :  George Miller</p>
+                    <ul>
+                       <li>Producto oficial de PIGGY de PhatMojo.</li>
+                       <li>Construible: construye tu figura, luego cambia las partes intercambiables con tus otras figuras de acción de PIGGY</li>
+                       <li>Posible: Las piezas articuladas se doblan y se mueven. La figura mide 3.5 pulgadas de alto (varía ligeramente según el carácter).</li>
+                       <li>Colecciónalos todos: completa tu colección Serie 1 con el juego completo de figuras de acción de 5: Piggy, Foxy, Dinopiggy, Clowny y Tigry.</li>
+                       <li>ARTÍCULOS VIRTUALES EN EL JUEGO: Incluye código DLC que se puede utilizar para desbloquear artículos exclusivos en el juego, como insignias, fichas de cerdito y pieles.</li>
+                    </ul>
 					</div>
 				</div>
                 <br>
@@ -138,7 +132,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Tenga en cuenta que el elemento se reproducirá solo en un reproductor 4K.</p>
+						<p>Este producto proviene de una marca de pequeña empresa. Apoya a las pequeñas empresas</p>
 					</div>
 				</div>
 
@@ -358,14 +352,17 @@
 </div>
 
 </section>
-<br>
-<br>
+
 <!-- Aqui termina otra seccion de productos -->
+
+        
 <script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
+
 
 <!-- footer section starts  -->
 <?php include "footer.php"; ?>
 <!-- footer section ends -->
+
 
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
 

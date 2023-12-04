@@ -2,7 +2,7 @@
 
 function validarUsuarioContraseña($usuario, $contrasena) {
     // Configura tus credenciales y detalles de la base de datos
-    $servidor = "127.0.0.1:33065";
+    $servidor = "localhost";
     $usuario_bd = "root";
     $contrasena_bd = "";
     $nombre_bd = "tienda";
