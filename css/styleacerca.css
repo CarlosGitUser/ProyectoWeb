@@ -9,7 +9,7 @@ article{
     background-color: whitesmoke;
   }
   #mision{
-    background-color: crimson;
+    background-color: whitesmoke;
   }
   #objetivo{
     background-color: whitesmoke;
@@ -21,4 +21,8 @@ article{
   h1{
     text-align: center;
     font-size: 30px;
+  }
+  #autores{
+    text-align: justify;
+    background-color: tomato;
   }

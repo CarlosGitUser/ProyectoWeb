@@ -5,15 +5,71 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca De</title>
-
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
 
     <!-- custom css file link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/styleacerca.css">
      <!-- font awesome cdn link  -->
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/carousel/">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+    body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
 
+
+
+        header,
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        h1, h2 {
+            color: #333;
+        }
+
+        section.acerca {
+            display: flex;
+            justify-content: space-around;
+            align-items: stretch;
+            flex-wrap: wrap;
+            margin: 20px auto;
+        }
+
+        article {
+            flex: 1;
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        article img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 20px;
+        }
+
+        section.autores {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+</style>
 </head>
 <body>
 
@@ -52,7 +108,35 @@
     </article>
     
 </section>
+
 <section class="autores">
+    <legend >Nuestro Equipo de trabajo</legend>
+    <table>
+        <tr>
+            <td><img src="image/asly.jpeg" alt="" width="80px"></td>
+            <td><p>Asly Lizbeth Salinas</p></td>
+            <td><img src="image/jaz.jpeg" alt="" width="80px"></td>
+            <td><p>Jazmín Martínez Chavez</p></td>
+            <td><img src="image/dani.jpeg" alt=""  width="80px"></td>
+            <td><p>Daniel Alejandro Barbosa Ayala.</p></td>
+        </tr>
+        <tr>
+            <td><img src="image/axel.jpeg" alt="" width="80px"></td>
+            <td><p>Axel Daniel Macias Heredia</p></td>
+            <td><img src="image/sebas.jpeg" alt="" width="80px"></td>
+            <td><p>Sebastian Rodriguez Hernandez</p></td>
+            <td><img src="image/einar.png" alt="" width="90px"></td>
+            <td><p>Einar Naim Aguilar Santana</p></td>
+        </tr>
+        <tr>
+            <td><img src="image/jesus.jpeg" alt="" width="80px"></td>
+            <td><p>Jesus Ruvalcaba Lozano</p></td>
+            <td><img src="image/carlos.jpeg" alt="" width="80px"></td>
+            <td><p></p></td>
+        </tr>
+    </table>
+
+    
 
 </section>
 
