@@ -89,7 +89,7 @@
                 if (response.ok) {
                     // Si la inserción fue exitosa, muestra un mensaje de éxito
                     swal("Perfecto", "Ahora eres parte de la tienda", "success");
-                    header("Location: index.php");
+                    window.location.replace("index.php");
                 } else {
                     // Si hubo un error, muestra un mensaje de error
                     swal("Error", "Hubo un problema al registrar el usuario. Por favor, inténtalo de nuevo.", "error");
