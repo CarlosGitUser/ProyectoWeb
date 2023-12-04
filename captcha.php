@@ -20,8 +20,9 @@ $imagen = imagecreatetruecolor($ancho, $alto);
 $colorFondo = imagecolorallocate($imagen, 255, 255, 255);
 imagefill($imagen, 0, 0, $colorFondo);
 $colorTexto = imagecolorallocate($imagen, 0, 0, 0);
+$anguloInclinacion = 10;
 
-imagettftext($imagen, 25, 0, 20, 40, $colorTexto, 'ArialTh.ttf', $captchaTexto);
+imagettftext($imagen, 25, $anguloInclinacion, 20, 40, $colorTexto, 'Arial.ttf', $captchaTexto);
 
 imagefilter($imagen, IMG_FILTER_SMOOTH, -3);
 imagefilter($imagen, IMG_FILTER_SMOOTH, -3);
