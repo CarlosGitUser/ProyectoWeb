@@ -1,5 +1,7 @@
 <?php
-session_start();
+if (session_status() == PHP_SESSION_NONE) {
+    session_start();
+}
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -28,6 +30,10 @@ session_start();
             <a href="Vision.php">Acerca De</a>
             <a href="Contactanos.php">Contacto</a>
             <a href="Ayuda.php">Ayuda</a>
+            <?php
+                if(isset($_SESSION["usuario"]) && $_SESSION["usuario"]=="admin")
+                    echo '<a href="#">Altas y bajas</a>';
+            ?>
         </nav>
 
         <div class="icons">

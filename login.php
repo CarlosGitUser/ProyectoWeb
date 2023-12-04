@@ -96,6 +96,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <label for="remember">Recordar nombre y contraseña</label>
             <input type="checkbox" id="remember" name="remember">
 
+            <img src="captcha.php" alt="CAPTCHA">
+            <input type="text" name="captcha" placeholder="Ingrese el CAPTCHA" required>
+
             <button type="submit">Iniciar Sesión</button>
         </form>
         
