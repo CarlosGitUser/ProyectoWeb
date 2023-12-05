@@ -94,8 +94,9 @@ if(isset($_POST['subir'])) {
             <label for="nombre">Nombre del producto:</label>
             <input type="text" name="nombre_prod2" value="<?php echo $_SESSION["nombre_prod"]; ?>"><br>
 
-            <label for="cuenta">Descripcion:</label>
-            <input type="text" name="descripcion2" value="<?php echo $_SESSION["descripcion"]; ?>"><br>
+            <label for="cuenta">Descripcion:</label><br>
+            <textarea name="" id="" cols="30" rows="10"><?php echo $_SESSION["descripcion"]; ?></textarea><br>
+            
 
             <label for="contra">Cantidad:</label>
             <input type="text" name="cantidad2" value="<?php echo $_SESSION['cantidad']; ?>"><br>
