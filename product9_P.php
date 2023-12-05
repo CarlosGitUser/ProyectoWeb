@@ -51,12 +51,12 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/peli3.jpg" alt="imagen-producto" />
+				<img src="image/peli22.jpg" alt="imagen-producto" />
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">
-					<span>$919.00</span>
-                    <span class="precio-tachado">$924.00</span>
+					<span>$256.00</span>
+                    <span class="precio-tachado">$261.00</span>
 				</div>
 
 				<div class="container-details-product">
@@ -87,25 +87,17 @@
 				</div>-->
 
 				<div class="container-description">
-                <h3 class="nom-product">Blade Runner (1982) (4K UHD) [Blu-Ray]</h3>
+                <h3 class="nom-product">In Good Company [Importado]</h3>
                 <br>
 					<div class="title-description">
 						<h4>Descripción</h4>
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-description">
-                        <p>Descatalogado por el fabricante  :  No <br>
-                        Clasificación de MPAA  :  R (Restricted) <br>
-                        Dimensiones del producto  :  0,7 x 7,5 x 5,4 pulgadas; 2,4 Onzas <br>
-                        Director  :  Denis Villeneuve, Denis Villenueve <br>
-                        Formato multimedia  :  4K <br>
-                        Tiempo de ejecución  :  2 horas y 43 minutos <br>
-                        Fecha de lanzamiento  :  Enero 16, 2018 <br>
-                        Actores  :  Ryan Gosling, Harrison Ford, Ana de Armas, Sylvia Hoeks, Robin Wright <br>
-                        Doblado:  :  Francés, Español <br>
-                        Productores  :  Ridley Scott, Andrew A. Kosove, Broderick Johnson, Tim Gamble, Bud Yorkin <br>
-                        Idioma  :  Inglés (Dolby Digital 5.1), Español (Dolby Digital 5.1) <br>
-                        Estudio  :  Studio Distribution Services<br>
+                    Producto descontinuado por el fabricante  :  No <br>
+                    Dimensiones del paquete  :  14,09 x 12,63 x 1,37 cm; 80,32 g <br>
+                    Fabricante  :  Candid (Fenn Music) <br>
+                    Etiqueta  :  Candid (Fenn Music) <br>
 					</div>
 				</div>
                 <br>
@@ -137,7 +129,7 @@
 						<i class="fa-solid fa-chevron-down"></i>
 					</div>
 					<div class="text-additional-information hidden">
-						<p>Tenga en cuenta que el elemento se reproducirá solo en un reproductor 4K.</p>
+						<p>Sin Advertencias</p>
 					</div>
 				</div>
 

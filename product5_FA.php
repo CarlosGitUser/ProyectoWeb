@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Figura de Accion</title>
-
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
     <link rel="stylesheet" href="css/style.css">
@@ -51,7 +51,7 @@
 
 <main>
 			<div class="container-img">
-				<img src="image/figu22.jpg" alt="imagen-producto" />
+				<img src="image/figu2.jpg" alt="imagen-producto"/>
 			</div>
 			<div class="container-info-product">
 				<div class="container-price">

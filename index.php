@@ -118,7 +118,7 @@
             if ($conn->connect_error) {
                 die("Conexión fallida: " . $conn->connect_error);
             }
-            $sql = "SELECT descripcion, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen FROM producto LIMIT 12";
+            $sql = "SELECT nombre_prod, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen, pagina FROM producto LIMIT 12";
 
             $result = $conn->query($sql);
             
@@ -129,14 +129,14 @@
                     <div class="icons">
                         <a href="#" class="fas fa-shopping-cart"></a>
                         <a href="#" class="fas fa-heart"></a>
-                        <a href="#" class="fas fa-search"></a>
-                        <a href="producto1.php" class="fas fa-eye"></a>
-                    </div>';
+                        <a href="#" class="fas fa-search"></a>';
+                    echo '<a href="'.$row["pagina"].'" class="fas fa-eye"></a>';
+                    echo '</div>';
                     echo '<div class="image">';
-                    echo '<a href="producto1.php"><img src="image/'.$row["imagen"].'" alt=""></a>';
+                    echo '<a href="'.$row["pagina"].'"><img src="image/'.$row["imagen"].'" alt=""></a>';
                     echo '</div>
                         <div class="content">
-                            <h3>'.$row["descripcion"].'</h3>
+                            <h3>'.$row["nombre_prod"].'</h3>
                             <div class="price">
                                 <div class="amount">$'. $row["precio"] .'</div>
                                 <div class="cut">';
