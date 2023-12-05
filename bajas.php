@@ -20,7 +20,7 @@
 
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "127.0.0.1:33065";
+    $servername = "localhost";
     $username = "root";
     $password = "";
     $dbname = "tienda";
