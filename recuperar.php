@@ -9,7 +9,24 @@ $nombre_bd = "tienda";
 $conexion = new mysqli($servidor, $usuario_bd, $contrasena_bd, $nombre_bd);
 $consulta = "SELECT preg_sec, res_preg FROM usuario WHERE cuenta = '$usuario'";
 $resultado = $conexion->query($consulta);
+?>
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recuperar</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/stylerecuperar.css">
+</head>
+<body>
+    
+</body>
+</html>
+
+<?php
 if ($resultado && $resultado->num_rows == 1) {
     $fila = $resultado->fetch_assoc();
     $pregunta_seguridad = $fila["preg_sec"];
@@ -60,11 +77,10 @@ if ($resultado && $resultado->num_rows == 1) {
 $conexion->close();
 
 
-
 // Función para mostrar el formulario de respuesta de seguridad
 function mostrarFormularioRespuestaSeguridad($usuario, $pregunta_seguridad) {
     echo "<form method='post'>";
-    echo "<p>Pregunta de Seguridad: $pregunta_seguridad</p>";
+    echo "<p>Pregunta de Seguridad: $pregunta_seguridad favorit@</p>";
     echo "<label for='respuesta_usuario'>Respuesta:</label>";
     echo "<input type='text' name='respuesta_usuario' required>";
     echo "<br>";
