@@ -114,7 +114,7 @@
     <table>
         <tr>
             <td><img src="image/asly.jpeg" alt="" width="80px"></td>
-            <td><p>Asly Lizbeth Salinas</p></td>
+            <td><p>Asly Lizbeth Salinas Morales</p></td>
             <td><img src="image/jaz.jpeg" alt="" width="80px"></td>
             <td><p>Jazmín Martínez Chavez</p></td>
             <td><img src="image/dani.jpeg" alt=""  width="80px"></td>
@@ -132,6 +132,7 @@
             <td><img src="image/jesus.jpeg" alt="" width="80px"></td>
             <td><p>Jesus Ruvalcaba Lozano</p></td>
             <td><img src="image/carlos.jpeg" alt="" width="80px"></td>
+            <td><p>Carlos Alberto Contreras Martinez</p></td>
             <td><p></p></td>
         </tr>
     </table>
