@@ -1,20 +1,7 @@
 <?php
 session_start();
+?>
 
-if (!isset($_SESSION["intentos_sesion"])) {
-    $_SESSION["intentos_sesion"] = 0;
-}
-include('validar.php');
-
-// Verificar si se ha enviado el formulario
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Realizar la validación llamando a la función validarUsuarioContraseña
-    $resultadoValidacion = validarUsuarioContraseña($_POST["usuario"], $_POST["contrasena"]);
-
-    // Mostrar el resultado de la validación
-    echo $resultadoValidacion;
-}
- ?>
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -80,7 +67,77 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             background-color: #45a049;
         }
     </style>
+    <!-- SweetAlert2 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
+
+    <!-- jQuery (puede ser necesario si SweetAlert2 lo requiere) -->
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+    <!-- SweetAlert2 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+
 </head>
+
+<?php
+if (!isset($_SESSION["intentos_sesion"])) {
+    $_SESSION["intentos_sesion"] = 0;
+}
+include('validar.php');
+
+// Verificar si se ha enviado el formulario
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Realizar la validación llamando a la función validarUsuarioContraseña
+    $resultadoValidacion = validarUsuarioContraseña($_POST["usuario"], $_POST["contrasena"]);
+
+    // Mostrar el resultado de la validación
+    if ($resultadoValidacion["result"] == "error_attempt") {
+        // Mostrar SweetAlert de error con mensaje de intento fallido
+        echo "<script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error en el inicio de sesión',
+                    text: 'Usuario o contraseña incorrectos. Intento " . ($resultadoValidacion["attempts"] + 1) . "/3'
+                });
+            </script>";
+    } elseif ($resultadoValidacion["result"] == "error_max_attempts") {
+        // Mostrar SweetAlert de error con mensaje de intentos agotados
+        echo "<script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error en el inicio de sesión',
+                    text: 'Has excedido el número máximo de intentos. ¿Deseas recuperar la contraseña?',
+                    showCancelButton: true,
+                    confirmButtonColor: '#3085d6',
+                    cancelButtonColor: '#d33',
+                    confirmButtonText: 'Sí, recuperar contraseña'
+                }).then((result) => {
+                    if (result.isConfirmed) {
+                        window.location.href = 'recuperar.php?usuario=" . $resultadoValidacion["usuario"] . "';
+                    }
+                });
+            </script>";
+    } elseif ($resultadoValidacion["result"] == "error_user_not_exist") {
+        // Mostrar SweetAlert de error con mensaje de usuario no existente
+        echo "<script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Error en el inicio de sesión',
+                    text: 'Usuario o contraseña incorrectos.'
+                });
+            </script>";
+        } elseif ($resultadoValidacion["result"] == "error_captcha") {
+        // Mostrar SweetAlert de error con mensaje de usuario no existente
+        echo "<script>
+                Swal.fire({
+                    icon: 'error',
+                    title: 'Captcha incorrecto',
+                    text: 'Vuelva a intentar'
+                });
+            </script>";
+    }
+}
+ ?>
+
 <body>
 
     <div class="login-container">
