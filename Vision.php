@@ -110,7 +110,7 @@
 </section>
 
 <section class="autores">
-    <legend >Nuestro Equipo de trabajo</legend>
+    <legend >Nuestro Equipo de   trabajo</legend>
     <table>
         <tr>
             <td><img src="image/asly.jpeg" alt="" width="80px"></td>
