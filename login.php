@@ -8,6 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Inicio de Sesión</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
     <style>
         body {
             font-family: 'Arial', sans-serif;
