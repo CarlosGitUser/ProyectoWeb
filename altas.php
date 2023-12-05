@@ -31,7 +31,7 @@
         </div>
         <div>
             <label for="imagen">Imagen del producto:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg" required>
+            <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg, image/jpg" required>
         </div>
         <div>
             <label for="descuento">Descuento:</label>

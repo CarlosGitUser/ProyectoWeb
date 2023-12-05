@@ -8,6 +8,7 @@ session_start();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario de Inicio de Sesión</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
     <style>
         body {
@@ -145,20 +146,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <h2>Iniciar Sesión</h2>
         
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
-            <label for="usuario">Usuario:</label>
-            <input type="text" id="usuario" name="usuario" value="<?php if(isset($_COOKIE['usuario'])){ echo $_COOKIE['usuario']; } ?>" required>
+        <label for="usuario">Usuario:</label>
+        <input type="text" id="usuario" name="usuario" value="<?php if(isset($_COOKIE['usuario'])){ echo $_COOKIE['usuario']; } ?>" required>
 
-            <label for="contrasena">Contraseña:</label>
-            <input type="password" id="contrasena" name="contrasena" value="<?php if (isset($_COOKIE['contrasena'])){ echo $_COOKIE['contrasena']; } ?>" required>
+        <label for="contrasena">Contraseña:</label>
+        <input type="password" id="contrasena" name="contrasena" value="<?php if (isset($_COOKIE['contrasena'])){ echo $_COOKIE['contrasena']; } ?>" required>
+        <div>
+            <label for="remember">Recordar nombre y contraseña <input type="checkbox" id="remember" name="remember"></label>
+            
+        </div>
 
-            <label for="remember">Recordar nombre y contraseña</label>
-            <input type="checkbox" id="remember" name="remember">
+        <img src="captcha.php" alt="CAPTCHA">
+        <input type="text" name="captcha" placeholder="Ingrese el CAPTCHA" required>
 
-            <img src="captcha.php" alt="CAPTCHA">
-            <input type="text" name="captcha" placeholder="Ingrese el CAPTCHA" required>
+        <button type="submit">Iniciar Sesión</button>
 
-            <button type="submit">Iniciar Sesión</button>
-        </form>
+        <a href="index.php">
+            <button type="button" class="btn btn-dark">Volver</button>
+        </a>
+    </form>
+        
         
     </div>
 
