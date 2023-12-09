@@ -85,50 +85,20 @@ if(isset($_POST['subir'])) {
     <link rel="stylesheet" href="css/style.css">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="css/stylescambios.css">
+    <style>
+    .contenedor-formulario {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .formulario label, .formulario input, .formulario textarea {
+        margin: 5px;
+    }
+    </style>
 </head>
 <body>
+    <?php include "header.php" ?>
     <h2>Modificar Cuentas</h2>
-    <div class="formulario">
-        <form class="formulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>   
-            <br>
-            <label for="id">ID producto</label>
-            <input type="number" name="id_prod2" value="<?php echo $_SESSION["id_prod"]; ?>"><br>
-
-            <label for="nombre">Nombre del producto:</label>
-            <input type="text" name="nombre_prod2" value="<?php echo $_SESSION["nombre_prod"]; ?>"><br>
-
-            <label for="cuenta">Descripcion:</label><br>
-            <textarea name="" id="" cols="30" rows="10"><?php echo $_SESSION["descripcion"]; ?></textarea><br>
-            
-
-            <label for="contra">Cantidad:</label>
-            <input type="text" name="cantidad2" value="<?php echo $_SESSION['cantidad']; ?>"><br>
-
-            <label for="contra">Precio</label>
-            <input type="text" name="precio2" value="<?php echo $_SESSION['precio']; ?>"><br>
-
-            <label for="contra">Imagen:</label>
-            <input type="text" name="imagen2" value="<?php echo $_SESSION['imagen']; ?>"><br>
-
-            <label for="contra">Descuento:</label>
-            <input type="text" name="descuento2" value="<?php echo $_SESSION['descuento']; ?>"><br>
-
-            <label for="contra">Categoria:</label>
-            <input type="text" name="categoria2" value="<?php echo $_SESSION['categoria']; ?>"><br>
-                    
-            <button type="submit" class="enviar" name="mod">Modificar</button>
-        </form>       
-    </div>
-    <br>
-    <div>
-        <h4>Subir imágenes</h4>
-        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
-            <label for="imagen">Subir nueva imagen:</label>
-            <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg"><br>
-            <button type="submit" class="enviar" name="subir">subir</button>
-        </form>
-    </div>
-    <br><br>
     <?php        
     $sql = 'select * from producto';
     $resultado = $conexion -> query($sql); 
@@ -172,7 +142,45 @@ if(isset($_POST['subir'])) {
         else{
             echo "no hay datos";
         }
-        echo $salida 
+        //echo $salida 
     ?>
+    <div class="contenedor-formulario">
+        <form class="formulario" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method='post'>   
+            <label for="id">ID producto</label>
+            <input type="number" name="id_prod2" value="<?php echo $_SESSION["id_prod"]; ?>">
+
+            <label for="nombre">Nombre del producto:</label>
+            <input type="text" name="nombre_prod2" value="<?php echo $_SESSION["nombre_prod"]; ?>">
+
+            <label for="descripcion">Descripcion:</label>
+            <textarea name="descripcion2" id="" cols="22" rows="5"><?php echo $_SESSION["descripcion"]; ?></textarea><br>
+
+            <label for="cantidad">Cantidad:</label>
+            <input type="text" name="cantidad2" value="<?php echo $_SESSION['cantidad']; ?>">
+
+            <label for="precio">Precio</label>
+            <input type="text" name="precio2" value="<?php echo $_SESSION['precio']; ?>">
+
+            <label for="imagen">Imagen:</label>
+            <input type="text" name="imagen2" value="<?php echo $_SESSION['imagen']; ?>">
+
+            <label for="descuento">Descuento:</label>
+            <input type="text" name="descuento2" value="<?php echo $_SESSION['descuento']; ?>">
+
+            <label for="categoria">Categoria:</label>
+            <input type="text" name="categoria2" value="<?php echo $_SESSION['categoria']; ?>">
+                    
+            <button type="submit" class="enviar" name="mod">Modificar</button>
+        </form>       
+    </div>
+    <br>
+    <div>
+        <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
+            <label for="imagen">Subir nueva imagen:</label>
+            <input type="file" id="imagen" name="imagen" accept="image/png, image/jpeg"><br>
+            <button type="submit" class="enviar" name="subir">subir</button>
+        </form>
+    </div>
+    <br><br>
 </body>
 </html>
