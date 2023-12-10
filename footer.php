@@ -72,7 +72,7 @@
         <a href="#" class="fab fa-instagram"></a>
     </div>
 
-    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de películas y figuras de acción</a></span> </div>
+    <div class="credit"> &copy; copyright @ 2023 by <span><a href="">sitio de películas y figuras de acción</a></span> </div>
     
 </section>
 

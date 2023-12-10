@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Figura de Accion</title>
+    <title></title>
     <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
     
@@ -25,149 +25,8 @@
 	color: gold; /* Reemplaza con tu color deseado */
     }
 </style>
-
 </head>
-
 <body>
-
-<?php include "header.php"; ?>
-
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-
-<main>
-			<div class="container-img">
-				<img src="image/figu3.jpg" alt="imagen-producto" />
-			</div>
-			<div class="container-info-product">
-				<div class="container-price">
-					<span>$149.00</span>
-                    <span class="precio-tachado">$153.00</span>
-				</div>
-
-				<div class="container-details-product">
-					<!--<div class="form-group">
-						<label for="colour">Color</label>
-						<select name="colour" id="colour">
-							<option disabled selected value="">
-								Escoge una opción
-							</option>
-							<option value="rojo">Rojo</option>
-							<option value="blanco">Blanco</option>
-							<option value="beige">Beige</option>
-						</select>
-					</div>
-					<div class="form-group">
-						<label for="size">Talla</label>
-						<select name="size" id="size">
-							<option disabled selected value="">
-								Escoge una opción
-							</option>
-							<option value="40">40</option>
-							<option value="42">42</option>
-							<option value="43">43</option>
-							<option value="44">44</option>
-						</select>
-					</div>
-					<button class="btn-clean">Limpiar</button>
-				</div>-->
-
-				<div class="container-description">
-                <h3 class="nom-product">Marvel Avengers Titan Hero Series - Figura de Thor de 30 cm con Accesorio</h3>
-                <br>
-					<div class="title-description">
-						<h4>Descripción</h4>
-						<i class="fa-solid fa-chevron-down"></i>
-					</div>
-					<div class="text-description">
-                    <ul>
-                       <li>THOR: ¡Thor desata el poder de Stormbreaker para derrotar a todos sus enemigos!</li>
-                       <li>FIGURA DE 30 CM: Inspirada en Thor: Love and Thunder, parte del Universo Cinematográfico de Marvel, esta figura de Thor de gran escala ofrece acción y aventuras para niños a partir de 4 años</li>
-                       <li>ACCESORIO DE PELÍCULA: La figura de acción Titan Hero Series de Thor incluye un accesorio desmontable (Stormbreaker) inspirado en la película</li>
-                       <li>FIGURA ARTICULADA: Esta figura de 30 cm cuenta con múltiples puntos de articulación para que los niños puedan colocarla en distintas poses e imaginar todo tipo de aventuras</li>
-                       <li>COLECCIONA OTRAS FIGURAS MARVEL TITAN: Colecciona otras figuras Avengers Titan Hero Series inspiradas en el Universo Marvel. Los productos adicionales se venden por separado. Sujeto a disponibilidad</li>
-                    </ul>
-					</div>
-				</div>
-                <br>
-                <br>
-            
-                <div class="container-add-cart">
-					<div class="container-quantity">
-						<input
-							type="number"
-							placeholder="1"
-							value="1"
-							min="1"
-							class="input-quantity"
-						/>
-						<div class="btn-increment-decrement">
-							<i class="fa-solid fa-chevron-up" id="increment"></i>
-							<i class="fa-solid fa-chevron-down" id="decrement"></i>
-						</div>
-					</div>
-					<button class="btn-add-to-cart">
-						<i class="fa-solid fa-plus"></i>
-						Añadir al carrito
-					</button>
-				</div>
-<br>
-				<div class="container-additional-information">
-					<div class="title-additional-information">
-						<h4>Información importante</h4>
-						<i class="fa-solid fa-chevron-down"></i>
-					</div>
-					<div class="text-additional-information hidden">
-						<p>ADVERTENCIA: Pueden producirse piezas pequeñas. No es apto para niños menores de 3 años.</p>
-					</div>
-				</div>
-
-				<div class="container-reviews">
-					<div class="title-reviews">
-						<h4>Reseñas</h4>
-						<div class="stars">
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="fas fa-star"></i>
-                    <i class="far fa-star"></i>
-                    <span>(50)</span>
-                </div>
-					</div>
-				</div>
-
-				<div class="container-social">
-					<span>Compartir</span>
-					<div class="container-buttons-social">
-						<a href="#"><i class="fa-solid fa-envelope"></i></a>
-						<a href="#"><i class="fa-brands fa-facebook"></i></a>
-						<a href="#"><i class="fa-brands fa-twitter"></i></a>
-						<a href="#"><i class="fa-brands fa-instagram"></i></a>
-						<a href="#"><i class="fa-brands fa-pinterest"></i></a>
-					</div>
-				</div>
-			</div>
-		</main>
-
-
-        <br>
-
-        <!-- aqui de nuevo inicia otra seccion de productos  -->
-
 <section class="featured" id="featured">
 
 <h1 class="heading"> <span>Productos</span> Relacionados </h1>
@@ -352,24 +211,8 @@
 </div>
 
 </section>
-
-<!-- Aqui termina otra seccion de productos -->
-
-        
-<script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
-
-
-<!-- footer section starts  -->
-<?php include "footer.php"; ?>
-<!-- footer section ends -->
-
-
 <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
-
-<!-- custom js file link -->
 <script src="js/productos.js"></script>
 <script src="js/script.js"></script>
-
 </body>
 </html>
-

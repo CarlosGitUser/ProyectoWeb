@@ -354,19 +354,48 @@ button{
             if ($conn->connect_error) {
                 die("Conexión fallida: " . $conn->connect_error);
             }
-            $sql = "SELECT nombre_prod, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen, pagina FROM producto LIMIT 12";
+            $sql = "SELECT id_prod, nombre_prod, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen, pagina FROM producto LIMIT 12";
 
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
                 // Imprimir los datos de cada fila
                 while ($row = $result->fetch_assoc()){
+                    $enlaceID = 'enlaceID_' . $row["id_prod"];
                     echo '<div class="box" data-item="featured">
                     <div class="icons">
                         <a href="#" class="fas fa-shopping-cart"></a>
                         <a href="#" class="fas fa-heart"></a>
                         <a href="#" class="fas fa-search"></a>';
-                    echo '<a href="'.$row["pagina"].'" class="fas fa-eye"></a>';
+                   ?>
+                        <a href="#" class="fas fa-eye" id="<?php echo $enlaceID; ?>" data-id="<?php echo $row["id_prod"] ?>"></a>
+                     <script>
+                            document.getElementById('<?php echo $enlaceID; ?>').addEventListener('click', function (e) {
+                            e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+                            var id = this.getAttribute('data-id'); // Obtiene el id desde el atributo data-id
+                            var url = 'productPage.php';
+
+                            // Crea un formulario dinámicamente
+                            var form = document.createElement('form');
+                            form.method = 'post';
+                            form.action = url;
+
+                            // Crea un input oculto para enviar el id
+                            var input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = 'id';
+                            input.value = id;
+
+                            // Agrega el input al formulario
+                            form.appendChild(input);
+
+                            // Agrega el formulario al cuerpo del documento y lo envía
+                            document.body.appendChild(form);
+                            form.submit();
+                        });
+                    </script>
+                   <?php
                     echo '</div>';
                     echo '<div class="image">';
                     echo '<a href="'.$row["pagina"].'"><img src="image/'.$row["imagen"].'" alt=""></a>';

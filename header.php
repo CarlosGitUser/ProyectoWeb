@@ -73,7 +73,7 @@ if (session_status() == PHP_SESSION_NONE) {
 <body>
     <header class="header">
 
-        <a href="#" class="logo">
+        <a href="index.php" class="logo">
         <img src="image/logo4.png" alt="The void zone">
         </a>
 
@@ -92,6 +92,7 @@ if (session_status() == PHP_SESSION_NONE) {
                         <a href="altas.php">Altas</a>
                         <a href="bajas.php">Bajas</a>
                         <a href="cambios.php">Cambios</a>
+                        <a href="estadisticas.php">Estadísticas</a>
                         </div>
                 </div>
                 ';
