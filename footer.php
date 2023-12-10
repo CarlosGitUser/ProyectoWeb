@@ -60,8 +60,6 @@
                 <button type="submit">Suscribirse</button>
             </form>
         </div>
-        
-        
     </div>
 
     <div class="share">
