@@ -1019,3 +1019,64 @@ section {
   }
 }
 /*# sourceMappingURL=style.css.map */
+
+
+
+/* Agrega estos estilos al final de tu archivo de estilo (style.css) o en el mismo HTML */
+
+/* Agrega estos estilos al final de tu archivo de estilo (style.css) o en el mismo HTML */
+
+.footer .box form {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer .box input[type="email"] {
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.footer .box button {
+  padding: 10px;
+  background-color: #3498db;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s ease;
+}
+
+.footer .box button:hover {
+  background-color: #2980b9;
+}
+
+.footer .box p {
+  font-size: 12px;
+  margin-top: 10px;
+  color: #777;
+  display: inline-block; /* Para que el párrafo esté en línea con el formulario */
+}
+
+/* Agrega más estilos según sea necesario */
+
+
+
+
+
+.footer .leyenda {
+  flex: 1;
+  margin-top: 10px; /* Ajusta el margen superior según sea necesario */
+}
+
+.footer .leyenda p {
+  font-size: 12px;
+  color: #777;
+}
+
+/* Agrega más estilos según sea necesario */
+
+

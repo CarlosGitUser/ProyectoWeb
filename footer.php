@@ -47,6 +47,21 @@
             <a href="#"> <i class="fas fa-arrow-right"></i> Mi listado </a>
         </div>
 
+        <div class="box">
+            <h3>Importante</h3>
+           <p>Este proyecto es solo un proyecto academico, nada de lo que se muestra en la página está a la venta.</p>
+        </div>
+        
+        <!-- Formulario de suscripción -->
+        <div class="box">
+            <h3>Suscríbete</h3>
+            <form action="#" method="post">
+                <input type="email" name="email" placeholder="Ingresa tu correo" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </div>
+        
+        
     </div>
 
     <div class="share">
@@ -57,13 +72,11 @@
         <a href="#" class="fab fa-instagram"></a>
     </div>
 
-    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de peliculas y figuras de accion</a></span> </div>
+    <div class="credit"> &copy; copyright @ 2021 by <span><a href="">sitio de películas y figuras de acción</a></span> </div>
     
 </section>
 
 <!-- footer section ends -->
-
-    
 
 </body>
 </html>
