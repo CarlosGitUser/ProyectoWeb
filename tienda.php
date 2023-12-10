@@ -20,6 +20,48 @@
             window.location.href = window.location.pathname;
         }
 </script>
+<style>
+        
+
+form {
+    display: flex;
+    flex-direction: column; /* Cambiado a dirección de columna */
+    align-items: center;
+    width: 100%; /* Ajustar al 100% del contenedor */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Agregado espacio inferior */
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    margin-bottom: 10px; /* Agregado espacio inferior */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Agregado espacio superior */
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #45a049;
+}
+</style>
 </head>
 
 <body>
@@ -44,14 +86,16 @@
         <div class="buttons" data-filter="arrivals">Peliculas</div>
         <div class="buttons" data-filter="seller">Figuras de Acción</div>
     </div>
-        <div class="filtro">
-          <form action="" method="get">
-          filtro <input type="number" placeholder="minimo" name="minPrecio" id="minPrecio">
-          hasta <input type="number" placeholder="maximo" name="maxPrecio" id="maxPrecio">
-          <input type="submit" value="filtrar">
-          <button type="button" onclick="eliminarValoresGET()">reset</button>
-          </form>
-        </div>
+    <div class="filtro">
+        <form action="" method="get">
+            <label for="minPrecio">Filtrar</label>
+            <input type="number" placeholder="Mínimo" name="minPrecio" id="minPrecio">
+            <label for="maxPrecio">hasta</label>
+            <input type="number" placeholder="Máximo" name="maxPrecio" id="maxPrecio">
+            <input type="submit" value="Filtrar">
+            <button type="button" onclick="eliminarValoresGET()">Reset</button>
+        </form>
+    </div>
 
        <!-- Aqui inician los productos-->
 
