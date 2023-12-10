@@ -42,9 +42,10 @@ select {
 
 select {
     background-color: #fff;
+    border: #333;
 }
 
-input[type="submit"] {
+button {
     background-color: #4caf50;
     color: white;
     padding: 12px 20px;
@@ -54,6 +55,6 @@ input[type="submit"] {
     transition: background-color 0.3s ease;
 }
 
-input[type="submit"]:hover {
+button:hover {
     background-color: #45a049;
 }
