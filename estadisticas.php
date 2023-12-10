@@ -5,15 +5,17 @@ if (session_status() == PHP_SESSION_NONE) {
 if ($_SESSION['usuario']!='admin'){
     header('Location: index.php');
 }
-
+?>
+<?php
 $servidor='localhost';
 $cuenta='root';
 $password='';
 $bd='tienda';
 
 $conexion = new mysqli($servidor,$cuenta,$password,$bd);
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+
+if ($conexion->connect_errno){
+    die('Error en la conexion');
 }
 
 $sql = "SELECT id_prod, nombre_prod, cantidad FROM producto";
@@ -45,10 +47,11 @@ $conexion->close();
 </head>
 <body>
     <?php include "header.php" ?>
-    <br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br>
     <h1 style="text-align: center;">Inventario</h1>
     <canvas id="graficoInventario" width="400" height="400"></canvas> 
     <script>
+        window.addEventListener('DOMContentLoaded', function() {
         // Obtener los datos de productos desde PHP
         var productosData = <?php echo $productos_json; ?>;
 
@@ -82,7 +85,8 @@ $conexion->close();
                     }
                 }
             }
-        });
+        })
+    });
     </script>
     <?php include "footer.php" ?>
 </body>
