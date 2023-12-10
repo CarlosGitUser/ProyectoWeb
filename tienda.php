@@ -14,7 +14,12 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
+    <script>
+        function eliminarValoresGET() {
+            // Redirigir a la misma página sin los parámetros GET
+            window.location.href = window.location.pathname;
+        }
+</script>
 </head>
 
 <body>
@@ -39,6 +44,14 @@
         <div class="buttons" data-filter="arrivals">Peliculas</div>
         <div class="buttons" data-filter="seller">Figuras de Acción</div>
     </div>
+        <div class="filtro">
+          <form action="" method="get">
+          filtro <input type="number" placeholder="minimo" name="minPrecio" id="minPrecio" require_once>
+          hasta <input type="number" placeholder="maximo" name="maxPrecio" id="maxPrecio">
+          <input type="submit" value="filtrar">
+          <button type="button" onclick="eliminarValoresGET()">reset</button>
+          </form>
+        </div>
 
        <!-- Aqui inician los productos-->
 
@@ -56,18 +69,38 @@
             if ($conn->connect_error) {
                 die("Conexión fallida: " . $conn->connect_error);
             }
-            $sql = "SELECT 
-                id_prod, nombre_prod,
-                precio,
-                IF(descuento <> 1, descuento, NULL) AS descuento,
-                imagen,
-                pagina,
-                CASE 
-                    WHEN categoria = 'figura' THEN 'seller'
-                    WHEN categoria = 'pelicula' THEN 'arrivals'
-                    ELSE ''
-                END AS categoria_etiqueta
-            FROM producto";
+            $minPrecio = isset($_GET['minPrecio']) ? floatval($_GET['minPrecio']) : 0;
+            $maxPrecio = isset($_GET['maxPrecio']) ? floatval($_GET['maxPrecio']) : 0;
+            
+            if (isset($_GET['minPrecio']) && isset($_GET['maxPrecio'])) {
+                $sql = "SELECT 
+                            id_prod, nombre_prod,
+                            precio,
+                            IF(descuento <> 1, descuento, NULL) AS descuento,
+                            imagen,
+                            pagina,
+                            CASE 
+                                WHEN categoria = 'figura' THEN 'seller'
+                                WHEN categoria = 'pelicula' THEN 'arrivals'
+                                ELSE ''
+                            END AS categoria_etiqueta
+                        FROM producto
+                        WHERE precio BETWEEN $minPrecio AND $maxPrecio";
+            } else {
+                $sql = "SELECT 
+                            id_prod, nombre_prod,
+                            precio,
+                            IF(descuento <> 1, descuento, NULL) AS descuento,
+                            imagen,
+                            pagina,
+                            CASE 
+                                WHEN categoria = 'figura' THEN 'seller'
+                                WHEN categoria = 'pelicula' THEN 'arrivals'
+                                ELSE ''
+                            END AS categoria_etiqueta
+                        FROM producto";
+            }
+            
     
             $result = $conn->query($sql);
             
@@ -137,7 +170,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <span>(50)</span>
                         </div>
                     </div>
                 </div>';
@@ -159,6 +191,7 @@
 
 <!-- custom js file link -->
 <script src="js/script.js"></script>
+<?php $conn->close();?>
 
 </body>
 </html>
