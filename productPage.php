@@ -104,13 +104,14 @@
 							value="1"
 							min="1"
 							class="input-quantity"
+                            id="cantidad"
 						/>
 						<div class="btn-increment-decrement">
 							<i class="fa-solid fa-chevron-up" id="increment"></i>
 							<i class="fa-solid fa-chevron-down" id="decrement"></i>
 						</div>
 					</div>
-					<button class="btn-add-to-cart">
+					<button class="btn-add-to-cart" onclick="addToCart(<?php echo $row['id_prod']; ?>, <?php echo $row['precio'] * $row['descuento']; ?>)">
 						<i class="fa-solid fa-plus"></i>
 						Añadir al carrito
 					</button>
@@ -152,7 +153,18 @@
 				</div>
 			</div>
 	</main>
-    <script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script> 
+    <script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script>
+    <script>
+
+        function addToCart(id_prod, precio) {
+            // Obtén los valores necesarios
+            var cantidad = document.getElementById('cantidad').value;
+
+            // Redirige a agCarrito.php con los parámetros
+            window.location.href = "php/agCarrito.php?id_prod=" + id_prod + "&precio=" + precio + "&cantidad=" + cantidad;
+        }
+
+    </script>
     <?php 
     include "prodRelated.php";
     include "footer.php"; ?>

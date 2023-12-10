@@ -29,6 +29,7 @@ if (isset($_SESSION["usuario"])) {
             if (isset($_GET['id_prod'])) {
                 $id_prod = $_GET['id_prod'];
                 $precio = $_GET['precio'];
+                $cantidad = $_GET['cantidad'];
 
                 // Consulta para verificar si el producto ya está en el carrito
                 $consulta_carrito = "SELECT * FROM carrito WHERE id_usr = $id_usr AND id_prod = $id_prod";
@@ -39,19 +40,49 @@ if (isset($_SESSION["usuario"])) {
                     $fila_carrito = $resultado_carrito->fetch_assoc();
                     $id_carrito = $fila_carrito['id_carrito'];
 
-                    $actualizar = "UPDATE carrito SET cantidad = cantidad + 1, monto = $precio * cantidad WHERE id_carrito = $id_carrito";
+                    $actualizar = "UPDATE carrito SET cantidad = cantidad + $cantidad, monto = $precio * cantidad WHERE id_carrito = $id_carrito";
                     $conexion->query($actualizar);
                 } else {
                     // El producto no está en el carrito, agrégalo
-                    $nuevo_carrito = "INSERT INTO carrito (id_usr, id_prod, cantidad) VALUES ($id_usr, $id_prod, 1)";
+                    $nuevo_carrito = "INSERT INTO carrito (id_usr, id_prod, cantidad, monto) VALUES ($id_usr, $id_prod, $cantidad, $cantidad * $precio)";
                     $conexion->query($nuevo_carrito);
                 }
 
                 // Cerrar la conexión a la base de datos
                 $conexion->close();
 
+                if(isset($_GET['pag'])){
+                    $pag = $_GET['pag'];
+                    header('Location: ../' . $pag);
+                }else{
+                    echo "<script>
+
+                    var id = '".$id_prod."'; // Obtiene el id desde el atributo data-id
+                    var url = '../productPage.php';
+
+                    // Crea un formulario dinámicamente
+                    var form = document.createElement('form');
+                    form.method = 'post';
+                    form.action = url;
+
+                    // Crea un input oculto para enviar el id
+                    var input = document.createElement('input');
+                    input.type = 'hidden';
+                    input.name = 'id';
+                    input.value = id;
+
+                    // Agrega el input al formulario
+                    form.appendChild(input);
+
+                    // Agrega el formulario al cuerpo del documento y lo envía
+                    document.documentElement.appendChild(form);
+                    form.submit();
+                </script>";
+                }
+                
+
                 // Redirigir a la página del carrito o a donde sea necesario
-                header('Location: ../tienda.php');
+                
                 exit();
             } else {
                 echo "Falta el parámetro 'id_prod' en la URL";
