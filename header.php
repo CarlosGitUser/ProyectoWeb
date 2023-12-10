@@ -102,7 +102,7 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="#" class="fas fa-shopping-cart"></a>
+            <a href="mostrarCar.php" class="fas fa-shopping-cart"></a>
             <a href="#" class="fas fa-heart"></a>
             
         </div>
