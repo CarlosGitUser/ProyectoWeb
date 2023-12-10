@@ -357,12 +357,13 @@ button{
             $sql = "SELECT id_prod, nombre_prod, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen, pagina FROM producto LIMIT 12";
 
             $result = $conn->query($sql);
-            
+            $type = ["arrivals","featured", "special", "seller"];
             if ($result->num_rows > 0) {
                 // Imprimir los datos de cada fila
                 while ($row = $result->fetch_assoc()){
                     $enlaceID = 'enlaceID_' . $row["id_prod"];
-                    echo '<div class="box" data-item="featured">
+                    $n = rand(0,3);
+                    echo '<div class="box" data-item="'.$type[$n].'">
                     <div class="icons">
                         <a href="#" class="fas fa-shopping-cart"></a>
                         <a href="#" class="fas fa-heart"></a>
@@ -417,7 +418,6 @@ button{
                                 <i class="fas fa-star"></i>
                                 <i class="fas fa-star"></i>
                                 <i class="far fa-star"></i>
-                                <span>(50)</span>
                             </div>
                         </div>
                     </div>';
