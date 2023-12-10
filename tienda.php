@@ -14,7 +14,54 @@
     <!-- font awesome cdn link  -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script>
+        function eliminarValoresGET() {
+            // Redirigir a la misma página sin los parámetros GET
+            window.location.href = window.location.pathname;
+        }
+</script>
+<style>
+        
 
+form {
+    display: flex;
+    flex-direction: column; /* Cambiado a dirección de columna */
+    align-items: center;
+    width: 100%; /* Ajustar al 100% del contenedor */
+}
+
+label {
+    font-weight: bold;
+    margin-bottom: 5px; /* Agregado espacio inferior */
+}
+
+input[type="number"] {
+    width: 80px;
+    padding: 8px;
+    margin-bottom: 10px; /* Agregado espacio inferior */
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"], button {
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-top: 10px; /* Agregado espacio superior */
+}
+
+input[type="submit"]:hover, button:hover {
+    background-color: #45a049;
+}
+</style>
 </head>
 
 <body>
@@ -39,6 +86,16 @@
         <div class="buttons" data-filter="arrivals">Peliculas</div>
         <div class="buttons" data-filter="seller">Figuras de Acción</div>
     </div>
+    <div class="filtro">
+        <form action="" method="get">
+            <label for="minPrecio">Filtrar</label>
+            <input type="number" placeholder="Mínimo" name="minPrecio" id="minPrecio">
+            <label for="maxPrecio">hasta</label>
+            <input type="number" placeholder="Máximo" name="maxPrecio" id="maxPrecio">
+            <input type="submit" value="Filtrar">
+            <button type="button" onclick="eliminarValoresGET()">Reset</button>
+        </form>
+    </div>
 
        <!-- Aqui inician los productos-->
 
@@ -56,31 +113,85 @@
             if ($conn->connect_error) {
                 die("Conexión fallida: " . $conn->connect_error);
             }
-            $sql = "SELECT 
-                nombre_prod,
-                precio,
-                IF(descuento <> 1, descuento, NULL) AS descuento,
-                imagen,
-                pagina,
-                CASE 
-                    WHEN categoria = 'figura' THEN 'seller'
-                    WHEN categoria = 'pelicula' THEN 'arrivals'
-                    ELSE ''
-                END AS categoria_etiqueta
-            FROM producto";
-    
+            $minPrecio = isset($_GET['minPrecio']) ? floatval($_GET['minPrecio']) : 0;
+            $maxPrecio = isset($_GET['maxPrecio']) ? floatval($_GET['maxPrecio']) : 0;
+            
+            if (isset($_GET['minPrecio']) && isset($_GET['maxPrecio'])) {
+                $sql = "SELECT 
+                            id_prod, nombre_prod,
+                            precio,
+                            IF(descuento <> 1, descuento, NULL) AS descuento,
+                            imagen,
+                            pagina,
+                            CASE 
+                                WHEN categoria = 'figura' THEN 'seller'
+                                WHEN categoria = 'pelicula' THEN 'arrivals'
+                                ELSE ''
+                            END AS categoria_etiqueta
+                        FROM producto
+                        WHERE precio BETWEEN $minPrecio AND $maxPrecio";
+            } else {
+                $sql = "SELECT 
+                            id_prod, nombre_prod,
+                            precio,
+                            IF(descuento <> 1, descuento, NULL) AS descuento,
+                            imagen,
+                            pagina,
+                            CASE 
+                                WHEN categoria = 'figura' THEN 'seller'
+                                WHEN categoria = 'pelicula' THEN 'arrivals'
+                                ELSE ''
+                            END AS categoria_etiqueta
+                        FROM producto";
+            }
+            
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
                 // Imprimir los datos de cada fila
                 while ($row = $result->fetch_assoc()){
+                    $enlaceID = 'enlaceID_' . $row["id_prod"];
+                    $cant = 1;
+                    if($row["descuento"] !== NULL){
+                        $precio = $row["descuento"]*$row["precio"];
+                    }
+                    else
+                        $precio = $row["precio"];
+
                     echo '<div class="box" data-item="'.$row["categoria_etiqueta"]. '">';
                     echo '<div class="icons">
-                          <a href="#" class="fas fa-shopping-cart"></a>
+                          <a href="php/agCarrito.php?id_prod='.$row["id_prod"].'&precio='.$precio.'&cantidad='.$cant.'&pag=tienda.php" class="fas fa-shopping-cart"></a>
                           <a href="#" class="fas fa-heart"></a>
                           <a href="#" class="fas fa-search"></a>';
-                    echo '<a href="'.$row["pagina"].'" class="fas fa-eye"></a>';
-                    echo '</div>
+                          ?>
+                          <a href="#" class="fas fa-eye" id="<?php echo $enlaceID; ?>" data-id="<?php echo $row["id_prod"] ?>"></a>
+                          <script>
+                            document.getElementById('<?php echo $enlaceID; ?>').addEventListener('click', function (e) {
+                            e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+
+                            var id = this.getAttribute('data-id'); // Obtiene el id desde el atributo data-id
+                            var url = 'productPage.php';
+
+                            // Crea un formulario dinámicamente
+                            var form = document.createElement('form');
+                            form.method = 'post';
+                            form.action = url;
+
+                            // Crea un input oculto para enviar el id
+                            var input = document.createElement('input');
+                            input.type = 'hidden';
+                            input.name = 'id';
+                            input.value = id;
+
+                            // Agrega el input al formulario
+                            form.appendChild(input);
+
+                            // Agrega el formulario al cuerpo del documento y lo envía
+                            document.body.appendChild(form);
+                            form.submit();
+                        });
+                    </script>
+                    <?php echo '</div>
                     <div class="image">';
                        echo '<img src="image/'.$row["imagen"].'" alt="">
                     </div>
@@ -109,7 +220,6 @@
                             <i class="fas fa-star"></i>
                             <i class="fas fa-star"></i>
                             <i class="far fa-star"></i>
-                            <span>(50)</span>
                         </div>
                     </div>
                 </div>';
@@ -131,6 +241,7 @@
 
 <!-- custom js file link -->
 <script src="js/script.js"></script>
+<?php $conn->close();?>
 
 </body>
 </html>

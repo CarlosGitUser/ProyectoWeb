@@ -40,6 +40,7 @@ function validarUsuarioContraseña($usuario, $contrasena) {
                     $conexion->query("UPDATE usuario SET intentos = 0 WHERE cuenta = '$usuario'");
                     unset($_SESSION["intentos_sesion"]);
                     $_SESSION["usuario"] = $fila['cuenta'];
+                    $_SESSION["id_usuario"]= $fila['id_usr'];
                     if (isset($_POST['remember']) && $_POST['remember'] === 'on') {
                         // Establecer cookies para recordar el nombre de usuario y la contraseña (no es seguro almacenar contraseñas en texto plano)
                         setcookie('usuario', $usuario, time() + (86400 * 30), "/"); // Cookie para el nombre de usuario
