@@ -92,6 +92,7 @@ if (session_status() == PHP_SESSION_NONE) {
                         <a href="altas.php">Altas</a>
                         <a href="bajas.php">Bajas</a>
                         <a href="cambios.php">Cambios</a>
+                        <a href="estadisticas.php">Estadísticas</a>
                         </div>
                 </div>
                 ';
