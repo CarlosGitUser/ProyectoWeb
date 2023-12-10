@@ -61,24 +61,24 @@
             <legend>Pago </legend>
             <table>
                 <tr>
-                    <td><label for="nombre">Nombre:</label></td>
+                    <td><label for="nombre">Nombre:</label></td><require>
                     <td><input id="nombre" type="text"></td>
                 </tr>
                 <tr>
-                    <td> <label for="apellido">Apellido:</label></td>
+                    <td> <label for="apellido">Apellido:</label></td><require>
                     <td><input id="apellido" type="text"></td>
                 </tr>
                 <tr>
-                    <td><label for="numtarjeta">Num. Tarjeta: </label></td>
+                    <td><label for="numtarjeta">Num. Tarjeta: </label></td><require>
                     <td><input id="numtarjerta" type="text"></td>
                 </tr>
                 <tr>
-                    <td><label for="fecexp">Fecha de expedicion</label></td>
+                    <td><label for="fecexp">Fecha de expedicion</label></td><reauire>
                     <td><input id="fecexp" type="number"></td>
                     <br>
                 </tr>
                 <tr>
-                    <td><label for="cv">CV:</label></td>
+                    <td><label for="cv">CV:</label></td><require>
                     <td><input type="number"></td>
                 </tr>
                 <tr>
@@ -88,7 +88,7 @@
                 
                 <tr>
                     <td></td>
-                    <td id="button"><button>Realizar pago</button></td>
+                    <td id="button"><button>Realizar pago</button></td><require>
                 </tr>
             </table>
         </fieldset>
