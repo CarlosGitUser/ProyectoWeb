@@ -2,9 +2,9 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-/*if ($_SESSION['usuario']!='admin'){
+if ($_SESSION['usuario']!='admin'){
     header('Location: index.php');
-}*/
+}
 ?>
 <?php   
 
@@ -83,18 +83,7 @@ if(isset($_POST['subir'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="icon" type="image/x-icon" href="image/logo.png">
     <link rel="stylesheet" href="css/stylescambios.css">
-    <style>
-    .contenedor-formulario {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-    }
-    .formulario label, .formulario input, .formulario textarea {
-        margin: 5px;
-    }
-    </style>
 </head>
 <body>
     <?php include "header.php" ?>
