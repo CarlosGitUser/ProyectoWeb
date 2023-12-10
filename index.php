@@ -15,38 +15,194 @@
     <link rel="stylesheet" href="css/style.css">
     <style>
         .modal {
-            display: none;
-            position: fixed;
-            z-index: 1;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            overflow: auto;
-            background-color: rgba(0, 0, 0, 0.8);
-        }
+        display: none;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        overflow: auto;
+        background-color: rgba(0, 0, 0, 0.8);
+    }
 
-        .modal-content {
-            background-color: #fefefe;
-            margin: 15% auto;
-            padding: 20px;
-            border: 1px solid #888;
-            width: 80%;
-        }
+    .modal-content {
+        background-color: #fff;
+        margin: 10% auto;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 70%;
+        max-width: 600px;
+    }
 
-        .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
+    .close {
+        color: #aaa;
+        float: right;
+        font-size: 28px;
+        font-weight: bold;
+        cursor: pointer;
+    }
 
-        .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+    .close:hover,
+    .close:focus {
+        color: #000;
+    }
+
+    .coupon {
+        background-color: #f7f7f7;
+        border: 1px solid #ddd;
+        padding: 20px;
+        text-align: center;
+        border-radius: 8px;
+        margin-top: 20px;
+    }
+
+    .coupon h2 {
+        color: #333;
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    .coupon p {
+        color: #555;
+        font-size: 16px;
+    }
+
+    .coupon code {
+        background-color: #e0e0e0;
+        padding: 5px 10px;
+        border-radius: 5px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 16px;
+        color: #333;
+    }
+    * {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-weight: normal;
+    font-family: 'Segoe UI';
+
+    font-size: 12px;
+    text-align: center;
+    color: #fff;
+}
+
+
+
+.center {
+    width: 100%;
+    height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.coupon_cont-center{
+    width: 400px;
+    height: 800px;
+
+    background-color: #505050;
+    box-shadow: 0px 10px 10px #00000030;
+    border-radius: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #333; }
+h3{
+    font-size: 40px;
+    font-weight: bold;
+    color: #7e57c2;
+}
+
+span{
+    font-size: 20px;
+    font-weight: bold;
+    color: #c25757;
+}
+.copiar_coupon{
+    width: 360px;
+    height: 200px;
+    text-align: center;
+    background-color: #e6d8ff;
+    box-shadow: 0px 5px 5px #00000030;
+    border-radius: 10px;
+
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.canjear_coupon {
+    width: 360px;
+    height: 200px;
+
+    background-color: #e6d8ff;
+    box-shadow: 0px 5px 5px #00000030;
+    border-radius: 10px;
+
+    margin-bottom: 50px;
+    overflow: hidden;
+}
+
+.txt_cont{
+    width: 100%;
+    height: 40px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.price_cont{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.action_cont{
+    width: 100%;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input{
+    width: 160px;
+    height: 40px;
+
+    outline: none;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+
+    color: #333;
+
+    font-size: 18px;
+    font-weight: bold;
+}
+button{
+    width: 160px;
+    height: 40px;
+
+    background-color: #333;
+    border-radius: 0px 5px 5px 0px;
+    border: none;
+
+    font-size: 18px;
+    font-weight: bold;
+
+    cursor: pointer;
+}
     </style>
 
 </head>
@@ -96,14 +252,49 @@
 </section>
 
 <!-- home section ends -->
-<button onclick="openModal()">Abrir Modal</button>
+<button style="position: fixed;
+        right: 20px;
+        bottom: 20px;
+        background-color: red;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 16px;
+        z-index: 2;" onclick="openModal()">Abrir cupón</button>
 
 <!-- Ventana modal -->
 <div id="myModal" class="modal">
     <!-- Contenido de la ventana modal -->
     <div class="modal-content">
         <span class="close" onclick="closeModal()">&times;</span>
-        <p>Aquí puedes poner el contenido de tu ventana modal.</p>
+            <div class="coupon_cont">
+
+                <div class="copiar_coupon">
+                    <div class="txt_cont"><h2>Precio Actual</h2></div>
+                    <div class="price_cont">  <h3>$</h3><h3 id="number1">200</h3> </div>
+
+                    <div class="action_cont">
+                        <input id="input1" type="text" value="54ldqwer23">
+                        <button id="btn1" onclick="copyCoupon()">copiar</button>
+                    </div>
+                </div>
+
+                <div class="canjear_coupon">
+                    <div class="txt_cont"><h2>Precio de un 50% de descuento</h2></div>
+                    <div class="price_cont" id="discount">
+                        <h3 style="font-size: 15px; width: 300px;">
+                        Haz click en el buton canjear cupon para obtener un 50% de descuento
+                        </h3>
+                    </div>
+
+                    <div class="action_cont">
+                        <input id="input2" type="text" placeholder="pergar codigo">
+                        <button id="btn2" onclick="canjearCoupon()">canjear</button>
+                    </div>
+                </div>
+            </div>
     </div>
 </div>
 
@@ -630,6 +821,44 @@
         }
     }
 </script>
+<script>
+function copyCoupon() {
+    let copyTxt = document.getElementById("input1");
+    let btnTxt = document.getElementById("btn1");
 
+    copyTxt.select();
+    copyTxt.setSelectionRange(0,99999);
+
+    navigator.clipboard.writeText(copyTxt.value);
+
+    if (btnTxt.innerHTML === "copiar") {
+        btnTxt.innerHTML = "copiado";
+    }
+}
+
+function canjearCoupon() {
+    let canjearTxt = document.getElementById("input2").value;
+    let canjearBtn = document.getElementById("btn2");
+
+    let number = document.getElementById("number1").innerHTML;
+    let discount = document.getElementById("discount");
+
+    function getPercent(percent) { return number / 100 * percent; }
+    let percentResult = getPercent(90); //VOY A OBTENER EL 90 PORCIENTO DE 200.
+
+    if (canjearTxt === "54ldqwer23") {
+        canjearBtn.innerHTML = "canjeado";
+
+        discount.innerHTML = `<h3>$</h3><h3 id="number2">${percentResult}</h3><span>$${number}</span>`;
+
+    } else if (canjearTxt === "") {
+
+        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">aun no has pegado el codigo 🤔</h3>';
+         
+    } else if (canjearTxt !== "54ldqwer23") {
+        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">el cupon no es valido 🥲</h3>';
+    } 
+}
+</script>
 </body>
 </html>
