@@ -101,16 +101,22 @@
                         FROM producto";
             }
             
-    
             $result = $conn->query($sql);
             
             if ($result->num_rows > 0) {
                 // Imprimir los datos de cada fila
                 while ($row = $result->fetch_assoc()){
                     $enlaceID = 'enlaceID_' . $row["id_prod"];
+                    $cant = 1;
+                    if($row["descuento"] !== NULL){
+                        $precio = $row["descuento"]*$row["precio"];
+                    }
+                    else
+                        $precio = $row["precio"];
+
                     echo '<div class="box" data-item="'.$row["categoria_etiqueta"]. '">';
                     echo '<div class="icons">
-                          <a href="#" class="fas fa-shopping-cart"></a>
+                          <a href="php/agCarrito.php?id_prod='.$row["id_prod"].'&precio='.$precio.'&cantidad='.$cant.'&pag=tienda.php" class="fas fa-shopping-cart"></a>
                           <a href="#" class="fas fa-heart"></a>
                           <a href="#" class="fas fa-search"></a>';
                           ?>
