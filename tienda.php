@@ -46,7 +46,7 @@
     </div>
         <div class="filtro">
           <form action="" method="get">
-          filtro <input type="number" placeholder="minimo" name="minPrecio" id="minPrecio" require_once>
+          filtro <input type="number" placeholder="minimo" name="minPrecio" id="minPrecio">
           hasta <input type="number" placeholder="maximo" name="maxPrecio" id="maxPrecio">
           <input type="submit" value="filtrar">
           <button type="button" onclick="eliminarValoresGET()">reset</button>
