@@ -64,9 +64,8 @@
   <div class="col-xs-6">
       <i class="fa fa fa-user"></i>
       <label for="pais">Pais:</label>
-      <input list="pais" name="pais" id="pais" required>
       <select id="pais">
-        <option selected>Seleccione</option>
+        <option selected>Seleccione</option required>
         <option value="Afganistan">Afganistan</option>
         <option value="Albania">Albania</option>
         <option value="Alemania">Alemania</option>
