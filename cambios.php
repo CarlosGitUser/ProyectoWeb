@@ -74,8 +74,6 @@ if(isset($_POST['subir'])) {
         echo "El archivo no es una imagen válida.";
     }
 }
-
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -84,6 +82,30 @@ if(isset($_POST['subir'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/stylescambios.css">
+    <title>Cambios</title>
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            font-size: small;
+        }
+
+        th, td {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+    </style>
+    <script src="js/mostrarProductosAJAX.js">
+    </script>
 </head>
 <body>
     <?php include "header.php" ?>
@@ -162,7 +184,6 @@ if(isset($_POST['subir'])) {
             <button type="submit" class="enviar" name="mod">Modificar</button>
         </form>       
     </div>
-    <br>
     <div>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>" method="post" enctype="multipart/form-data">
             <label for="imagen">Subir nueva imagen:</label>
@@ -170,6 +191,9 @@ if(isset($_POST['subir'])) {
             <button type="submit" class="enviar" name="subir">subir</button>
         </form>
     </div>
+    <button onclick="mostrarProductos()" class="enviar">Mostrar Productos</button>
     <br><br>
+    <div id="tablaProductos">
+    </div>
 </body>
 </html>
