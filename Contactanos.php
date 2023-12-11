@@ -1,3 +1,59 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require 'PHPMailer.php';
+require 'SMTP.php';
+require 'Exception.php';
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $nombre = $_POST['nombre'];
+    $email = $_POST['email'];
+    $numero = $_POST['numero'];
+    $asunto = $_POST['asunto'];
+    $mensaje = $_POST['mensaje'];
+
+    // Configuración de PHPMailer
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuración del servidor SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.office365.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'Dokkabaelol69@outlook.com';
+        $mail->Password = 'Dokkabae69';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Desactivar verificación del certificado SSL
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+
+        // Configuración del remitente y destinatario
+        $mail->setFrom('Dokkabaelol69@outlook.com');
+        $mail->addAddress($email, $nombre);
+
+        // Contenido del correo
+        $mail->isHTML(true);
+        $mail->Subject = 'Respuesta a tu solicitud';
+        $mail->Body = "Hola $nombre,<br><br>Gracias por ponerte en contacto con nosotros. Tu mensaje ha sido recibido y te responderemos en breve.<br><br>Atentamente,<br>Equipo de soporte";
+
+        // Envío del correo
+        $mail->send();
+
+        echo 'El mensaje ha sido enviado';
+    } catch (Exception $e) {
+        echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,9 +74,9 @@
 <body>
 
 <!-- header -->
-
 <?php include "header.php"; ?>
 <br><br><br><br><br><br><br><br><br>
+
 <!-- contact section starts  -->
 
 <section class="contact" id="contact">
@@ -53,18 +109,18 @@
 
     <div class="row">
 
-        <form action="">
+<form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
             <h3>Ponerse en contacto</h3>
             <div class="inputBox">
-                <input type="text" placeholder="tu nombre">
-                <input type="email" placeholder="tu email">
+                <input type="text" name="nombre" placeholder="tu nombre">
+                <input type="email" name="email" placeholder="tu email">
             </div>
             <div class="inputBox">
-                <input type="number" placeholder="tu numero">
-                <input type="text" placeholder="tu asunto">
+                <input type="number" name="numero" placeholder="tu numero">
+                <input type="text" name="asunto" placeholder="tu asunto">
             </div>
-            <textarea placeholder="tu mensaje" cols="30" rows="10"></textarea>
-            <input type="submit" value="Enviar mensaje" class="btn">
+            <textarea name="mensaje" placeholder="tu mensaje" cols="30" rows="10"></textarea>
+                <input type="submit" value="Enviar mensaje" class="btn">
         </form>
        <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14806.125242757787!2d-102.33626167245366!3d21.914116910620464!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8429eee23dfea56d%3A0xc2edcc935471e5fa!2sUniversidad%20Aut%C3%B3noma%20de%20Aguascalientes%2C%2020100%20Aguascalientes%2C%20Ags.!5e0!3m2!1ses!2smx!4v1701371735263!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
