@@ -3,7 +3,7 @@
 session_start();
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    if (isset($_POST['id_producto']) && isset($_POST['nueva_cantidad'])) {
+    if (isset($_POST['id_producto']) && isset($_POST['nueva_cantidad']) && isset($_POST['nuevo_precio'])) {
         // Obtener los valores enviados por la solicitud AJAX
         $id_usuario = $_SESSION['id_usuario'];
         $id_producto = $_POST['id_producto'];
@@ -24,16 +24,30 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("La conexión falló: " . $conn->connect_error);
         }
 
-        // Realizar la actualización en la base de datos
-        $sql_update = "UPDATE carrito SET cantidad = $nueva_cantidad, monto = $nuevo_precio WHERE id_prod = $id_producto AND id_usr = $id_usuario";
-        $result_update = $conn->query($sql_update);
+        if ($nueva_cantidad == 0) {
+            // Si la nueva cantidad es cero, eliminar el producto del carrito
+            $sql_delete = "DELETE FROM carrito WHERE id_prod = $id_producto AND id_usr = $id_usuario";
+            $result_delete = $conn->query($sql_delete);
 
-        if ($result_update) {
-            // La actualización fue exitosa
-            echo 'Datos actualizados correctamente en la base de datos.';
+            if ($result_delete) {
+                // Eliminación exitosa
+                echo 'Producto eliminado del carrito.';
+            } else {
+                // Error al eliminar
+                echo 'Error al eliminar el producto del carrito.';
+            }
         } else {
-            // La actualización falló
-            echo 'Error al actualizar datos en la base de datos.';
+            // Actualizar la cantidad y el precio en el carrito
+            $sql_update = "UPDATE carrito SET cantidad = $nueva_cantidad, monto = $nuevo_precio WHERE id_prod = $id_producto AND id_usr = $id_usuario";
+            $result_update = $conn->query($sql_update);
+
+            if ($result_update) {
+                // La actualización fue exitosa
+                echo 'Datos actualizados correctamente en el carrito.';
+            } else {
+                // La actualización falló
+                echo 'Error al actualizar datos en el carrito.';
+            }
         }
 
         // Cerrar la conexión a la base de datos si es necesario
