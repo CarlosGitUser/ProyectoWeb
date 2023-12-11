@@ -436,7 +436,7 @@ if (isset($_SESSION['id_usuario'])) {
                     
                 </div>
             </div>
-            <button class="buttonCheckout">Verificar</button>
+            <button class="buttonCheckout">Confirmar compra</button>
             </div>
     </div>
 </div>
