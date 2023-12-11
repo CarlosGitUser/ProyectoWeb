@@ -1,3 +1,7 @@
+
+<?php
+include "header.php";
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -250,31 +254,107 @@ header .totalQuantity{
     </style>
 </head>
 <body>
-<?php include "header.php"; ?>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <br>
 <br>
 <br>
 <br>
 <div class="container">
     <div class="checkoutLayout">
-
-        
         <div class="returnCart">
-            <a href="index.php">Seguir comprando</a>
+        <a href="index.php">Seguir comprando</a>
             <h1>Lista de productos en el carrito</h1>
-            <div class="list">
+<?php
 
-                <div class="item">
-                    <img src="images/1.webp">
-                    <div class="info">
-                        <div class="name">PRODUCTO 1</div>
-                        <div class="price">$22/1 producto</div>
-                    </div>
-                    <div class="quantity">5</div>
-                    <div class="returnPrice">$433.3</div>
-                </div>
+// Verificar si el usuario tiene una sesión iniciada
+if (isset($_SESSION['id_usuario'])) {
+    // Obtener el ID del usuario de la sesión
+    $id_usuario = $_SESSION['id_usuario'];
 
-            </div>
+    // Establecer la conexión con la base de datos (cambiar estos valores por los correspondientes a tu base de datos)
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "tienda";
+
+    // Crear conexión
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("La conexión falló: " . $conn->connect_error);
+    }
+
+    $total = 0;
+    // Consulta SQL para obtener los productos en el carrito del usuario específico
+    $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usuario";
+
+    // Ejecutar la consulta
+    $result = $conn->query($sql);
+
+    // Verificar si se obtuvieron resultados
+    if ($result->num_rows > 0) {
+        // Mostrar los productos en el carrito
+        // echo "<table>";
+        // echo "<tr><th>Nombre del Producto</th><th>Unidades</th><th>Costo</th></tr>";
+        $total = 0; // Inicializar la variable para almacenar el total de los montos
+        while ($row = $result->fetch_assoc()) {
+            $id_producto = $row["id_prod"];
+            
+            // Consulta adicional para obtener el nombre, precio y descuento del producto basado en el ID del producto en el carrito
+            $sql_producto = "SELECT nombre_prod, precio, descuento, imagen FROM producto WHERE id_prod = $id_producto";
+            $result_producto = $conn->query($sql_producto);
+            
+            if ($result_producto->num_rows > 0) {
+                $row_producto = $result_producto->fetch_assoc();
+                $nombre_producto = $row_producto["nombre_prod"];
+                $precio_unitario = $row_producto["precio"];
+                $descuento = $row_producto["descuento"];
+                
+                
+                $precio_descuento = $precio_unitario * ($descuento); // Precio con descuento aplicado
+                ?>
+                    <div class="list">
+
+                        <div class="item">
+                            <img src="<?php echo "image/". $row_producto['imagen']; ?>">
+                            <div class="info">
+                                <div class="name"> <?php echo $nombre_producto; ?> </div>
+                                <div class="price">$<?php echo $precio_unitario; ?> c/u</div>
+                            </div>
+                            <div class="quantity"><input type='number' min='1' value='<?php echo $row["cantidad"]; ?>' data-id='<?php echo $row["id_prod"]; ?>' onchange='actualizarCantidad(this, <?php echo $precio_descuento; ?>)'></div>
+                            <div class="returnPrice"><?php echo "<p id='precio_".$row["id_prod"]."'>$".$row["monto"]."</p>"; ?></div>
+                        </div>
+
+                        </div>
+                <?php
+                
+                // Calcular el precio con descuento
+                $total += $row["monto"]; // Sumar el monto del producto al total
+            }
+        }
+        } else {
+        echo "No se encontraron productos en el carrito para el usuario $id_usuario";
+    }
+
+    // Cerrar la conexión
+    $conn->close();
+} else {
+    // Si el usuario no tiene una sesión iniciada, redirigirlo a la página de inicio de sesión
+    // header("Location: login.php");
+    exit();
+}
+?>
+
+            
         </div>
 
 
@@ -320,7 +400,7 @@ header .totalQuantity{
                 </div>
                 <div class="row">
                     <div>Precio Total</div>
-                    <div class="totalPrice">$900</div>
+                    <div class="totalPrice" id="total">$<?php echo $total; ?></div>
                 </div>
             </div>
             <button class="buttonCheckout">Verificar</button>
@@ -330,6 +410,29 @@ header .totalQuantity{
 
   <?php include "footer.php"; ?>
 <script>
+    function actualizarCantidad(input, descu) {
+        var nuevaCantidad = input.value;
+        var idProducto = input.getAttribute('data-id');
+
+        // Calcular el nuevo precio con el descuento aplicado
+        var nuevoPrecio = nuevaCantidad * descu;
+
+        // Actualizar el precio en la interfaz
+        document.getElementById('precio_' + idProducto).innerText = '$' + nuevoPrecio.toFixed(2);
+        
+        var rows = document.querySelectorAll("input[data-id]");
+        var total = 0;
+
+        rows.forEach(function(row) {
+            var id = row.getAttribute('data-id');
+            var cantidad = parseInt(row.value);
+            var precioDescuento = parseFloat(document.getElementById('precio_' + id).innerText.replace('$', ''));
+            total += precioDescuento;
+        });
+
+        // Mostrar el total actualizado en la interfaz
+        document.getElementById('total').innerText = '$' + total.toFixed(2);
+    }
     let iconCart = document.querySelector('.iconCart');
 let cart = document.querySelector('.cart');
 let container = document.querySelector('.container');
@@ -512,6 +615,6 @@ function addCartToHTML(){
     totalQuantityHTML.innerText = totalQuantity;
     totalPriceHTML.innerText = '$' + totalPrice;
 }
-  </script>
+</script>
 </body>
 </html>
