@@ -313,6 +313,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         $mail->Subject = 'Recibo de compra';
         $body = "Hola,<br><br>Gracias por tu compra. Aquí están los detalles de tu carrito:<br><br>";
 
+        $total = 0;
         $subtotal = 0;
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
