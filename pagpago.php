@@ -8,10 +8,33 @@
     <title>Pagina de pago</title>
     <link rel="stylesheet" href="css/estilospago.css">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <style>
+      #oxxo {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+#oxxo-content {
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+#oxxo img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-xs-5 {
+    max-width: 30%;
+      }
+    </style>
 </head>
 <body>
 <div id="wrapper">
-<div class="row">
+    <div class="row">
             <div class="col-xs-5">
                 <div id="cards">
                     <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
@@ -34,51 +57,21 @@
                         Pagaon  $150.00 cPayPal
                     </label>
                 </div>
-            </div><!--col-xs-5 end-->
+            </div>
             <div class="col-xs-5">
-                <!-- New OXXO payment option -->
                 <div id="oxxo">
-                    <img src="img/oxxologo.png">
-                </div><!--#oxxo end-->
-                <div class="form-check">
-                    <label class="form-check-label" for='oxxo'>
-                        <input id="oxxo" class="form-check-input" type="checkbox" value="">
-                        Paga $150.00 con OXXO
-                    </label>
+                    <div id="oxxo-content">
+                        <img src="image/oxxologo.png">
+                        <label class="form-check-label" for='oxxo'>
+                            <input id="oxxo" class="form-check-input" type="checkbox" value="">
+                            Paga $150.00 con OXXO
+                        </label>
+                    </div>
                 </div>
-            </div><!--col-xs-5 end-->
-        </div><!--row end-->
-  <div class="row">
-    <div class="col-xs-5">
-      <div id="cards">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
-      </div><!--#cards end-->
-      <div class="form-check">
-  <label class="form-check-label" for='card'>
-    <input id="card" class="form-check-input" type="checkbox" value="">
-    Paga $150.00 con tarjeta de crédito
-  </label>
-  
-</div>
-    
-    </div><!--col-xs-5 end-->
-    
-    <div class="col-xs-5">
-      <div id="cards">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
-      </div><!--#cards end-->
-      <div class="form-check">
-  <label class="form-check-label" for='paypal'>
-    <input id="paypal" class="form-check-input" type="checkbox" value="" >
-    Paga $150.00 con PayPal
-  </label>
-</div>
-    </div><!--col-xs-5 end-->
-    
-  </div><!--row end-->
-  
->>>>>>> 7f8d3b106cdd7af7823eba8e8239b251277e69dc
+            </div>
+        </div>
+
+
   <div class="row">
     
     <div class="col-xs-5">
