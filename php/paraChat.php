@@ -1,7 +1,6 @@
 
 <?php
 include "header.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,250 +8,7 @@ include "header.php";
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
-    <style>
-body{
-    font-family: monospace;
-    overflow-x: hidden;
-    font-synthesis: 15px;
-}
-a{
-    text-decoration: none;
-}
-.container{
-    width: 1200px;
-    margin: auto;
-    max-width: 90%;
-    transition: transform 1s;
-}
-header img{
-    width: 60px;
-}
-header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header .iconCart{
-    position: relative;
-    z-index: 1;
-}
-header .totalQuantity{
-    position: absolute;
-    top: 0;
-    right: 0;
-    font-size: x-large;
-    background-color: #b31010;
-    width: 40px;
-    height: 40px;
-    color: #fff;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 50%;
-    transform: translateX(20px);
-}
-.listProduct{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-}
-.listProduct .item img{
-    width: 100%;
-        height: 430px;
-    object-fit: cover;
-}
-.listProduct .item{
-    position: relative;
-}
-.listProduct .item h2{
-    font-weight: 700;
-    font-size: x-large;
-}
-.listProduct .item .price{
-    font-size: x-large;
-}
 
-.listProduct .item button{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    background-color: #e6572c;
-    color: #fff;
-    width: 50%;
-    border: none;
-    padding: 20px 30px;
-    box-shadow: 0 10px 50px #000;
-    cursor: pointer;
-    transform: translateX(-50%) translateY(100px);
-    opacity: 0;
-}
-.listProduct .item:hover button{
-    transition:  0.5s;
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-}
-.cart{
-    color: #fff;
-    position: fixed;
-    width: 400px;
-    max-width: 80vw;
-    height: 100vh;
-    background-color: #0E0F11;
-    top: 0px;
-    right: -100%;
-    display: grid;
-    grid-template-rows: 50px 1fr 50px;
-    gap: 20px;
-    transition: right 1s;
-}
-
-.cart .buttons .checkout{
-    background-color: #E8BC0E;
-    color: #000;
-}
-.cart h2{
-    color: #E8BC0E;
-    padding: 20px;
-    height: 30px;
-    margin: 0;
-}
-
-
-.cart .listCart .item{
-    display: grid;
-    grid-template-columns: 50px 1fr 70px;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 20px;
-    
-}
-.cart .listCart img{
-    width: 100%;
-    height: 70px;
-    object-fit: cover;
-    border-radius: 10px;
-}
-.cart .listCart .item .name{
-    font-weight: bold;
-}
-.cart .listCart .item .quantity{
-    display: flex;
-    justify-content: end;
-    align-items: center;
-}
-.cart .listCart .item .quantity span{
-    display: block;
-    width: 50px;
-    text-align: center;
-}
-
-.cart .listCart{
-    padding: 20px;
-    overflow: auto;
-}
-.cart .listCart::-webkit-scrollbar{
-    width: 0;
-}
-
-.cart .buttons{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-}
-.cart .buttons div{
-    background-color: #000;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-weight: bold;
-    cursor: pointer;
-}
-.cart .buttons a{
-    color: #fff;
-    text-decoration: none;
-}
-.checkoutLayout{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    padding: 20px;
-}
-.checkoutLayout .right{
-    background-color: #5358B3;
-    border-radius: 20px;
-    padding: 40px;
-    color: #fff;
-}
-.checkoutLayout .right .form{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    border-bottom: 1px solid #7a7fe2;
-    padding-bottom: 20px;
-}
-.checkoutLayout .form h1,
-.checkoutLayout .form .group:nth-child(-n+3){
-    grid-column-start: 1;
-    grid-column-end: 3;
-}
-.checkoutLayout .form input, 
-.checkoutLayout .form select
-{
-    width: 100%;
-    padding: 10px 20px;
-    box-sizing: border-box;
-    border-radius: 20px;
-    margin-top: 10px;
-    border:none;
-    background-color: #6a6fc9;
-    color: #fff;
-}
-.checkoutLayout .right .return .row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 10px;
-}
-.checkoutLayout .right .return .row div:nth-child(2){
-    font-weight: bold;
-    font-size: x-large;
-}
-.buttonCheckout{
-    width: 100%;
-    height: 40px;
-    border: none;
-    border-radius: 20px;
-    background-color: #49D8B9;
-    margin-top: 20px;
-    font-weight: bold;
-    color: #fff;
-
-
-}
-.returnCart h1{
-    border-top: 1px solid #eee;  
-    padding: 20px 0;
-}
-.returnCart .list .item img{
-    height: 80px;
-}
-.returnCart .list .item{
-    display: grid;
-    grid-template-columns: 80px 1fr  50px 80px;
-    align-items: center;
-    gap: 20px;
-    margin-bottom: 30px;
-    padding: 0 10px;
-    box-shadow: 0 10px 20px #5555;
-    border-radius: 20px;
-}
-.returnCart .list .item .name,
-.returnCart .list .item .returnPrice{
-    font-size: large;
-    font-weight: bold;
-}
-    </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
@@ -355,23 +111,10 @@ if (isset($_SESSION['id_usuario'])) {
     // header("Location: login.php");
     exit();
 }
-
-if($_SERVER['REQUEST_METHOD'] === 'POST'){
-    echo '<script>
-    document.getElementById("cupon").style.display = "none";
-    </script>';
-}else{
-    ?>
-        <form id="miFormulario" style="display: none;" method="post">
-            <input type="hidden" name="valor" id="valorInput">
-        </form>
+?>
         <label for="">Ingrese su cupon</label><input type="text" id="cupon">
         <button id="btn2" onclick="canjearCoupon()">canjear</button>
         </div>
-    <?php
-    
-}
-?>      
 
 
         <form action="pagpago.php" method="post">
@@ -407,69 +150,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     <label for="country">País</label>
                     <select name="country" id="country" onchange="cargarCiudades()">
                         <option value="">Escoje..</option>
-                        <option value="Afganistan">Afganistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Alemania">Alemania</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="ArabiaSaudi">Arabia Saudi</option>
-                        <option value="Argelia">Argelia</option>
                         <option value="Argentina" >Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaiyan">Azerbaiyan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belgica">Belgica</option>
-                        <option value="Belice">Belice</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bielorrusia">Bielorrusia</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Botsuana">Botsuana</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="BurkinaFaso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="CaboVerde">Cabo Verde</option>
-                        <option value="Camboya">Camboya</option>
-                        <option value="Camerun">Camerun</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Congo">Congo</option>
-                        <option value="CoreadelSur">Corea del Sur</option>
-                        <option value="CostaRica">Costa Rica</option>
-                        <option value="Croacia">Croacia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Dinamarca">Dinamarca</option>
-                        <option value="EAU">Emiratos Arabas Unidos</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="ElSalvador">El Salvador</option>
-                        <option value="EU">Estados Unidos</option>
                         <option value="España">España</option>
-                        <option value="Francia">Francia</option>
-                        <option value="Grecia">Grecia</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="HongKong">Hong Kong</option>
-                        <option value="Hungria">Hungria</option>
-                        <option value="Holanda">Holanda</option>
-                        <option value="India">India</option>
-                        <option value="Irak">Irak</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Irlanda">Irlanda</option>
-                        <option value="Islandia">Isalndia</option>
-                        <option value="Italia">Italia</option>
-                        <option value="Japon">Japon</option>
-                        <option value="Libano">Libano</option>
-                        <option value="Luxemburgo">Luxemburgo</option>
-                        <option value="Macedonia">Macedonia</option>
-                        <option value="Malasia">Malasia</option>
-                        <option value="Marruecos">Marruecos</option>
                         <option value="Mexico">Mexico</option>
                         
                     </select>
@@ -507,29 +189,31 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 </div>
                 <div class="row">
                 <?php 
+                    if($total > 1000){
+                        ?>
+                        <div>Precio Total</div>
+                        <div class="totalPrice" id="total">$<?php echo $total; ?></div>
+                        <?php
+                    }else{
+                        ?>
+                        <div>Precio Total</div>
+                        <div class="totalPrice" id="total">$<?php echo $total + 100; ?></div>
+                        <?php
+                    }
                     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         // Procesar datos recibidos por POST
                         $valor = $_POST['valor'];
-                        $_SESSION["total"] = $valor;
-                        ?>
-                            <div>Precio Total</div>
-                            <div class="totalPrice" id="total">$<?php echo $valor; ?></div>
-                        <?php
-                    }elseif($total > 1000){
-                        ?>
-                            <div>Precio Total</div>
-                            <div class="totalPrice" id="total">$<?php echo $total; ?></div>
-                            <?php
-                            $_SESSION["total"] = $total;
-                    }else{
-                        ?>
-                            <div>Precio Total</div>
-                            <div class="totalPrice" id="total">$<?php echo $total + 100; ?></div>
-                            <?php
-                            $_SESSION["total"] = $total + 100;
-                    }
+                        
+                        // Realizar operaciones o procesamiento adicional aquí
                     
+                        // Enviar respuesta de vuelta a JavaScript
+                        echo json_encode(['resultado' => 'Procesado exitosamente']);
+                        exit();
+                    }
+                    $_SESSION["total"] = $total;
+                    echo $total;
                     ?>
+                    <?php echo $total; ?>
                     
                 </div>
             </div>
@@ -651,7 +335,9 @@ function addDataToHTML(){
         if (matches) {
             var numeroExtraido = parseFloat(matches[0]);
         }
-    
+        if(numeroExtraido < 1000){
+            numeroExtraido = numeroExtraido + 100;
+        }
         // Limpia las opciones actuales de la ciudad
         selectCiudad.innerHTML = '';
 
@@ -708,11 +394,21 @@ function addDataToHTML(){
         document.getElementById('total').innerText = '$' + (numeroExtraido - 100).toFixed(2);
         // Valor numérico en JavaScript
         var valorNumerico = numeroExtraido - 100;
-        document.getElementById('valorInput').value = valorNumerico;
-        
-        // Enviar el formulario usando JavaScript
-        document.getElementById('miFormulario').action = window.location.href;
-        document.getElementById('miFormulario').submit();
+
+        fetch(window.location.href, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: 'valor=' + valorNumerico,
+        })
+        .then(response => response.json())
+        .then(data => {
+            console.log(data.resultado);
+        })
+        .catch(error => {
+            console.error('Error en la solicitud AJAX:', error);
+        });
 
 
     } else if (canjearTxt === "") {
