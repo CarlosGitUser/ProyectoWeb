@@ -24,7 +24,14 @@
   </label>
   
 </div>
-    
+    <div id="cards">
+      <img src="image/oxxologo.png" width="25" height="25">
+      </div><!--#cards end-->
+      <div class="form-check">
+      <label class="form-check-label" for=''>
+        <input id="p" class="form-check-input" type="checkbox" value="" >
+        Paga $500.00 con OXXO PAGO
+      </label>
     </div><!--col-xs-5 end-->
     
     <div class="col-xs-5">
