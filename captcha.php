@@ -10,7 +10,8 @@ function generarCaptcha($length = 6) {
     return $captcha;
 }
 
-$captchaTexto = generarCaptcha();
+//$captchaTexto = generarCaptcha();
+$captchaTexto="123";
 $_SESSION['captcha'] = $captchaTexto;
 
 // Crear la imagen

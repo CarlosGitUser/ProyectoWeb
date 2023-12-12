@@ -1,14 +1,9 @@
 <?php
 $usuario = $_GET["usuario"]; // Recuperar el nombre de usuario de la URL
 
-$servidor = "localhost";
-$usuario_bd = "root";
-$contrasena_bd = "";
-$nombre_bd = "tienda";
-// Obtener la pregunta de seguridad y respuesta almacenada en la base de datos para el usuario actual
-$conexion = new mysqli($servidor, $usuario_bd, $contrasena_bd, $nombre_bd);
+require "php/conexionBD.php";
 $consulta = "SELECT preg_sec, res_preg FROM usuario WHERE cuenta = '$usuario'";
-$resultado = $conexion->query($consulta);
+$resultado = $conn->query($consulta);
 ?>
 
 <!DOCTYPE html>
