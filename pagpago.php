@@ -272,6 +272,20 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                
               $subtotal += $producto['monto'];
             }
+            if ($country === "Mexico") {
+              $impuesto = 0.16;
+            } elseif ($country === "Argentina") {
+              $impuesto = 0.30;
+            } elseif ($country === "España") {
+              $impuesto = 0.21;
+            } else {
+              $impuesto = 0;
+            }
+
+            $envio = ($subtotal < 1000) ? 100 : 0;
+            $impuestos = ($subtotal + $envio) * $impuesto;
+            $body .= '<li>Envio: $' . $envio . '</li>';
+            $body .= '<li>Impuesto: $' . $impuestos . '</li>';
             $body .= "</ul>";
             $body .= "<br>Subtotal: $" . $subtotal;
             $body .= '<li><strong>Total:</strong> $' . $total . '</li>';
@@ -287,14 +301,19 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         //configuracion del pdf
          
           
-
+        $sub = 0;
         if (!empty($carrito)) {
           $text = 'Recibo de compras de ' . $nombre;
           $text .= "
           Datos del usuario: 
           Correo: $correo
           Telefono: $telefono
+          Direccion: $address
 
+          ";
+          if($_SESSION["total"]>1000){
+            $text .= "Envio GRATIS";
+          }else $text .= "Gastos de envio: 100
           ";
           $text .="Datos de los productos
           ";
@@ -303,11 +322,18 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               $text .="
               ";
               //' <img src="image/'.$producto['imagen'];
-              $subtotal += $producto['monto'];
+              $sub += $producto['monto'];
           }
+          
+            $tot = $_SESSION["total"];
+          
           $text .= "
           
-          Subtotal: $" . $subtotal;
+
+          
+          Subtotal: $" . $sub;
+          $text .= "
+          Total:  $$tot";
       
           // Codificar el texto para que pueda ser enviado por URL
       
