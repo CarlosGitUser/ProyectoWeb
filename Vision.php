@@ -36,6 +36,7 @@
             padding: 10px 0;
         }
 
+        
         h1, h2 {
             color: #333;
         }
