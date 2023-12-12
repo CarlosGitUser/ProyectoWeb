@@ -69,6 +69,7 @@ if (session_status() == PHP_SESSION_NONE) {
             background-color: #45a049;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <header class="header">
@@ -102,9 +103,17 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="carrito.php" id="carrito-link" class="fas fa-shopping-cart">
-                <span id="carrito-cantidad"></span>
-            </a>
+            <?php 
+                if(isset($_SESSION["usuario"])){
+                    echo '<a href="carrito.php" id="carrito-link" class="fas fa-shopping-cart">
+                        <span id="carrito-cantidad"></span>
+                    </a>';
+                    
+                }else{
+                    echo '<a href="login.php" id="carrito-link" class="fas fa-shopping-cart"></a>';
+                }
+            ?>
+            
             <a href="#" class="fas fa-heart"></a>
             
         </div>
