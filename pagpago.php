@@ -174,7 +174,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
             $body .= "<ul>";
             foreach ($carrito as $producto) {
 
-              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                
+              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li>';
               $subtotal += $producto['monto'];
             }
             if ($country === "Mexico") {
@@ -189,6 +189,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
 
             $envio = ($subtotal < 1000) ? 100 : 0;
             $impuestos = ($subtotal + $envio) * $impuesto;
+            $total += $impuestos;
             $body .= '<li>Envio: $' . $envio . '</li>';
             $body .= '<li>Impuesto: $' . $impuestos . '</li>';
             $body .= "</ul>";

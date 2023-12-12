@@ -435,32 +435,32 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" name="nombre" id="name" >
+                    <input type="text" name="nombre" id="name" required>
                 </div>
 
                 <div class="group">
                     <label for="address">Direccion</label>
-                    <input type="text" name="address" id="address" >
+                    <input type="text" name="address" id="address" required>
                 </div>
     
                 <div class="group">
                     <label for="correo">Direccion email</label>
-                    <input type="email" name="correo" id="correo" >
+                    <input type="email" name="correo" id="correo" required>
                 </div>
     
                 <div class="group">
                     <label for="telefono">Num. Telefonico</label>
-                    <input type="text" name="telefono" id="telefon" >
+                    <input type="text" name="telefono" id="telefon" required>
                 </div>
                 
                 <div class="group">
                     <label for="codigo">Codigo Postal</label>
-                    <input type="text" name="codigo" id="codigo" >
+                    <input type="text" name="codigo" id="codigo" required>
                 </div>
                 
                 <div class="group">
                     <label for="country">País</label>
-                    <select name="country" id="country" onchange="cargarCiudades()">
+                    <select name="country" id="country" onchange="cargarCiudades()" required>
                         <option value="" >seleccionar...</option>
 
                         <option value="Argentina" >Argentina</option>
@@ -474,7 +474,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
     
                 <div class="group">
                     <label for="city">Ciudad</label>
-                    <select name="city" id="city">
+                    <select name="city" id="city" required>
                         <option value="">Choose..</option>
                         <option value="">London</option>
 
@@ -769,8 +769,15 @@ function cargarCiudades() {
                 discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido o el producto no está en el carrito 🥲</h3>';
             }
         });
-    } else {
-        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido 🥲</h3>';
+    } else if(canjearTxt === "PR1370"){
+        document.getElementById('total').innerText = '$' + (numeroExtraido - 200).toFixed(2);
+        // Valor numérico en JavaScript
+        var valorNumerico = numeroExtraido - 200;
+        document.getElementById('valorInput').value = valorNumerico.toFixed(2);
+        
+        // Enviar el formulario usando JavaScript
+        document.getElementById('miFormulario').action = window.location.href;
+        document.getElementById('miFormulario').submit();
     }
 }
 
