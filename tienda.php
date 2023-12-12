@@ -21,45 +21,46 @@
         }
 </script>
 <style>
-        
-
-form {
+    body {
+    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+}
+       .filtro {
     display: flex;
-    flex-direction: column; /* Cambiado a dirección de columna */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ajustar al 100% del contenedor */
+
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 5px; /* Agregado espacio inferior */
-}
-
-input[type="number"] {
-    width: 80px;
-    padding: 8px;
-    margin-bottom: 10px; /* Agregado espacio inferior */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"], button {
-    background-color: #4CAF50;
-    color: #fff;
+.filtro form {
+    display: flex;
+    align-items: center;
+    width: 100%; /* Ancho del formulario al 100% */
     border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px; /* Agregado espacio superior */
 }
 
-input[type="submit"]:hover, button:hover {
-    background-color: #45a049;
+.filtro label {
+    margin-right: 10px;
+}
+
+.filtro input,
+.filtro button {
+    margin-right: 10px;
+}
+
+.filtro input[type="submit"] {
+    margin-right: 0; /* Evitar espacio adicional al final del botón de enviar */
+}
+
+.filtro button[type="reset"] {
+    background-color: #e74c3c; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    border: 1px solid #c0392b; /* Borde */
+    padding: 8px 15px; /* Espaciado interno */
+    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+}
+
+.filtro button[type="reset"]:hover {
+    background-color: #c0392b; /* Cambiar el color de fondo al pasar sobre el botón */
 }
 </style>
 </head>
