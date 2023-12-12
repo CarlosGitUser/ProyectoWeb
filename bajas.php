@@ -63,16 +63,7 @@
 </html>
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "tienda";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
+    require "php/conexionBD.php";
 
     $opcion = $_POST["opcion"];
     $valor = $_POST["valor"];

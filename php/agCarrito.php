@@ -6,12 +6,7 @@ if (isset($_SESSION["usuario"])) {
     $nombre_usuario = $_SESSION["usuario"];
 
     // Conectar a la base de datos (ajusta según tu configuración)
-    $conexion = new mysqli('localhost', 'root', '', 'tienda');
-
-    // Verificar la conexión
-    if ($conexion->connect_error) {
-        die("Error de conexión a la base de datos: " . $conexion->connect_error);
-    }
+    require "php/conexionBD.php";
 
     // Consulta para obtener el id_usr a partir del nombre de usuario
     $consulta_id = "SELECT id_usr FROM usuario WHERE nombre = '$nombre_usuario'";

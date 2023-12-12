@@ -1,13 +1,7 @@
 <?php
  if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_FILES["imagen"]) && !(empty($_FILES["imagen"]["tmp_name"]))) {
     // Conexión a la base de datos (debes tener tus propias credenciales aquí)
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "tienda";
-
-    // Crear una conexión
-    $conn = new mysqli($servername, $username, $password, $dbname);
+    require "php/conexionBD.php";
 
     // Verificar la conexión
     if ($conn->connect_error) {

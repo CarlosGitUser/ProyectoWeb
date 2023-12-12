@@ -38,18 +38,7 @@ if (isset($_SESSION['id_usuario'])) {
     $id_usuario = $_SESSION['id_usuario'];
 
     // Establecer la conexión con la base de datos (cambiar estos valores por los correspondientes a tu base de datos)
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "tienda";
-
-    // Crear conexión
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    // Verificar la conexión
-    if ($conn->connect_error) {
-        die("La conexión falló: " . $conn->connect_error);
-    }
+    require "php/conexionBD.php";
 
     $total = 0;
     // Consulta SQL para obtener los productos en el carrito del usuario específico

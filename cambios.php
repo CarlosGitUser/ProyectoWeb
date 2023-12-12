@@ -7,11 +7,7 @@ if ($_SESSION['usuario']!='admin'){
 }
 ?>
 <?php   
-
-$servidor='localhost';
-$cuenta='root';
-$password='';
-$bd='tienda';
+require "php/conexionBD.php";
  
 $_SESSION['id_prod'] = '';
 $_SESSION['nombre_prod'] = '';
@@ -21,12 +17,6 @@ $_SESSION['precio'] = '';
 $_SESSION['imagen'] = '';
 $_SESSION['descuento'] = '';
 $_SESSION['categoria'] = '';
-
-$conexion = new mysqli($servidor,$cuenta,$password,$bd);
-
-if ($conexion->connect_errno){
-    die('Error en la conexion');
-}
 
 if(isset($_POST['submit'])){
     $modificar = $_POST['modificar'];
