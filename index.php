@@ -623,7 +623,7 @@ button{
                 <div class="user">
                     <img src="image/pic-1.png" alt="">
                     <div class="info">
-                        <h3>john deo</h3>
+                        <h3>Juan Padilla</h3>
                         <span>happy client</span>
                     </div>
                 </div>
