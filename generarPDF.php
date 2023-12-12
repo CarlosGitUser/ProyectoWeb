@@ -42,7 +42,7 @@
     $pdf->MultiCell(0, 10, $text);
     
     $pdf->SetXY(10, 140);
-    $pdf->MultiCell(0, 180, $text2);
+    $pdf->MultiCell(0, 80, $text2);
 
     $pdf->Ln(10);
     $pdf->Image('image/Ccodigo_barras.png', 80, 170, 40);
@@ -51,5 +51,5 @@
     $pdf->Cell(0, 10, '____________________________', 0, 1, 'C');
     $pdf->Cell(0, 10, 'Por void zone', 0, 1, 'C');
     $pdf->Output('D', 'recibo.pdf');
-    header("idex.php");
+    header("index.php");
     ?>
