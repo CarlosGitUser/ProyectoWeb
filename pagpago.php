@@ -227,7 +227,14 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
 });
 </script>
 
-<?php 
+<?php
+  use PHPMailer\PHPMailer\PHPMailer;
+  use PHPMailer\PHPMailer\Exception;
+
+  require_once 'PHPMailer.php';
+  require_once 'SMTP.php';
+  require_once 'Exception.php';
+  
   $nombre = $_POST["name"];
   $address = $_POST["address"];
   $correo = $_POST["correo"];
@@ -242,19 +249,77 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     $dbname = "tienda";
     
     $conn = new mysqli($servername, $username, $password, $dbname);
-
+    
     // Verificar la conexión
     if ($conn->connect_error) {
         die("La conexión falló: " . $conn->connect_error);
     }
+    
     $id_usr = $_SESSION["id_usuario"];
     $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usr";
     $result = $conn->query($sql);
-
-    while ($row = $result->fetch_assoc()){
-      echo "Productos: ". $row["id_prod"];
+    
+    $carrito = array(); // Variable para almacenar la información del carrito
+    
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            // Almacena los detalles del producto en el array $carrito
+            $carrito[] = array(
+                'id_prod' => $row["id_prod"],
+                'cantidad' => $row["cantidad"],
+                'monto' => $row["monto"]
+            );
+        }
+    } else {
+        echo "El carrito está vacío";
     }
-  }
+    try {
+        // Configuración del servidor SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.office365.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'Dokkabaelol69@outlook.com';
+        $mail->Password = 'Dokkabae69';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Desactivar verificación del certificado SSL
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+
+        // Configuración del remitente y destinatario
+        $mail->setFrom('Dokkabaelol69@outlook.com');
+        $mail->addAddress($email);
+
+        // Contenido del correo
+        $mail->isHTML(true);
+        $mail->Subject = 'Recibo de compra';
+        $body = "Hola,<br><br>Gracias por tu compra. Aquí están los detalles de tu carrito:<br><br>";
+        if (!empty($carrito)) {
+          $body .= "<ul>";
+          foreach ($carrito as $producto) {
+              $body .= "<li>Producto: " . $producto['id_prod'] . ", Cantidad: " . $producto['cantidad'] . ", Monto: " . $producto['monto'] . "</li>";
+          }
+          $body .= "</ul>";
+      } else {
+          $body .= "El carrito está vacío.";
+      }
+      
+      $mail->Body = $body;
+
+        // Envío del correo
+        $mail->send();
+
+        // echo 'El mensaje ha sido enviado';
+    } catch (Exception $e) {
+        echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
+    }
+    }
 ?>
 </body>
 </html>
