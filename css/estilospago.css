@@ -114,3 +114,7 @@
   .col-xs-5.highlight{
 	border:solid 1px blue;
   }
+  .col-xs-6 .pais{
+	font-weight:bold;
+	background-color: #f62f5e;
+  }

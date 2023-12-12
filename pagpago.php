@@ -45,6 +45,11 @@
       <label for="cardnumber">Número de tarjeta </label>
       <input type="number" id="cardnumber" required>
     </div><!--col-xs-5-->
+    <div class="col-xs-5">
+      <i class="fa fa fa-user"></i>
+      <label for="cupon">cupon:</label>
+      <input type="text" id="cupon" required>
+    </div>
   </div><!--row end-->
   <div class="row row-three">
     <div class="col-xs-2">
@@ -65,7 +70,7 @@
       <i class="fa fa fa-user"></i>
       <label for="pais">Pais:</label>
       <select id="pais">
-        <option selected>Seleccione</option required>
+        <option selected required>Seleccione</option required>
         <option value="Afganistan">Afganistan</option>
         <option value="Albania">Albania</option>
         <option value="Alemania">Alemania</option>
