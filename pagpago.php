@@ -275,6 +275,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     }
     try {
         // Configuración del servidor SMTP
+        $mail = new PHPMailer(true);
         $mail->isSMTP();
         $mail->Host = 'smtp.office365.com';
         $mail->SMTPAuth = true;
@@ -294,7 +295,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
 
         // Configuración del remitente y destinatario
         $mail->setFrom('Dokkabaelol69@outlook.com');
-        $mail->addAddress($email);
+        $mail->addAddress($correo);
 
         // Contenido del correo
         $mail->isHTML(true);
