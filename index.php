@@ -330,18 +330,7 @@ button{
 
     <div class="box-container">
         <?php 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "tienda";
-        
-            // Crear una conexión
-            $conn = new mysqli($servername, $username, $password, $dbname);
-        
-            // Verificar la conexión
-            if ($conn->connect_error) {
-                die("Conexión fallida: " . $conn->connect_error);
-            }
+            require "php/conexionBD.php";
             $sql = "SELECT id_prod, nombre_prod, precio, IF(descuento <> 1, descuento, NULL) AS descuento, imagen, pagina FROM producto LIMIT 12";
 
             $result = $conn->query($sql);

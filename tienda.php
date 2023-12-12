@@ -116,18 +116,7 @@ body {
 
     <div class="box-container">
       <?php 
-            $servername = "localhost";
-            $username = "root";
-            $password = "";
-            $dbname = "tienda";
-        
-            // Crear una conexión
-            $conn = new mysqli($servername, $username, $password, $dbname);
-        
-            // Verificar la conexión
-            if ($conn->connect_error) {
-                die("Conexión fallida: " . $conn->connect_error);
-            }
+            require "php/conexionBD.php";
             $minPrecio = isset($_GET['minPrecio']) ? floatval($_GET['minPrecio']) : 0;
             $maxPrecio = isset($_GET['maxPrecio']) ? floatval($_GET['maxPrecio']) : 0;
             
