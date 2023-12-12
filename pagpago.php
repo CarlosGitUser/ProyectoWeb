@@ -1,4 +1,4 @@
-<?php
+<?php session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -33,6 +33,7 @@
     </style>
 </head>
 <body>
+<form action="<?php echo htmlspecialchars("PHP_SELF")?>" method="post">
 <div id="wrapper">
     <div class="row">
             <div class="col-xs-5">
@@ -71,7 +72,7 @@
             </div>
         </div>
 
-
+  
   <div class="row">
     
     <div class="col-xs-5">
@@ -217,7 +218,9 @@
     <a href="index.php" class="btn btn-dark">volver</a>
     <button class="btn">Finalizar compra</buton>
   </footer>
+  
 </div><!--wrapper end-->
+</form>
 <script>
     $('input[type="checkbox"]').on('click',function(){
 var selected = $(this).parent().parent().parent();    $(selected).toggleClass('highlight');
@@ -231,7 +234,27 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
   $telefono = $_POST["telefono"];
   $codigo = $_POST["codigo"];
   $country = $_POST["country"];
-  $city = $_POST["city"]; 
+  
+  if($_SERVER["PHP_SELF"]){
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "tienda";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("La conexión falló: " . $conn->connect_error);
+    }
+    $id_usr = $_SESSION["id_usuario"];
+    $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usr";
+    $result = $conn->query($sql);
+
+    while ($row = $result->fetch_assoc()){
+      echo "Productos: ". $row["id_prod"];
+    }
+  }
 ?>
 </body>
 </html>

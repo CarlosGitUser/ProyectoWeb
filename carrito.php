@@ -363,27 +363,27 @@ if (isset($_SESSION['id_usuario'])) {
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" name="name" id="name" required>
+                    <input type="text" name="name" id="name" >
                 </div>
 
                 <div class="group">
                     <label for="address">Direccion</label>
-                    <input type="text" name="address" id="address" required>
+                    <input type="text" name="address" id="address" >
                 </div>
     
                 <div class="group">
                     <label for="correo">Direccion email</label>
-                    <input type="email" name="correo" id="correo" required>
+                    <input type="email" name="correo" id="correo" >
                 </div>
     
                 <div class="group">
                     <label for="telefono">Num. Telefonico</label>
-                    <input type="text" name="telefono" id="telefon" required>
+                    <input type="text" name="telefono" id="telefon" >
                 </div>
                 
                 <div class="group">
                     <label for="codigo">Codigo Postal</label>
-                    <input type="text" name="codigo" id="codigo" required>
+                    <input type="text" name="codigo" id="codigo" >
                 </div>
                 
                 <div class="group">
