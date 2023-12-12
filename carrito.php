@@ -303,8 +303,7 @@ if (isset($_SESSION['id_usuario'])) {
     // Verificar si se obtuvieron resultados
     if ($result->num_rows > 0) {
         // Mostrar los productos en el carrito
-        // echo "<table>";
-        // echo "<tr><th>Nombre del Producto</th><th>Unidades</th><th>Costo</th></tr>";
+        
         $total = 0; // Inicializar la variable para almacenar el total de los montos
         while ($row = $result->fetch_assoc()) {
             $id_producto = $row["id_prod"];
@@ -363,20 +362,30 @@ if (isset($_SESSION['id_usuario'])) {
 
             <div class="form">
                 <div class="group">
-                    <label for="name">Nombre</label>
+                    <label for="name">Nombre Completo</label>
                     <input type="text" name="name" id="name">
                 </div>
-    
+
                 <div class="group">
-                    <label for="phone">Numero de telefono</label>
-                    <input type="text" name="phone" id="phone">
-                </div>
-    
-                <div class="group">
-                    <label for="address">Dirección</label>
+                    <label for="address">Direccion</label>
                     <input type="text" name="address" id="address">
                 </div>
     
+                <div class="group">
+                    <label for="correo">Direccion email</label>
+                    <input type="email" name="correo" id="correo">
+                </div>
+    
+                <div class="group">
+                    <label for="telefono">Num. Telefonico</label>
+                    <input type="text" name="telefono" id="telefon">
+                </div>
+                
+                <div class="group">
+                    <label for="codigo">Codigo Postal</label>
+                    <input type="text" name="codigo" id="codigo">
+                </div>
+                
                 <div class="group">
                     <label for="country">País</label>
                     <select name="country" id="country">
@@ -395,15 +404,39 @@ if (isset($_SESSION['id_usuario'])) {
             </div>
             <div class="return">
                 <div class="row">
-                    <div>Cantidad Total</div>
-                    <div class="totalQuantity">70</div>
+                    <?php 
+                    if($total > 1000){
+                        ?>
+                        <div>Envio completamente GRATIS!!</div>
+                        <div class="totalQuantity">$0</div>
+                        <?php
+                    }else{
+                        ?>
+                        <div>Costo de Envio</div>
+                        <div class="totalQuantity">$100</div>
+                        <?php
+                    }
+                    ?>
                 </div>
                 <div class="row">
-                    <div>Precio Total</div>
-                    <div class="totalPrice" id="total">$<?php echo $total; ?></div>
+                <?php 
+                    if($total > 1000){
+                        ?>
+                        <div>Precio Total</div>
+                        <div class="totalPrice" id="total">$<?php echo $total; ?></div>
+                        <?php
+                    }else{
+                        ?>
+                        <div>Precio Total</div>
+                        <div class="totalPrice" id="total">$<?php echo $total + 100; ?></div>
+                        <?php
+                    }
+                    ?>
+                    
+                    
                 </div>
             </div>
-            <button class="buttonCheckout">Verificar</button>
+            <button class="buttonCheckout">Confirmar compra</button>
             </div>
     </div>
 </div>
@@ -413,7 +446,6 @@ if (isset($_SESSION['id_usuario'])) {
     function actualizarCantidad(input, descu) {
         var nuevaCantidad = input.value;
         var idProducto = input.getAttribute('data-id');
-
         // Calcular el nuevo precio con el descuento aplicado
         var nuevoPrecio = nuevaCantidad * descu;
 
@@ -422,16 +454,37 @@ if (isset($_SESSION['id_usuario'])) {
         
         var rows = document.querySelectorAll("input[data-id]");
         var total = 0;
-
         rows.forEach(function(row) {
             var id = row.getAttribute('data-id');
             var cantidad = parseInt(row.value);
             var precioDescuento = parseFloat(document.getElementById('precio_' + id).innerText.replace('$', ''));
             total += precioDescuento;
         });
-
         // Mostrar el total actualizado en la interfaz
         document.getElementById('total').innerText = '$' + total.toFixed(2);
+
+        // Realizar la solicitud AJAX para enviar los datos al servidor
+        var xhr = new XMLHttpRequest();
+        var url = 'php/actualizarCarrito.php'; // El archivo PHP que manejará la actualización
+        var params = 'id_producto=' + idProducto + '&nueva_cantidad=' + nuevaCantidad + '&nuevo_precio=' + nuevoPrecio;
+
+        xhr.open('POST', url, true);
+        xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
+
+        xhr.onreadystatechange = function() {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
+                    // La solicitud fue exitosa, puedes realizar alguna acción si es necesario
+                    console.log('Datos actualizados en la base de datos.');
+                } else {
+                    // Ocurrió un error al procesar la solicitud
+                    console.error('Error al actualizar datos en la base de datos.');
+                }
+            }
+        };
+
+        xhr.send(params);
+
     }
     let iconCart = document.querySelector('.iconCart');
 let cart = document.querySelector('.cart');
