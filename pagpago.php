@@ -263,6 +263,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             // Almacena los detalles del producto en el array $carrito
+            $id_producto = $row['id_prod'];
             $sql_producto = "SELECT nombre_prod, imagen FROM producto WHERE id_prod = $id_producto";
             $result_producto = $conn->query($sql_producto);
             
@@ -310,7 +311,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         if (!empty($carrito)) {
           $body .= "<ul>";
           foreach ($carrito as $producto) {
-              $body .= "<li>Producto: " . $producto['nombre_prod'] . ", Cantidad: " . $producto['cantidad'] . ", Monto: " . $producto['monto'] . "</li> <img src=image/". $producto['imagen'].">";
+              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';
           }
           $body .= "</ul>";
       } else {
