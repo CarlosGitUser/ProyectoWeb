@@ -1,16 +1,5 @@
 <?php 
-     $servername = "localhost";
-     $username = "root";
-     $password = "";
-     $dbname = "tienda";
- 
-     // Crear una conexión
-     $conn = new mysqli($servername, $username, $password, $dbname);
- 
-     // Verificar la conexión
-     if ($conn->connect_error) {
-         die("Conexión fallida: " . $conn->connect_error);
-     }
+     require "php/conexionBD.php";
      $id_pag = $_POST["id"];
      $sql = "SELECT id_prod, nombre_prod, precio, cantidad, descripcion, IF(descuento <> 1, descuento, NULL) AS descuento, imagen, pagina 
      FROM producto
