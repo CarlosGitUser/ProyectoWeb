@@ -359,6 +359,7 @@ if (isset($_SESSION['id_usuario'])) {
 if($_SERVER['REQUEST_METHOD'] === 'POST'){
     echo '<script>
     document.getElementById("cupon").style.display = "none";
+    canjearBtn.innerHTML = "canjeado";
     </script>';
 }else{
     ?>
@@ -367,11 +368,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </form>
         <label for="">Ingrese su cupon</label><input type="text" id="cupon">
         <button id="btn2" onclick="canjearCoupon()">canjear</button>
-        </div>
-    <?php
+        <?php
     
 }
 ?>      
+</div>
 
 
         <form action="pagpago.php" method="post">
@@ -529,10 +530,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                             $_SESSION["total"] = $total + 100;
                     }
                     ?>
-                    <form method="post" action="pagpago.php">
-                        <input type="hidden" name="total" value="<?php echo $_SESSION["total"]; ?>">
-                        <input type="submit" value="Pagar">
-                    </form>
+                    <input type="hidden" name="total" value="<?php echo $_SESSION["total"]; ?>">
+                    <!-- <input type="submit" value="Pagar"> -->
                 </div>
             </div>
             <input type="submit" value="proceder al pago" class="btn btn-dark">
@@ -706,25 +705,51 @@ function cargarCiudades() {
     }
 
     if (canjearTxt === "54ldqwer23") {
-        canjearBtn.innerHTML = "canjeado";
         document.getElementById('total').innerText = '$' + (numeroExtraido - 100).toFixed(2);
         // Valor numérico en JavaScript
         var valorNumerico = numeroExtraido - 100;
-        document.getElementById('valorInput').value = valorNumerico;
+        document.getElementById('valorInput').value = valorNumerico.toFixed(2);
         
         // Enviar el formulario usando JavaScript
         document.getElementById('miFormulario').action = window.location.href;
         document.getElementById('miFormulario').submit();
-
-
-    } else if (canjearTxt === "") {
-
-        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">aun no has pegado el codigo 🤔</h3>';
-         
-    } else if (canjearTxt !== "54ldqwer23") {
-        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">el cupon no es valido 🥲</h3>';
-    } 
+    } else if (canjearTxt === "VoidZon3") {
+        // Verificar si el producto está en el carrito antes de aplicar el descuento
+        var productoId = 2; // Reemplaza con el ID del producto específico
+        verificarCarrito(productoId, function(enCarrito) {
+            if (enCarrito) {
+                // Aplicar descuento solo si el cupón es válido y el producto está en el carrito
+                document.getElementById('total').innerText = '$' + (numeroExtraido - 100).toFixed(2);
+                // Valor numérico en JavaScript
+                var valorNumerico = numeroExtraido - 100;
+                document.getElementById('valorInput').value = valorNumerico.toFixed(2);
+                
+                // Enviar el formulario usando JavaScript
+                document.getElementById('miFormulario').action = window.location.href;
+                document.getElementById('miFormulario').submit();
+            } else {
+                // Mostrar mensaje de cupón no válido si el producto no está en el carrito
+                discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido o el producto no está en el carrito 🥲</h3>';
+            }
+        });
+    } else {
+        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido 🥲</h3>';
     }
+}
+
+// Función para verificar si un producto está en el carrito
+function verificarCarrito(productoId, callback) {
+    // Enviar una solicitud AJAX al script PHP para verificar el carrito
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            callback(response.enCarrito);
+        }
+    };
+    xhr.open("GET", "php/verificarCupon.php?productoId=" + productoId, true);
+    xhr.send();
+}
     
 let listCart = [];
 function checkCart(){
