@@ -3,8 +3,9 @@
 
      session_start();
 
-    if (isset($_SESSION["texto"])) {
+    if (isset($_SESSION["texto"]) && isset($_SESSION["texto2"])) {
         $text = $_SESSION["texto"];
+        $text2 = $_SESSION["texto2"];
     }else $text = "Datos no obtenidos correctamente";
     
     
@@ -39,15 +40,10 @@
     $pdf->SetXY(70, 70);
     $pdf->SetFont('Arial', '', 12,  'ISO-8859-1');
     $pdf->MultiCell(0, 10, $text);
-
-    $pdf->SetXY(70, 70);
-    $pdf->SetFont('Arial', '', 12,  'ISO-8859-1');
-    $pdf->MultiCell(0, 10, $text);
-
+    
     $pdf->SetXY(10, 140);
-    //$pdf->MultiCell(0, 10, $text2);
+    $pdf->MultiCell(0, 180, $text2);
 
-   // Salto de línea
     $pdf->Ln(10);
     $pdf->Image('image/Ccodigo_barras.png', 80, 170, 40);
     $pdf->SetY(-45);

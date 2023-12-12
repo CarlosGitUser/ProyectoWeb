@@ -335,7 +335,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
             } elseif ($country === "España") {
               $impuesto = 0.21;
             } else {
-              $impuesto = 0;
+              $impuesto = 1;
             }
 
             $envio = ($subtotal < 1000) ? 100 : 0;
@@ -373,9 +373,11 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           ";
           $text .="Datos de los productos
           ";
+          $text2 = "Detalles de la compra
+          ";
           foreach ($carrito as $producto) {
-              $text .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
-              $text .="
+              $text2 .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
+              $text2 .="
               ";
               //' <img src="image/'.$producto['imagen'];
               $sub += $producto['monto'];
@@ -383,13 +385,14 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           
             $tot = $_SESSION["total"];
           
-          $text .= "
+          $text2 .= "
           
 
           
           Subtotal: $" . $sub;
-          $text .= "
-          Total:  $$tot";
+          $text2 .= "
+          Impuesto: $".$impuesto."
+          Total:  $".$impuestos;
       
           // Codificar el texto para que pueda ser enviado por URL
       
@@ -397,11 +400,12 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           // Redirigir a la página crearPDF.php con el contenido de $text
           
       } else {
-          $text .= "El carrito está vacío.";
+          $text2 .= "El carrito está vacío.";
       }
       
      
       $_SESSION["texto"] = $text;
+      $_SESSION["texto2"] = $text2;
        
 
      
