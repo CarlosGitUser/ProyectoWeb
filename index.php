@@ -439,9 +439,9 @@ button{
     </div>
 
     <div class="content">
-        <span>tendencias para nuevas temporadas!</span>
+        <span>Tendencias para nuevas temporadas!</span>
         <h3>La mejor colección de invierno</h3>
-        <p>rebajas hasta el 50% de descuento</p>
+        <p>Rebajas hasta el 50% de descuento</p>
         <a href="#" class="btn">Comprar ahora</a>
     </div>
 
