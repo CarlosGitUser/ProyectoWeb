@@ -407,7 +407,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <div class="group">
                     <label for="country">País</label>
                     <select name="country" id="country" onchange="cargarCiudades()">
-                       
+                        <option value="" >seleccionar...</option>
+
                         <option value="Argentina" >Argentina</option>
                        
                         <option value="España">España</option>
