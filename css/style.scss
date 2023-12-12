@@ -6,7 +6,6 @@
     box-sizing: border-box;
     outline: none; border:none;
     text-decoration: none;
-    text-transform: capitalize;
     transition: .2s linear;
 }
 
@@ -147,7 +146,6 @@ section{
             height:100%;
             width:100%;
             font-size: 1.6rem;
-            text-transform: none;
             color:$black;
             padding:0 1.2rem;
         }
@@ -696,7 +694,7 @@ section{
                 padding:1rem 1.2rem;
                 font-size: 1.6rem;
                 color:$black;
-                text-transform: none;
+               
                 margin:.7rem 0;
             }
 

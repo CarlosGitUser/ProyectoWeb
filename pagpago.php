@@ -1,5 +1,4 @@
-<?php
-
+<?php session_start();
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -9,35 +8,73 @@
     <title>Pagina de pago</title>
     <link rel="stylesheet" href="css/estilospago.css">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
+    <style>
+      #oxxo {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+#oxxo-content {
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+#oxxo img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-xs-5 {
+    max-width: 30%;
+      }
+    </style>
 </head>
 <body>
+<form action="<?php echo htmlspecialchars("PHP_SELF")?>" method="post">
 <div id="wrapper">
+    <div class="row">
+            <div class="col-xs-5">
+                <div id="cards">
+                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+                </div><!--#cards end-->
+                <div class="form-check">
+                    <label class="form-check-label" for='card'>
+                        <input id="card" class="form-check-input" type="checkbox" value="">
+                        Paga $150.00 con tarjeta de crédito
+                    </label>
+                </div>
+            </div><!--col-xs-5 end-->
+            <div class="col-xs-5">
+                <div id="cards">
+                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+                </div><!--#cards end-->
+                <div class="form-check">
+                    <label class="form-check-label" for='paypal'>
+                        <input id="paypal" class="form-check-input" type="checkbox" value="">
+                        Pagaon  $150.00 cPayPal
+                    </label>
+                </div>
+            </div>
+            <div class="col-xs-5">
+                <div id="oxxo">
+                    <div id="oxxo-content">
+                        <img src="image/oxxologo.png">
+                        <label class="form-check-label" for='oxxo'>
+                            <input id="oxxo" class="form-check-input" type="checkbox" value="">
+                            Paga $150.00 con OXXO
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+  
   <div class="row">
-    <div class="col-xs-5">
-      <div id="cards">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
-      </div><!--#cards end-->
-      <div class="form-check">
-  <label class="form-check-label" for='card'>
-    <input id="card" class="form-check-input" type="checkbox" value="">
-    Paga $150.00 con tarjeta de crédito
-  </label>
-</div>
-    </div><!--col-xs-5 end-->
-    <div class="col-xs-5">
-      <div id="cards">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
-      </div><!--#cards end-->
-      <div class="form-check">
-  <label class="form-check-label" for='paypal'>
-    <input id="paypal" class="form-check-input" type="checkbox" value="" >
-    Paga $150.00 con PayPal
-  </label>
-</div>
-    </div><!--col-xs-5 end-->
-  </div><!--row end-->
-  <div class="row">
+    
     <div class="col-xs-5">
       <i class="fa fa fa-user"></i>
       <label for="cardholder">Nombre</label>
@@ -178,14 +215,46 @@
     </select>
     </div>
   <footer>
-    <button class="btn">Atrás</button>
-    <button class="btn">Próximo paso</buton>
+    <a href="index.php" class="btn btn-dark">volver</a>
+    <button class="btn">Finalizar compra</buton>
   </footer>
+  
 </div><!--wrapper end-->
+</form>
 <script>
     $('input[type="checkbox"]').on('click',function(){
 var selected = $(this).parent().parent().parent();    $(selected).toggleClass('highlight');
 });
 </script>
+
+<?php 
+  $nombre = $_POST["name"];
+  $address = $_POST["address"];
+  $correo = $_POST["correo"];
+  $telefono = $_POST["telefono"];
+  $codigo = $_POST["codigo"];
+  $country = $_POST["country"];
+  
+  if($_SERVER["PHP_SELF"]){
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "tienda";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+
+    // Verificar la conexión
+    if ($conn->connect_error) {
+        die("La conexión falló: " . $conn->connect_error);
+    }
+    $id_usr = $_SESSION["id_usuario"];
+    $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usr";
+    $result = $conn->query($sql);
+
+    while ($row = $result->fetch_assoc()){
+      echo "Productos: ". $row["id_prod"];
+    }
+  }
+?>
 </body>
 </html>

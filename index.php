@@ -439,9 +439,9 @@ button{
     </div>
 
     <div class="content">
-        <span>tendencias para nuevas temporadas!</span>
+        <span>Tendencias para nuevas temporadas!</span>
         <h3>La mejor colección de invierno</h3>
-        <p>rebajas hasta el 50% de descuento</p>
+        <p>Rebajas hasta el 50% de descuento</p>
         <a href="#" class="btn">Comprar ahora</a>
     </div>
 
@@ -460,12 +460,7 @@ button{
         <div class="swiper-wrapper">
 
             <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
+                
                 <div class="image">
                 <img src="image/peli6.jpg" alt="">
             </div>
@@ -488,12 +483,7 @@ button{
             </div>
 
             <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
+                
                 <div class="image">
                     <img src="image/figu1.jpeg" alt="">
                 </div>
@@ -516,12 +506,7 @@ button{
             </div>
 
             <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
+                
                 <div class="image">
                     <img src="image/figu2.jpg" alt="">
                 </div>
@@ -544,12 +529,7 @@ button{
             </div>
 
             <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
+                
                 <div class="image">
                     <img src="image/figu6.jpg" alt="">
                 </div>
@@ -572,12 +552,7 @@ button{
             </div>
 
             <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
+                
                 <div class="image">
                     <img src="image/peli14.jpg" alt="">
                 </div>
@@ -600,12 +575,7 @@ button{
             </div>
 
             <div class="swiper-slide slide">
-                <div class="icons">
-                    <a href="#" class="fas fa-shopping-cart"></a>
-                    <a href="#" class="fas fa-heart"></a>
-                    <a href="#" class="fas fa-search"></a>
-                    <a href="#" class="fas fa-eye"></a>
-                </div>
+                
                 <div class="image">
                     <img src="image/peli21.jpg" alt="">
                 </div>

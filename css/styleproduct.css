@@ -8,7 +8,7 @@
   outline: none;
   border: none;
   text-decoration: none;
-  text-transform: capitalize;
+
   -webkit-transition: .2s linear;
   transition: .2s linear;
 
@@ -152,7 +152,6 @@ html {
     height: 100%;
     width: 100%;
     font-size: 1.6rem;
-    text-transform: none;
     color: #130f40;
     padding: 0 1.2rem;
   }

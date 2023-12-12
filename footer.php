@@ -1,3 +1,67 @@
+<?php
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require_once 'PHPMailer.php';
+require_once 'SMTP.php';
+require_once 'Exception.php';
+
+// function generarCupon($length = 6) {
+//     $caracteres = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+//     $longitudCaracteres = strlen($caracteres);
+//     $cupon = '';
+//     for ($i = 0; $i < $length; $i++) {
+//         $cupon .= $caracteres[rand(0, $longitudCaracteres - 1)];
+//     }
+//     return $cupon;
+// }
+
+// $cuponfinal = generarCupon();
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+
+    // Configuración de PHPMailer
+    $mail = new PHPMailer(true);
+
+    try {
+        // Configuración del servidor SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.office365.com';
+        $mail->SMTPAuth = true;
+        $mail->Username = 'Dokkabaelol69@outlook.com';
+        $mail->Password = 'Dokkabae69';
+        $mail->SMTPSecure = 'tls';
+        $mail->Port = 587;
+
+        // Desactivar verificación del certificado SSL
+        $mail->SMTPOptions = array(
+            'ssl' => array(
+                'verify_peer' => false,
+                'verify_peer_name' => false,
+                'allow_self_signed' => true
+            )
+        );
+
+        // Configuración del remitente y destinatario
+        $mail->setFrom('Dokkabaelol69@outlook.com');
+        $mail->addAddress($email);
+
+        // Contenido del correo
+        $mail->isHTML(true);
+        $mail->Subject = 'Respuesta a tu solicitud';
+        $mail->Body = "Hola,<br><br>Gracias por suscribirte a nuestra pagina. Aqui tienes un cupon de descuento como cortesia: <br><br>Cupon de descuento: <br><br>PR13T0";
+
+        // Envío del correo
+        $mail->send();
+
+        // echo 'El mensaje ha sido enviado';
+    } catch (Exception $e) {
+        echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -55,7 +119,7 @@
         <!-- Formulario de suscripción -->
         <div class="box">
             <h3>Suscríbete</h3>
-            <form action="#" method="post">
+            <form method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
                 <input type="email" name="email" placeholder="Ingresa tu correo" required>
                 <button type="submit">Suscribirse</button>
             </form>
@@ -70,7 +134,7 @@
         <a href="https://www.instagram.com/thevoidzon3/" class="fab fa-instagram"></a>
     </div>
 
-    <div class="credit"> &copy; copyright @ 2023 by <span><a href="">sitio de películas y figuras de acción</a></span> </div>
+    <div class="credit"> &copy; copyright @ 2023 by <span><a href="">Sitio de Películas y Figuras de acción</a></span> </div>
     
 </section>
 
