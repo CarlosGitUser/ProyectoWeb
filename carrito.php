@@ -9,7 +9,7 @@ include "header.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <style>
-body{
+        body{
     font-family: monospace;
     overflow-x: hidden;
     font-synthesis: 15px;
@@ -307,7 +307,7 @@ if (isset($_SESSION['id_usuario'])) {
         $total = 0; // Inicializar la variable para almacenar el total de los montos
         while ($row = $result->fetch_assoc()) {
             $id_producto = $row["id_prod"];
-           
+            
             // Consulta adicional para obtener el nombre, precio y descuento del producto basado en el ID del producto en el carrito
             $sql_producto = "SELECT nombre_prod, precio, descuento, imagen FROM producto WHERE id_prod = $id_producto";
             $result_producto = $conn->query($sql_producto);
@@ -331,7 +331,7 @@ if (isset($_SESSION['id_usuario'])) {
                             </div>
                             <div class="quantity"><input type='number' min='1' value='<?php echo $row["cantidad"]; ?>' data-id='<?php echo $row["id_prod"]; ?>' onchange='actualizarCantidad(this, <?php echo $precio_descuento; ?>)'></div>
                             <div class="returnPrice"><?php echo "<p id='precio_".$row["id_prod"]."'>$".$row["monto"]."</p>"; ?> <span><a href="php/eliminarCarrito.php?id_prod= <?php echo $row["id_prod"]; ?> " class="fas fa-trash"></a></span></div>
-                            
+
 
                         </div>
 
@@ -354,8 +354,8 @@ if (isset($_SESSION['id_usuario'])) {
     exit();
 }
 ?>
+        <label for="">Ingrese su cupon</label><input type="text">
 
-            
         </div>
 
 
@@ -390,9 +390,109 @@ if (isset($_SESSION['id_usuario'])) {
                 
                 <div class="group">
                     <label for="country">País</label>
-                    <select name="country" id="country">
+                    <select name="country" id="country" onchange="cargarCiudades()">
                         <option value="">Escoje..</option>
-                        <option value="">Kingdom</option>
+                        <option value="Afganistan">Afganistan</option>
+                        <option value="Albania">Albania</option>
+                        <option value="Alemania">Alemania</option>
+                        <option value="Andorra">Andorra</option>
+                        <option value="Angola">Angola</option>
+                        <option value="ArabiaSaudi">Arabia Saudi</option>
+                        <option value="Argelia">Argelia</option>
+                        <option value="Argentina" >Argentina</option>
+                        <option value="Armenia">Armenia</option>
+                        <option value="Aruba">Aruba</option>
+                        <option value="Australia">Australia</option>
+                        <option value="Austria">Austria</option>
+                        <option value="Azerbaiyan">Azerbaiyan</option>
+                        <option value="Bahamas">Bahamas</option>
+                        <option value="Bangladesh">Bangladesh</option>
+                        <option value="Barbados">Barbados</option>
+                        <option value="Belgica">Belgica</option>
+                        <option value="Belice">Belice</option>
+                        <option value="Benin">Benin</option>
+                        <option value="Bielorrusia">Bielorrusia</option>
+                        <option value="Bolivia">Bolivia</option>
+                        <option value="Botsuana">Botsuana</option>
+                        <option value="Brasil">Brasil</option>
+                        <option value="Bulgaria">Bulgaria</option>
+                        <option value="BurkinaFaso">Burkina Faso</option>
+                        <option value="Burundi">Burundi</option>
+                        <option value="CaboVerde">Cabo Verde</option>
+                        <option value="Camboya">Camboya</option>
+                        <option value="Camerun">Camerun</option>
+                        <option value="Canada">Canada</option>
+                        <option value="Chile">Chile</option>
+                        <option value="China">China</option>
+                        <option value="Colombia">Colombia</option>
+                        <option value="Congo">Congo</option>
+                        <option value="CoreadelSur">Corea del Sur</option>
+                        <option value="CostaRica">Costa Rica</option>
+                        <option value="Croacia">Croacia</option>
+                        <option value="Cuba">Cuba</option>
+                        <option value="Dinamarca">Dinamarca</option>
+                        <option value="EAU">Emiratos Arabas Unidos</option>
+                        <option value="Ecuador">Ecuador</option>
+                        <option value="ElSalvador">El Salvador</option>
+                        <option value="EU">Estados Unidos</option>
+                        <option value="España">España</option>
+                        <option value="Francia">Francia</option>
+                        <option value="Grecia">Grecia</option>
+                        <option value="Guatemala">Guatemala</option>
+                        <option value="Honduras">Honduras</option>
+                        <option value="HongKong">Hong Kong</option>
+                        <option value="Hungria">Hungria</option>
+                        <option value="Holanda">Holanda</option>
+                        <option value="India">India</option>
+                        <option value="Irak">Irak</option>
+                        <option value="Iran">Iran</option>
+                        <option value="Irlanda">Irlanda</option>
+                        <option value="Islandia">Isalndia</option>
+                        <option value="Italia">Italia</option>
+                        <option value="Japon">Japon</option>
+                        <option value="Libano">Libano</option>
+                        <option value="Luxemburgo">Luxemburgo</option>
+                        <option value="Macedonia">Macedonia</option>
+                        <option value="Malasia">Malasia</option>
+                        <option value="Marruecos">Marruecos</option>
+                        <option value="Mexico">Mexico</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Mongolia">Mongolia</option>
+                        <option value="Montenegro">Montenegro</option>
+                        <option value="Noruega">Noruega</option>
+                        <option value="NuevaZelanda">Nueva Zelanda</option>
+                        <option value="PaisesBajos">Paises Bajos</option>
+                        <option value="Pakistan">Pakistan</option>
+                        <option value="Palestina">Palestina</option>
+                        <option value="Panama">Panama</option>
+                        <option value="Paraguay">Paraguay</option>
+                        <option value="Peru">Peru</option>
+                        <option value="Polonia">Polonia</option>
+                        <option value="Portugal">Portugal</option>
+                        <option value="Qatar">Qatar</option>
+                        <option value="RepublicaDominicana">República Dominicana</option>
+                        <option value="Ruanda">Ruanda</option>
+                        <option value="Rumania">Rumania</option>
+                        <option value="Rusia">Rusia</option>
+                        <option value="SaharaOccidental">Sahara Occidental</option>
+                        <option value="SudAfrica">Sudáfrica</option>
+                        <option value="SudVietnam">Sud Vietnam</option>
+                        <option value="Suiza">Suiza</option>
+                        <option value="Tailandia">Tailandia</option>
+                        <option value="Taiwan">Taiwán</option>
+                        <option value="Tanzania">Tanzania</option>
+                        <option value="TimorOriental">Timor Oriental</option>
+                        <option value="Togo">Togo</option>
+                        <option value="Tonga">Tonga</option>
+                        <option value="TrinidadYTobago">Trinidad y Tobago</option>
+                        <option value="Tunez">Túnez</option>
+                        <option value="Uganda">Uganda</option>
+                        <option value="Uruguay">Uruguay</option>
+                        <option value="Venezuela">Venezuela</option>
+                        <option value="Vietnam">Vietnam</option>
+                        <option value="Yemen">Yemen</option>
+                        <option value="Zambia">Zambia</option>
+                        <option value="Zimbabue">Zimbabue</option>
                     </select>
                 </div>
     
@@ -401,6 +501,7 @@ if (isset($_SESSION['id_usuario'])) {
                     <select name="city" id="city">
                         <option value="">Choose..</option>
                         <option value="">London</option>
+
                     </select>
                 </div>
             </div>
@@ -421,6 +522,11 @@ if (isset($_SESSION['id_usuario'])) {
                     ?>
                 </div>
                 <div class="row">
+                    <div>Impuesto</div>
+                    <div class="totalTax" id="impuesto"></div>
+                    
+                </div>
+                <div class="row">
                 <?php 
                     if($total > 1000){
                         ?>
@@ -439,7 +545,7 @@ if (isset($_SESSION['id_usuario'])) {
                     
                 </div>
             </div>
-           <input type="submit" value="proceder al pago" class="btn btn-dark">
+            <input type="submit" value="proceder al pago" class="btn btn-dark">
             </div>
             </form>
     </div>
@@ -543,6 +649,57 @@ function addDataToHTML(){
     }
 }
 //use cookie so the cart doesn't get lost on refresh page
+
+function cargarCiudades() {
+        // Obtén el elemento del país y la ciudad
+        var selectPais = document.getElementById('country');
+        var selectCiudad = document.getElementById('city');
+
+        // Obtén el valor seleccionado del país
+        var paisSeleccionado = selectPais.options[selectPais.selectedIndex].value;
+        var total = <?php echo $total; ?>;
+        if(total < 1000){
+            total = total + 100;
+        }
+        // Limpia las opciones actuales de la ciudad
+        selectCiudad.innerHTML = '';
+
+        // Añade nuevas opciones de ciudad según el país seleccionado
+        switch (paisSeleccionado) {
+            case 'Argentina':
+                agregarCiudad(selectCiudad, 'Buenos Aires');
+                agregarCiudad(selectCiudad, 'Córdoba');
+                impuesto = 0.30;
+                document.getElementById('impuesto').innerText = '$' + (total * impuesto).toFixed(2);
+                document.getElementById('total').innerText = '$' + (total * (impuesto + 1)).toFixed(2);
+                // Agrega más ciudades según sea necesario
+                break;
+            case 'España':
+                agregarCiudad(selectCiudad, 'Madrid');
+                agregarCiudad(selectCiudad, 'Barcelona');
+                impuesto = 0.21;
+                document.getElementById('impuesto').innerText = '$' + (total * impuesto).toFixed(2);
+                document.getElementById('total').innerText = '$' + (total * (impuesto + 1)).toFixed(2);
+                // Agrega más ciudades según sea necesario
+                break;
+            case 'Mexico':
+                agregarCiudad(selectCiudad, 'Ciudad de México');
+                agregarCiudad(selectCiudad, 'Guadalajara');
+                agregarCiudad(selectCiudad, 'Aguascalientes');
+                impuesto = 0.16; 
+                document.getElementById('impuesto').innerText = '$' + (total * impuesto).toFixed(2);
+                document.getElementById('total').innerText = '$' + (total * (impuesto + 1)).toFixed(2);
+                // Agrega más ciudades según sea necesario
+                break;
+        }
+    }
+
+    function agregarCiudad(select, ciudad) {
+        var opcion = document.createElement('option');
+        opcion.value = ciudad;
+        opcion.text = ciudad;
+        select.add(opcion);
+    }
 
 
 let listCart = [];
