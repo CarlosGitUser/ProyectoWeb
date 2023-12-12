@@ -1,4 +1,6 @@
-<?php session_start();
+<?php 
+  session_start();
+  require('php/fpdf.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -236,6 +238,10 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
   $country = $_POST["country"];
   
   if($_SERVER["PHP_SELF"]){
+    
+    $pdf = new FPDF();
+    $pdf->AddPage();
+
     $servername = "localhost";
     $username = "root";
     $password = "";
@@ -248,13 +254,22 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         die("La conexión falló: " . $conn->connect_error);
     }
     $id_usr = $_SESSION["id_usuario"];
+
+    // Consulta para obtener todos los productos en el carrito para el usuario
     $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usr";
     $result = $conn->query($sql);
-
-    while ($row = $result->fetch_assoc()){
-      echo "Productos: ". $row["id_prod"];
+    
+    // Preparación del pdf
+    
+    // Consulta para obtener cada producto del carrito
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            
+            }
+        }
     }
-  }
+    $pdf->Output('D', 'datos_usuario.pdf');
 ?>
+
 </body>
 </html>
