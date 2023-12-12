@@ -365,7 +365,7 @@ if (isset($_SESSION['id_usuario'])) {
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" name="name" id="name" >
+                    <input type="text" name="nombre" id="name" >
                 </div>
 
                 <div class="group">
