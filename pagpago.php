@@ -1,3 +1,5 @@
+<?php
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +50,38 @@
         </div><!--row end-->
   <div class="row">
     <div class="col-xs-5">
+      <div id="cards">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+      </div><!--#cards end-->
+      <div class="form-check">
+  <label class="form-check-label" for='card'>
+    <input id="card" class="form-check-input" type="checkbox" value="">
+    Paga $150.00 con tarjeta de crédito
+  </label>
+  
+</div>
+    
+    </div><!--col-xs-5 end-->
+    
+    <div class="col-xs-5">
+      <div id="cards">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+      </div><!--#cards end-->
+      <div class="form-check">
+  <label class="form-check-label" for='paypal'>
+    <input id="paypal" class="form-check-input" type="checkbox" value="" >
+    Paga $150.00 con PayPal
+  </label>
+</div>
+    </div><!--col-xs-5 end-->
+    
+  </div><!--row end-->
+  
+>>>>>>> 7f8d3b106cdd7af7823eba8e8239b251277e69dc
+  <div class="row">
+    
+    <div class="col-xs-5">
       <i class="fa fa fa-user"></i>
       <label for="cardholder">Nombre</label>
       <input type="text" id="cardholder" required>
@@ -57,6 +91,11 @@
       <label for="cardnumber">Número de tarjeta </label>
       <input type="number" id="cardnumber" required>
     </div><!--col-xs-5-->
+    <div class="col-xs-5">
+      <i class="fa fa fa-user"></i>
+      <label for="cupon">cupon:</label>
+      <input type="text" id="cupon" required>
+    </div>
   </div><!--row end-->
   <div class="row row-three">
     <div class="col-xs-2">
@@ -77,7 +116,7 @@
       <i class="fa fa fa-user"></i>
       <label for="pais">Pais:</label>
       <select id="pais">
-        <option selected>Seleccione</option required>
+        <option selected required>Seleccione</option required>
         <option value="Afganistan">Afganistan</option>
         <option value="Albania">Albania</option>
         <option value="Alemania">Alemania</option>

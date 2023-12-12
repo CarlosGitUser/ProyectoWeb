@@ -59,5 +59,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 } else {
     // La solicitud no es de tipo POST
     echo 'Error: Método de solicitud no válido.';
+
 }
 ?>
