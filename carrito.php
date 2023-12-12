@@ -407,70 +407,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <div class="group">
                     <label for="country">País</label>
                     <select name="country" id="country" onchange="cargarCiudades()">
-                        <option value="">Escoje..</option>
-                        <option value="Afganistan">Afganistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Alemania">Alemania</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="ArabiaSaudi">Arabia Saudi</option>
-                        <option value="Argelia">Argelia</option>
+                       
                         <option value="Argentina" >Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaiyan">Azerbaiyan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belgica">Belgica</option>
-                        <option value="Belice">Belice</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bielorrusia">Bielorrusia</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Botsuana">Botsuana</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="BurkinaFaso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="CaboVerde">Cabo Verde</option>
-                        <option value="Camboya">Camboya</option>
-                        <option value="Camerun">Camerun</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Congo">Congo</option>
-                        <option value="CoreadelSur">Corea del Sur</option>
-                        <option value="CostaRica">Costa Rica</option>
-                        <option value="Croacia">Croacia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Dinamarca">Dinamarca</option>
-                        <option value="EAU">Emiratos Arabas Unidos</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="ElSalvador">El Salvador</option>
-                        <option value="EU">Estados Unidos</option>
+                       
                         <option value="España">España</option>
-                        <option value="Francia">Francia</option>
-                        <option value="Grecia">Grecia</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="HongKong">Hong Kong</option>
-                        <option value="Hungria">Hungria</option>
-                        <option value="Holanda">Holanda</option>
-                        <option value="India">India</option>
-                        <option value="Irak">Irak</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Irlanda">Irlanda</option>
-                        <option value="Islandia">Isalndia</option>
-                        <option value="Italia">Italia</option>
-                        <option value="Japon">Japon</option>
-                        <option value="Libano">Libano</option>
-                        <option value="Luxemburgo">Luxemburgo</option>
-                        <option value="Macedonia">Macedonia</option>
-                        <option value="Malasia">Malasia</option>
-                        <option value="Marruecos">Marruecos</option>
+                       
                         <option value="Mexico">Mexico</option>
                         
                     </select>

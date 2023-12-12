@@ -343,14 +343,19 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         //configuracion del pdf
          
           
-
+        $sub = 0;
         if (!empty($carrito)) {
           $text = 'Recibo de compras de ' . $nombre;
           $text .= "
           Datos del usuario: 
           Correo: $correo
           Telefono: $telefono
+          Direccion: $address
 
+          ";
+          if($_SESSION["total"]>1000){
+            $text .= "Envio GRATIS";
+          }else $text .= "Gastos de envio: 100
           ";
           $text .="Datos de los productos
           ";
@@ -359,11 +364,18 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               $text .="
               ";
               //' <img src="image/'.$producto['imagen'];
-              $subtotal += $producto['monto'];
+              $sub += $producto['monto'];
           }
+          
+            $tot = $_SESSION["total"];
+          
           $text .= "
           
-          Subtotal: $" . $subtotal;
+
+          
+          Subtotal: $" . $sub;
+          $text .= "
+          Total:  $$tot";
       
           // Codificar el texto para que pueda ser enviado por URL
       
