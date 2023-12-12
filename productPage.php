@@ -111,7 +111,7 @@
 							<i class="fa-solid fa-chevron-down" id="decrement"></i>
 						</div>
 					</div>
-					<button class="btn-add-to-cart" onclick="addToCart(<?php echo $row['id_prod']; ?>, <?php echo $row['precio'] * $row['descuento']; ?>)">
+					<button class="btn-add-to-cart" onclick="addToCart(<?php echo $row['id_prod']; ?>, <?php echo $row['precio'] * $row['descuento']; ?>, <?php echo $row['cantidad']; ?>)">
 						<i class="fa-solid fa-plus"></i>
 						Añadir al carrito
 					</button>
@@ -156,12 +156,15 @@
     <script src="https://kit.fontawesome.com/e85f6f4e46.js" crossorigin="anonymous"></script>
     <script>
 
-        function addToCart(id_prod, precio) {
+        function addToCart(id_prod, precio, cantTot) {
             // Obtén los valores necesarios
             var cantidad = document.getElementById('cantidad').value;
-
-            // Redirige a agCarrito.php con los parámetros
-            window.location.href = "php/agCarrito.php?id_prod=" + id_prod + "&precio=" + precio + "&cantidad=" + cantidad;
+            if(cantidad <= cantTot && cantTot != 0){
+                // Redirige a agCarrito.php con los parámetros
+                window.location.href = "php/agCarrito.php?id_prod=" + id_prod + "&precio=" + precio + "&cantidad=" + cantidad;
+            }else{
+                alert('La cantidad solicitada supera la disponibilidad del producto.');
+            }
         }
 
     </script>

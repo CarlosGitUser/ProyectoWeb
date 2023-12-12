@@ -21,46 +21,60 @@
         }
 </script>
 <style>
-        
+body {
+    margin: 0;
+}
 
-form {
+.filtro {
     display: flex;
-    flex-direction: column; /* Cambiado a dirección de columna */
+    justify-content: space-between;
     align-items: center;
-    width: 100%; /* Ajustar al 100% del contenedor */
 }
 
-label {
-    font-weight: bold;
-    margin-bottom: 5px; /* Agregado espacio inferior */
-}
-
-input[type="number"] {
-    width: 80px;
-    padding: 8px;
-    margin-bottom: 10px; /* Agregado espacio inferior */
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    box-sizing: border-box;
-}
-
-input[type="submit"], button {
-    background-color: #4CAF50;
-    color: #fff;
+.filtro form {
+    display: flex;
+    align-items: center;
+    max-width: 100%;
     border: none;
-    padding: 10px 20px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    border-radius: 4px;
-    cursor: pointer;
-    margin-top: 10px; /* Agregado espacio superior */
 }
 
-input[type="submit"]:hover, button:hover {
-    background-color: #45a049;
+.filtro label {
+    margin-right: 10px;
 }
+
+
+.filtro input,
+.filtro button {
+    margin-right: 10px;
+    padding: 10px 15px; /* Ajuste del espaciado interno para que sea un poco más grande */
+    border: 1px solid #3498db; /* Borde predeterminado */
+    background-color: #3498db; /* Color de fondo predeterminado */
+    color: #fff; /* Color del texto predeterminado */
+    cursor: pointer;
+}
+
+.filtro input[type="submit"],
+.filtro button[type="reset"] {
+    transition: background-color 0.3s ease; /* Efecto de transición para suavizar el cambio de color */
+}
+
+.filtro input[type="submit"]:hover,
+.filtro button[type="reset"]:hover {
+    background-color: #2980b9;
+    border: 1px solid #2980b9; /* Ajuste del borde al pasar el mouse */
+}
+
+.filtro button[type="reset"] {
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c; /* Ajuste del borde predeterminado para el botón de reset */
+}
+
+.filtro button[type="reset"]:hover {
+    background-color: #c0392b;
+    border: 1px solid #c0392b; /* Ajuste del borde al pasar el mouse para el botón de reset */
+}
+
+
 </style>
 </head>
 
@@ -89,10 +103,11 @@ input[type="submit"]:hover, button:hover {
     <div class="filtro">
         <form action="" method="get">
             <label for="minPrecio">Filtrar</label>
-            <input type="number" placeholder="Mínimo" name="minPrecio" id="minPrecio">
+            <input style="background-color: white; color: black;" type="number" placeholder="Mínimo" name="minPrecio" id="minPrecio">
             <label for="maxPrecio">hasta</label>
-            <input type="number" placeholder="Máximo" name="maxPrecio" id="maxPrecio">
-            <input type="submit" value="Filtrar">
+            <input style="background-color: white; color: black;" type="number" placeholder="Máximo" name="maxPrecio" id="maxPrecio">
+            <input type="submit" value="Filtrar"> 
+
             <button type="button" onclick="eliminarValoresGET()">Reset</button>
         </form>
     </div>
