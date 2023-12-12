@@ -10,7 +10,7 @@ include "header.php";
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Carrito</title>
     <style>
-body{
+        body{
     font-family: monospace;
     overflow-x: hidden;
     font-synthesis: 15px;
@@ -309,7 +309,7 @@ if (isset($_SESSION['id_usuario'])) {
         $total = 0; // Inicializar la variable para almacenar el total de los montos
         while ($row = $result->fetch_assoc()) {
             $id_producto = $row["id_prod"];
-           
+            
             // Consulta adicional para obtener el nombre, precio y descuento del producto basado en el ID del producto en el carrito
             $sql_producto = "SELECT nombre_prod, precio, descuento, imagen FROM producto WHERE id_prod = $id_producto";
             $result_producto = $conn->query($sql_producto);
@@ -333,7 +333,7 @@ if (isset($_SESSION['id_usuario'])) {
                             </div>
                             <div class="quantity"><input type='number' min='1' value='<?php echo $row["cantidad"]; ?>' data-id='<?php echo $row["id_prod"]; ?>' onchange='actualizarCantidad(this, <?php echo $precio_descuento; ?>)'></div>
                             <div class="returnPrice"><?php echo "<p id='precio_".$row["id_prod"]."'>$".$row["monto"]."</p>"; ?> <span><a href="php/eliminarCarrito.php?id_prod= <?php echo $row["id_prod"]; ?> " class="fas fa-trash"></a></span></div>
-                            
+
 
                         </div>
 
@@ -480,7 +480,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     <select name="city" id="city">
                         <option value="">Choose..</option>
                         <option value="">London</option>
-                        
+
                     </select>
                 </div>
             </div>
@@ -533,7 +533,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                     
                 </div>
             </div>
-           <input type="submit" value="proceder al pago" class="btn btn-dark">
+            <input type="submit" value="proceder al pago" class="btn btn-dark">
             </div>
             </form>
     </div>
@@ -638,7 +638,7 @@ function addDataToHTML(){
 }
 //use cookie so the cart doesn't get lost on refresh page
 
-    function cargarCiudades() {
+function cargarCiudades() {
         // Obtén el elemento del país y la ciudad
         var selectPais = document.getElementById('country');
         var selectCiudad = document.getElementById('city');

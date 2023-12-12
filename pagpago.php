@@ -316,16 +316,20 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = 'Recibo de compra';
-        $body = "Hola,<br><br>Gracias por tu compra. Aqui estan los detalles de tu carrito:<br><br>";
+        $body = "Hola,<br><br>Gracias por tu compra. Aquí están los detalles de tu carrito:<br><br>";
+
+        $subtotal = 0;
+
         if (!empty($carrito)) {
-          $body .= "<ul>";
-          foreach ($carrito as $producto) {
-              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';
+            $body .= "<ul>";
+            foreach ($carrito as $producto) {
+              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                $subtotal += $producto['monto'];
+            }
+            $body .= "</ul>";
+            $body .= "<br>Subtotal: $" . $subtotal;
+          } else {
+             $body .= "El carrito está vacío.";
           }
-          $body .= "</ul>";
-      } else {
-          $body .= "El carrito está vacío.";
-      }
       
       $mail->Body = $body;
 
