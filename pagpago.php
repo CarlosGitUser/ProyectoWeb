@@ -1,6 +1,7 @@
 <?php 
   session_start();
-  require('php/fpdf.php');
+  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -236,6 +237,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
   require_once 'PHPMailer.php';
   require_once 'SMTP.php';
   require_once 'Exception.php';
+  require_once 'php/fpdf.php';
   
   $nombre = $_POST["name"];
   $address = $_POST["address"];
@@ -332,11 +334,16 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         // Envío del correo
         $mail->send();
 
-        // echo 'El mensaje ha sido enviado';
+        //configuracion del pdf
+
+        $pdf = new FPDF();
+        $pdf->AddPage();
+        
+
     } catch (Exception $e) {
         echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
     }
-    $pdf->Output('D', 'datos_usuario.pdf');
+    
   }
 ?>
 
