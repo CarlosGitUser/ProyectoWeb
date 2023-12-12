@@ -53,6 +53,7 @@ session_start();
 </html>
 <?php
 // Destruir todas las variables de sesión
+$_SESSION["total"] = 0;
 session_destroy();
 
 // Redirigir a la página de inicio de sesión (o cualquier otra página que desees)
