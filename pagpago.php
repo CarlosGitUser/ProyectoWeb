@@ -315,14 +315,21 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
 
         $subtotal = 0;
 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          if (isset($_POST['total'])) {
+              $total = $_POST['total'];
+          }        
+        }
         if (!empty($carrito)) {
             $body .= "<ul>";
             foreach ($carrito as $producto) {
-              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';
+
+              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                
               $subtotal += $producto['monto'];
             }
             $body .= "</ul>";
             $body .= "<br>Subtotal: $" . $subtotal;
+            $body .= '<li><strong>Total:</strong> $' . $total . '</li>';
           } else {
              $body .= "El carrito está vacío.";
           }
