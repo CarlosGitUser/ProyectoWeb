@@ -381,7 +381,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" name="name" id="name" >
+                    <input type="text" name="nombre" id="name" >
                 </div>
 
                 <div class="group">
@@ -529,9 +529,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                             <?php
                             $_SESSION["total"] = $total + 100;
                     }
-                    
                     ?>
-                    
+                    <form method="post" action="pagpago.php">
+                        <input type="hidden" name="total" value="<?php echo $_SESSION["total"]; ?>">
+                        <input type="submit" value="Pagar">
+                    </form>
                 </div>
             </div>
             <input type="submit" value="proceder al pago" class="btn btn-dark">
