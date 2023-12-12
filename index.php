@@ -634,7 +634,7 @@ button{
                 <div class="user">
                     <img src="image/pic-2.png" alt="">
                     <div class="info">
-                        <h3>amy paulette</h3>
+                        <h3>Ana Pau</h3>
                         <span>happy client</span>
                     </div>
                 </div>
@@ -645,7 +645,7 @@ button{
                 <div class="user">
                     <img src="image/pic-3.png" alt="">
                     <div class="info">
-                        <h3>teo olivares</h3>
+                        <h3>Rodrigo olivares</h3>
                         <span>happy client</span>
                     </div>
                 </div>
@@ -656,7 +656,7 @@ button{
                 <div class="user">
                     <img src="image/pic-4.png" alt="">
                     <div class="info">
-                        <h3>valeria dondiego</h3>
+                        <h3>valeria Rodriguez</h3>
                         <span>happy client</span>
                     </div>
                 </div>
@@ -667,7 +667,7 @@ button{
                 <div class="user">
                     <img src="image/pic-5.png" alt="">
                     <div class="info">
-                        <h3>Paul davila</h3>
+                        <h3>Ruben Davila</h3>
                         <span>happy client</span>
                     </div>
                 </div>
@@ -678,7 +678,7 @@ button{
                 <div class="user">
                     <img src="image/pic-6.png" alt="">
                     <div class="info">
-                        <h3>Hanna Yao</h3>
+                        <h3>Adriana Dominguez</h3>
                         <span>happy client</span>
                     </div>
                 </div>
