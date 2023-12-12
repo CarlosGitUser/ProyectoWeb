@@ -330,7 +330,9 @@ if (isset($_SESSION['id_usuario'])) {
                                 <div class="price">$<?php echo $precio_unitario; ?> c/u</div>
                             </div>
                             <div class="quantity"><input type='number' min='1' value='<?php echo $row["cantidad"]; ?>' data-id='<?php echo $row["id_prod"]; ?>' onchange='actualizarCantidad(this, <?php echo $precio_descuento; ?>)'></div>
-                            <div class="returnPrice"><?php echo "<p id='precio_".$row["id_prod"]."'>$".$row["monto"]."</p>"; ?></div>
+                            <div class="returnPrice"><?php echo "<p id='precio_".$row["id_prod"]."'>$".$row["monto"]."</p>"; ?> <span><a href="php/eliminarCarrito.php?id_prod= <?php echo $row["id_prod"]; ?> " class="fas fa-trash"></a></span></div>
+                            
+
                         </div>
 
                         </div>
