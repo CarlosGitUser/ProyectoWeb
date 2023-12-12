@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 04-12-2023 a las 23:11:47
+-- Tiempo de generación: 10-12-2023 a las 21:33:19
 -- Versión del servidor: 10.4.28-MariaDB
--- Versión de PHP: 8.0.28
+-- Versión de PHP: 8.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -20,6 +20,31 @@ SET time_zone = "+00:00";
 --
 -- Base de datos: `tienda`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `carrito`
+--
+
+CREATE TABLE `carrito` (
+  `id_carrito` int(255) NOT NULL,
+  `id_usr` int(11) NOT NULL,
+  `id_prod` int(11) DEFAULT NULL,
+  `cantidad` int(11) DEFAULT NULL,
+  `monto` decimal(10,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Volcado de datos para la tabla `carrito`
+--
+
+INSERT INTO `carrito` (`id_carrito`, `id_usr`, `id_prod`, `cantidad`, `monto`) VALUES
+(1, 5, 2, 11, 3960.00),
+(2, 5, 1, 11, 1311.20),
+(4, 5, 3, 2, 428.00),
+(5, 5, 4, 4, 2057.60),
+(6, 5, 5, 1, 606.40);
 
 -- --------------------------------------------------------
 
@@ -119,6 +144,14 @@ CREATE TABLE `ventas` (
 --
 
 --
+-- Indices de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD PRIMARY KEY (`id_carrito`),
+  ADD KEY `id_prod` (`id_prod`),
+  ADD KEY `id_usr` (`id_usr`);
+
+--
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -143,6 +176,12 @@ ALTER TABLE `ventas`
 --
 
 --
+-- AUTO_INCREMENT de la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  MODIFY `id_carrito` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
@@ -163,6 +202,13 @@ ALTER TABLE `ventas`
 --
 -- Restricciones para tablas volcadas
 --
+
+--
+-- Filtros para la tabla `carrito`
+--
+ALTER TABLE `carrito`
+  ADD CONSTRAINT `carrito_ibfk_1` FOREIGN KEY (`id_usr`) REFERENCES `usuario` (`id_usr`),
+  ADD CONSTRAINT `carrito_ibfk_2` FOREIGN KEY (`id_prod`) REFERENCES `producto` (`id_prod`);
 
 --
 -- Filtros para la tabla `ventas`

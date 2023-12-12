@@ -11,63 +11,77 @@ session_start();
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
     <style>
+        
         body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-        }
+    margin: 0;
+    padding: 0;
+    background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 100vh; /* Ajusta la altura al 100% de la ventana */
+}
 
-        h2 {
-            text-align: center;
-            color: #333;
-            margin-top: 30px;
-        }
+.login-container {
+    max-width: 400px;
+    margin: 20px;
+    padding: 20px;
+    background-color: #ad9afa;
+    
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
 
-        form {
-            max-width: 400px;
-            margin: 20px auto;
-            padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-        }
+h2 {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    font-weight: bold;
+    font-size: 40px;
+    transition: color 0.3s ease;
+}
 
-        label {
-            display: block;
-            margin-bottom: 8px;
-            color: #333;
-        }
+h2:hover {
+    color: #5861b6;
+}
 
-        input[type="text"],
-        input[type="email"],
-        input[type="password"],
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 15px;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
 
-        select {
-            background-color: #fff;
-        }
 
-        button[type="submit"] {
-            background-color: #4caf50;
-            color: white;
-            padding: 12px 20px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
+label {
+    display: block;
+    margin-bottom: 8px;
+    color: #333;
+}
 
-        button[type="submit"]:hover {
-            background-color: #45a049;
-        }
+input[type="text"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button[type="submit"] {
+    background-color: #5861b6;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #2b2a42;
+}
+
+
+
     </style>
     <!-- SweetAlert2 CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@10">
@@ -142,9 +156,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 <body>
 
+<div class="image-login">
+    <img src="image/tranding.png" alt="">
+</div>
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
-        
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
         <label for="usuario">Usuario:</label>
         <input type="text" id="usuario" name="usuario" value="<?php if(isset($_COOKIE['usuario'])){ echo $_COOKIE['usuario']; } ?>" required>

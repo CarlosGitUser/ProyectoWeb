@@ -230,6 +230,14 @@ header .totalQuantity{
 
 
 }
+
+#btn2{
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+}
+
 .returnCart h1{
     border-top: 1px solid #eee;  
     padding: 20px 0;
@@ -252,6 +260,52 @@ header .totalQuantity{
     font-size: large;
     font-weight: bold;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no hay suficiente espacio */
+    justify-content: space-around; /* Alinea los elementos a lo largo del eje principal con espacio alrededor */
+}
+#cards img, #oxxo img {
+    max-width: 100%;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 100%;
+    margin: 0 auto;
+}
+
+#cards{
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 0%;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#oxxo {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+#oxxo-content {
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+#oxxo img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-xs-5 {
+    max-width: 30%;
+      }
+      
     </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -407,70 +461,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                 <div class="group">
                     <label for="country">País</label>
                     <select name="country" id="country" onchange="cargarCiudades()">
-                        <option value="">Escoje..</option>
-                        <option value="Afganistan">Afganistan</option>
-                        <option value="Albania">Albania</option>
-                        <option value="Alemania">Alemania</option>
-                        <option value="Andorra">Andorra</option>
-                        <option value="Angola">Angola</option>
-                        <option value="ArabiaSaudi">Arabia Saudi</option>
-                        <option value="Argelia">Argelia</option>
+                        <option value="" >seleccionar...</option>
+
                         <option value="Argentina" >Argentina</option>
-                        <option value="Armenia">Armenia</option>
-                        <option value="Aruba">Aruba</option>
-                        <option value="Australia">Australia</option>
-                        <option value="Austria">Austria</option>
-                        <option value="Azerbaiyan">Azerbaiyan</option>
-                        <option value="Bahamas">Bahamas</option>
-                        <option value="Bangladesh">Bangladesh</option>
-                        <option value="Barbados">Barbados</option>
-                        <option value="Belgica">Belgica</option>
-                        <option value="Belice">Belice</option>
-                        <option value="Benin">Benin</option>
-                        <option value="Bielorrusia">Bielorrusia</option>
-                        <option value="Bolivia">Bolivia</option>
-                        <option value="Botsuana">Botsuana</option>
-                        <option value="Brasil">Brasil</option>
-                        <option value="Bulgaria">Bulgaria</option>
-                        <option value="BurkinaFaso">Burkina Faso</option>
-                        <option value="Burundi">Burundi</option>
-                        <option value="CaboVerde">Cabo Verde</option>
-                        <option value="Camboya">Camboya</option>
-                        <option value="Camerun">Camerun</option>
-                        <option value="Canada">Canada</option>
-                        <option value="Chile">Chile</option>
-                        <option value="China">China</option>
-                        <option value="Colombia">Colombia</option>
-                        <option value="Congo">Congo</option>
-                        <option value="CoreadelSur">Corea del Sur</option>
-                        <option value="CostaRica">Costa Rica</option>
-                        <option value="Croacia">Croacia</option>
-                        <option value="Cuba">Cuba</option>
-                        <option value="Dinamarca">Dinamarca</option>
-                        <option value="EAU">Emiratos Arabas Unidos</option>
-                        <option value="Ecuador">Ecuador</option>
-                        <option value="ElSalvador">El Salvador</option>
-                        <option value="EU">Estados Unidos</option>
+                       
                         <option value="España">España</option>
-                        <option value="Francia">Francia</option>
-                        <option value="Grecia">Grecia</option>
-                        <option value="Guatemala">Guatemala</option>
-                        <option value="Honduras">Honduras</option>
-                        <option value="HongKong">Hong Kong</option>
-                        <option value="Hungria">Hungria</option>
-                        <option value="Holanda">Holanda</option>
-                        <option value="India">India</option>
-                        <option value="Irak">Irak</option>
-                        <option value="Iran">Iran</option>
-                        <option value="Irlanda">Irlanda</option>
-                        <option value="Islandia">Isalndia</option>
-                        <option value="Italia">Italia</option>
-                        <option value="Japon">Japon</option>
-                        <option value="Libano">Libano</option>
-                        <option value="Luxemburgo">Luxemburgo</option>
-                        <option value="Macedonia">Macedonia</option>
-                        <option value="Malasia">Malasia</option>
-                        <option value="Marruecos">Marruecos</option>
+                       
                         <option value="Mexico">Mexico</option>
                         
                     </select>
@@ -484,7 +480,45 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
                     </select>
                 </div>
+
             </div>
+            <div class="row">
+            <div class="col-xs-5">
+    <div id="cards">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+    </div><!--#cards end-->
+    <div class="form-check">
+        <label class="form-check-label" for='card-visa'>
+            <input id="card-visa" class="form-check-input" type="radio" name="payment-method" value="visa">
+            Paga $150.00 con tarjeta de crédito (Visa)
+        </label>
+    </div>
+</div><!--col-xs-5 end-->
+
+<div class="col-xs-5">
+    <div id="cards">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+    </div><!--#cards end-->
+    <div class="form-check">
+        <label class="form-check-label" for='paypal'>
+            <input id="paypal" class="form-check-input" type="radio" name="payment-method" value="paypal">
+            Paga $150.00 con PayPal
+        </label>
+    </div>
+</div>
+
+<div class="col-xs-5">
+    <div id="oxxo">
+        <div id="oxxo-content">
+            <img src="image/oxxologo.png">
+            <label class="form-check-label" for='oxxo'>
+                <input id="oxxo" class="form-check-input" type="radio" name="payment-method" value="oxxo">
+                Paga $150.00 con OXXO
+            </label>
+        </div>
+    </div>
+</div>
             <div class="return">
                 <div class="row">
                     <?php 
@@ -536,9 +570,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             </div>
             <input type="submit" value="proceder al pago" class="btn btn-dark">
             </div>
+            
             </form>
+            
     </div>
 </div>
+
 
   <?php include "footer.php"; ?>
 <script>

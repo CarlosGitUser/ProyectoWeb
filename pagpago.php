@@ -12,68 +12,12 @@
     <link rel="stylesheet" href="css/estilospago.css">
     <link rel="icon" type="image/x-icon" href="image/logo.png">
     <style>
-      #oxxo {
-    display: flex;
-    align-items: center; /* Centra verticalmente los elementos hijos */
-    justify-content: center; /* Centra horizontalmente los elementos hijos */
-    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
-}
-
-#oxxo-content {
-    text-align: center; /* Centra horizontalmente el texto */
-}
-
-#oxxo img {
-    max-width: 50%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.col-xs-5 {
-    max-width: 30%;
-      }
+      
     </style>
 </head>
 <body>
 <form action="<?php echo htmlspecialchars("PHP_SELF")?>" method="post">
 <div id="wrapper">
-    <div class="row">
-            <div class="col-xs-5">
-                <div id="cards">
-                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
-                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
-                </div><!--#cards end-->
-                <div class="form-check">
-                    <label class="form-check-label" for='card'>
-                        <input id="card" class="form-check-input" type="checkbox" value="">
-                        Paga $150.00 con tarjeta de crédito
-                    </label>
-                </div>
-            </div><!--col-xs-5 end-->
-            <div class="col-xs-5">
-                <div id="cards">
-                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
-                </div><!--#cards end-->
-                <div class="form-check">
-                    <label class="form-check-label" for='paypal'>
-                        <input id="paypal" class="form-check-input" type="checkbox" value="">
-                        Pagaon  $150.00 cPayPal
-                    </label>
-                </div>
-            </div>
-            <div class="col-xs-5">
-                <div id="oxxo">
-                    <div id="oxxo-content">
-                        <img src="image/oxxologo.png">
-                        <label class="form-check-label" for='oxxo'>
-                            <input id="oxxo" class="form-check-input" type="checkbox" value="">
-                            Paga $150.00 con OXXO
-                        </label>
-                    </div>
-                </div>
-            </div>
-        </div>
 
   
   <div class="row">
@@ -328,6 +272,20 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                
               $subtotal += $producto['monto'];
             }
+            if ($country === "Mexico") {
+              $impuesto = 0.16;
+            } elseif ($country === "Argentina") {
+              $impuesto = 0.30;
+            } elseif ($country === "España") {
+              $impuesto = 0.21;
+            } else {
+              $impuesto = 1;
+            }
+
+            $envio = ($subtotal < 1000) ? 100 : 0;
+            $impuestos = ($subtotal + $envio) * $impuesto;
+            $body .= '<li>Envio: $' . $envio . '</li>';
+            $body .= '<li>Impuesto: $' . $impuestos . '</li>';
             $body .= "</ul>";
             $body .= "<br>Subtotal: $" . $subtotal;
             $body .= '<li><strong>Total:</strong> $' . $total . '</li>';
@@ -343,27 +301,42 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         //configuracion del pdf
          
           
-
+        $sub = 0;
         if (!empty($carrito)) {
           $text = 'Recibo de compras de ' . $nombre;
           $text .= "
           Datos del usuario: 
           Correo: $correo
           Telefono: $telefono
+          Direccion: $address
 
+          ";
+          if($_SESSION["total"]>1000){
+            $text .= "Envio GRATIS";
+          }else $text .= "Gastos de envio: 100
           ";
           $text .="Datos de los productos
           ";
+          $text2 = "Detalles de la compra
+          ";
           foreach ($carrito as $producto) {
-              $text .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
-              $text .="
+              $text2 .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
+              $text2 .="
               ";
               //' <img src="image/'.$producto['imagen'];
-              $subtotal += $producto['monto'];
+              $sub += $producto['monto'];
           }
-          $text .= "
           
-          Subtotal: $" . $subtotal;
+            $tot = $_SESSION["total"];
+          
+          $text2 .= "
+          
+
+          
+          Subtotal: $" . $sub;
+          $text2 .= "
+          Impuesto: $".$impuesto."
+          Total:  $".$impuestos;
       
           // Codificar el texto para que pueda ser enviado por URL
       
@@ -371,11 +344,12 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           // Redirigir a la página crearPDF.php con el contenido de $text
           
       } else {
-          $text .= "El carrito está vacío.";
+          $text2 .= "El carrito está vacío.";
       }
       
      
       $_SESSION["texto"] = $text;
+      $_SESSION["texto2"] = $text2;
        
 
      
