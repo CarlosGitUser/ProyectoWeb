@@ -732,8 +732,15 @@ function cargarCiudades() {
                 discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido o el producto no está en el carrito 🥲</h3>';
             }
         });
-    } else {
-        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido 🥲</h3>';
+    } else if(canjearTxt === "PR1370"){
+        document.getElementById('total').innerText = '$' + (numeroExtraido - 200).toFixed(2);
+        // Valor numérico en JavaScript
+        var valorNumerico = numeroExtraido - 200;
+        document.getElementById('valorInput').value = valorNumerico.toFixed(2);
+        
+        // Enviar el formulario usando JavaScript
+        document.getElementById('miFormulario').action = window.location.href;
+        document.getElementById('miFormulario').submit();
     }
 }
 
