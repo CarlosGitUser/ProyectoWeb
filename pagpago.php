@@ -214,8 +214,8 @@
     </select>
     </div>
   <footer>
-    <button class="btn">Atrás</button>
-    <button class="btn">Próximo paso</buton>
+    <a href="index.php" class="btn btn-dark">volver</a>
+    <button class="btn">Finalizar compra</buton>
   </footer>
 </div><!--wrapper end-->
 <script>
@@ -223,5 +223,15 @@
 var selected = $(this).parent().parent().parent();    $(selected).toggleClass('highlight');
 });
 </script>
+
+<?php 
+  $nombre = $_POST["name"];
+  $address = $_POST["address"];
+  $correo = $_POST["correo"];
+  $telefono = $_POST["telefono"];
+  $codigo = $_POST["codigo"];
+  $country = $_POST["country"];
+  $city = $_POST["city"]; 
+?>
 </body>
 </html>

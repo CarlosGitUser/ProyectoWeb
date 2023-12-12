@@ -307,7 +307,7 @@ if (isset($_SESSION['id_usuario'])) {
         $total = 0; // Inicializar la variable para almacenar el total de los montos
         while ($row = $result->fetch_assoc()) {
             $id_producto = $row["id_prod"];
-            $_SESSION["id_prod"]+=$row["id_prod"].",";
+           
             // Consulta adicional para obtener el nombre, precio y descuento del producto basado en el ID del producto en el carrito
             $sql_producto = "SELECT nombre_prod, precio, descuento, imagen FROM producto WHERE id_prod = $id_producto";
             $result_producto = $conn->query($sql_producto);
@@ -363,27 +363,27 @@ if (isset($_SESSION['id_usuario'])) {
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" name="name" id="name">
+                    <input type="text" name="name" id="name" required>
                 </div>
 
                 <div class="group">
                     <label for="address">Direccion</label>
-                    <input type="text" name="address" id="address">
+                    <input type="text" name="address" id="address" required>
                 </div>
     
                 <div class="group">
                     <label for="correo">Direccion email</label>
-                    <input type="email" name="correo" id="correo">
+                    <input type="email" name="correo" id="correo" required>
                 </div>
     
                 <div class="group">
                     <label for="telefono">Num. Telefonico</label>
-                    <input type="text" name="telefono" id="telefon">
+                    <input type="text" name="telefono" id="telefon" required>
                 </div>
                 
                 <div class="group">
                     <label for="codigo">Codigo Postal</label>
-                    <input type="text" name="codigo" id="codigo">
+                    <input type="text" name="codigo" id="codigo" required>
                 </div>
                 
                 <div class="group">
@@ -431,6 +431,7 @@ if (isset($_SESSION['id_usuario'])) {
                         <div class="totalPrice" id="total">$<?php echo $total + 100; ?></div>
                         <?php
                     }
+                    $_SESSION["total"] = $total;
                     ?>
                     
                     
