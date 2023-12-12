@@ -134,7 +134,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <a href="https://www.instagram.com/thevoidzon3/" class="fab fa-instagram"></a>
     </div>
 
-    <div class="credit"> &copy; copyright @ 2023 by <span><a href="">sitio de películas y figuras de acción</a></span> </div>
+    <div class="credit"> &copy; copyright @ 2023 by <span><a href="">Sitio de Películas y Figuras de acción</a></span> </div>
     
 </section>
 
