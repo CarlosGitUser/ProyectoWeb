@@ -272,8 +272,8 @@ button{
             <div class="coupon_cont">
 
                 <div class="copiar_coupon">
-                    <div class="txt_cont"><h2>Precio Actual</h2></div>
-                    <div class="price_cont">  <h3>$</h3><h3 id="number1">200</h3> </div>
+                    <div class="txt_cont"><h2>Cupon de descuento</h2></div>
+                    <div class="price_cont"><h3 style="font-size: 20px;">El envío va por nuestra cuenta</h3> </div>
 
                     <div class="action_cont">
                         <input id="input1" type="text" value="54ldqwer23">
@@ -281,19 +281,7 @@ button{
                     </div>
                 </div>
 
-                <div class="canjear_coupon">
-                    <div class="txt_cont"><h2>Precio de un 50% de descuento</h2></div>
-                    <div class="price_cont" id="discount">
-                        <h3 style="font-size: 15px; width: 300px;">
-                        Haz click en el buton canjear cupon para obtener un 50% de descuento
-                        </h3>
-                    </div>
-
-                    <div class="action_cont">
-                        <input id="input2" type="text" placeholder="pergar codigo">
-                        <button id="btn2" onclick="canjearCoupon()">canjear</button>
-                    </div>
-                </div>
+               
             </div>
     </div>
 </div>
@@ -835,29 +823,7 @@ function copyCoupon() {
     }
 }
 
-function canjearCoupon() {
-    let canjearTxt = document.getElementById("input2").value;
-    let canjearBtn = document.getElementById("btn2");
 
-    let number = document.getElementById("number1").innerHTML;
-    let discount = document.getElementById("discount");
-
-    function getPercent(percent) { return number / 100 * percent; }
-    let percentResult = getPercent(90); //VOY A OBTENER EL 90 PORCIENTO DE 200.
-
-    if (canjearTxt === "54ldqwer23") {
-        canjearBtn.innerHTML = "canjeado";
-
-        discount.innerHTML = `<h3>$</h3><h3 id="number2">${percentResult}</h3><span>$${number}</span>`;
-
-    } else if (canjearTxt === "") {
-
-        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">aun no has pegado el codigo 🤔</h3>';
-         
-    } else if (canjearTxt !== "54ldqwer23") {
-        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">el cupon no es valido 🥲</h3>';
-    } 
-}
 </script>
 </body>
 </html>

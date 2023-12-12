@@ -1,6 +1,7 @@
 <?php 
   session_start();
-  require('php/fpdf.php');
+  
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -87,11 +88,7 @@
       <label for="cardnumber">Número de tarjeta </label>
       <input type="number" id="cardnumber" required>
     </div><!--col-xs-5-->
-    <div class="col-xs-5">
-      <i class="fa fa fa-user"></i>
-      <label for="cupon">cupon:</label>
-      <input type="text" id="cupon" required>
-    </div>
+    
   </div><!--row end-->
   <div class="row row-three">
     <div class="col-xs-2">
@@ -218,7 +215,7 @@
     </div>
   <footer>
     <a href="index.php" class="btn btn-dark">volver</a>
-    <button class="btn">Finalizar compra</buton>
+    <a href="generarPDF.php" class="btn btn-light">Finalizar compra</a>
   </footer>
   
 </div><!--wrapper end-->
@@ -236,18 +233,17 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
   require_once 'PHPMailer.php';
   require_once 'SMTP.php';
   require_once 'Exception.php';
+ 
   
-  $nombre = $_POST["name"];
+  $nombre = $_POST["nombre"];
   $address = $_POST["address"];
   $correo = $_POST["correo"];
   $telefono = $_POST["telefono"];
   $codigo = $_POST["codigo"];
   $country = $_POST["country"];
-  
+
   if($_SERVER["PHP_SELF"]){
     
-    $pdf = new FPDF();
-    $pdf->AddPage();
 
     $servername = "localhost";
     $username = "root";
@@ -262,7 +258,6 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     }
     
     $id_usr = $_SESSION["id_usuario"];
-
     // Consulta para obtener todos los productos en el carrito para el usuario
     $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usr";
     $result = $conn->query($sql);
@@ -318,15 +313,24 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         $mail->Subject = 'Recibo de compra';
         $body = "Hola,<br><br>Gracias por tu compra. Aquí están los detalles de tu carrito:<br><br>";
 
+        $total = 0;
         $subtotal = 0;
 
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+          if (isset($_POST['total'])) {
+              $total = $_POST['total'];
+          }        
+        }
         if (!empty($carrito)) {
             $body .= "<ul>";
             foreach ($carrito as $producto) {
-              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                $subtotal += $producto['monto'];
+
+              $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                
+              $subtotal += $producto['monto'];
             }
             $body .= "</ul>";
             $body .= "<br>Subtotal: $" . $subtotal;
+            $body .= '<li><strong>Total:</strong> $' . $total . '</li>';
           } else {
              $body .= "El carrito está vacío.";
           }
@@ -336,11 +340,49 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         // Envío del correo
         $mail->send();
 
-        // echo 'El mensaje ha sido enviado';
+        //configuracion del pdf
+         
+          
+
+        if (!empty($carrito)) {
+          $text = 'Recibo de compras de ' . $nombre;
+          $text .= "
+          Datos del usuario: 
+          Correo: $correo
+          Telefono: $telefono
+
+          ";
+          $text .="Datos de los productos
+          ";
+          foreach ($carrito as $producto) {
+              $text .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
+              $text .="
+              ";
+              //' <img src="image/'.$producto['imagen'];
+              $subtotal += $producto['monto'];
+          }
+          $text .= "
+          
+          Subtotal: $" . $subtotal;
+      
+          // Codificar el texto para que pueda ser enviado por URL
+      
+      
+          // Redirigir a la página crearPDF.php con el contenido de $text
+          
+      } else {
+          $text .= "El carrito está vacío.";
+      }
+      
+     
+      $_SESSION["texto"] = $text;
+       
+
+     
     } catch (Exception $e) {
         echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
     }
-    $pdf->Output('D', 'datos_usuario.pdf');
+    exit();
   }
 ?>
 

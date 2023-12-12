@@ -1,6 +1,7 @@
 
 <?php
 include "header.php";
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -252,6 +253,7 @@ header .totalQuantity{
     font-weight: bold;
 }
     </style>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
 <body>
 <br>
@@ -353,10 +355,24 @@ if (isset($_SESSION['id_usuario'])) {
     // header("Location: login.php");
     exit();
 }
-?>
-        <label for="">Ingrese su cupon</label><input type="text">
 
-        </div>
+if($_SERVER['REQUEST_METHOD'] === 'POST'){
+    echo '<script>
+    document.getElementById("cupon").style.display = "none";
+    canjearBtn.innerHTML = "canjeado";
+    </script>';
+}else{
+    ?>
+        <form id="miFormulario" style="display: none;" method="post">
+            <input type="hidden" name="valor" id="valorInput">
+        </form>
+        <label for="">Ingrese su cupon</label><input type="text" id="cupon">
+        <button id="btn2" onclick="canjearCoupon()">canjear</button>
+        <?php
+    
+}
+?>      
+</div>
 
 
         <form action="pagpago.php" method="post">
@@ -365,7 +381,7 @@ if (isset($_SESSION['id_usuario'])) {
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
-                    <input type="text" name="name" id="name" >
+                    <input type="text" name="nombre" id="name" >
                 </div>
 
                 <div class="group">
@@ -456,43 +472,7 @@ if (isset($_SESSION['id_usuario'])) {
                         <option value="Malasia">Malasia</option>
                         <option value="Marruecos">Marruecos</option>
                         <option value="Mexico">Mexico</option>
-                        <option value="Monaco">Monaco</option>
-                        <option value="Mongolia">Mongolia</option>
-                        <option value="Montenegro">Montenegro</option>
-                        <option value="Noruega">Noruega</option>
-                        <option value="NuevaZelanda">Nueva Zelanda</option>
-                        <option value="PaisesBajos">Paises Bajos</option>
-                        <option value="Pakistan">Pakistan</option>
-                        <option value="Palestina">Palestina</option>
-                        <option value="Panama">Panama</option>
-                        <option value="Paraguay">Paraguay</option>
-                        <option value="Peru">Peru</option>
-                        <option value="Polonia">Polonia</option>
-                        <option value="Portugal">Portugal</option>
-                        <option value="Qatar">Qatar</option>
-                        <option value="RepublicaDominicana">República Dominicana</option>
-                        <option value="Ruanda">Ruanda</option>
-                        <option value="Rumania">Rumania</option>
-                        <option value="Rusia">Rusia</option>
-                        <option value="SaharaOccidental">Sahara Occidental</option>
-                        <option value="SudAfrica">Sudáfrica</option>
-                        <option value="SudVietnam">Sud Vietnam</option>
-                        <option value="Suiza">Suiza</option>
-                        <option value="Tailandia">Tailandia</option>
-                        <option value="Taiwan">Taiwán</option>
-                        <option value="Tanzania">Tanzania</option>
-                        <option value="TimorOriental">Timor Oriental</option>
-                        <option value="Togo">Togo</option>
-                        <option value="Tonga">Tonga</option>
-                        <option value="TrinidadYTobago">Trinidad y Tobago</option>
-                        <option value="Tunez">Túnez</option>
-                        <option value="Uganda">Uganda</option>
-                        <option value="Uruguay">Uruguay</option>
-                        <option value="Venezuela">Venezuela</option>
-                        <option value="Vietnam">Vietnam</option>
-                        <option value="Yemen">Yemen</option>
-                        <option value="Zambia">Zambia</option>
-                        <option value="Zimbabue">Zimbabue</option>
+                        
                     </select>
                 </div>
     
@@ -528,21 +508,30 @@ if (isset($_SESSION['id_usuario'])) {
                 </div>
                 <div class="row">
                 <?php 
-                    if($total > 1000){
+                    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+                        // Procesar datos recibidos por POST
+                        $valor = $_POST['valor'];
+                        $_SESSION["total"] = $valor;
                         ?>
-                        <div>Precio Total</div>
-                        <div class="totalPrice" id="total">$<?php echo $total; ?></div>
+                            <div>Precio Total</div>
+                            <div class="totalPrice" id="total">$<?php echo $valor; ?></div>
                         <?php
+                    }elseif($total > 1000){
+                        ?>
+                            <div>Precio Total</div>
+                            <div class="totalPrice" id="total">$<?php echo $total; ?></div>
+                            <?php
+                            $_SESSION["total"] = $total;
                     }else{
                         ?>
-                        <div>Precio Total</div>
-                        <div class="totalPrice" id="total">$<?php echo $total + 100; ?></div>
-                        <?php
+                            <div>Precio Total</div>
+                            <div class="totalPrice" id="total">$<?php echo $total + 100; ?></div>
+                            <?php
+                            $_SESSION["total"] = $total + 100;
                     }
-                    $_SESSION["total"] = $total;
                     ?>
-                    
-                    
+                    <input type="hidden" name="total" value="<?php echo $_SESSION["total"]; ?>">
+                    <!-- <input type="submit" value="Pagar"> -->
                 </div>
             </div>
             <input type="submit" value="proceder al pago" class="btn btn-dark">
@@ -657,10 +646,13 @@ function cargarCiudades() {
 
         // Obtén el valor seleccionado del país
         var paisSeleccionado = selectPais.options[selectPais.selectedIndex].value;
-        var total = <?php echo $total; ?>;
-        if(total < 1000){
-            total = total + 100;
+        var total = document.getElementById('total');
+        var contenido = total.innerText;
+        var matches = contenido.match(/\d+\.\d+/);
+        if (matches) {
+            var numeroExtraido = parseFloat(matches[0]);
         }
+    
         // Limpia las opciones actuales de la ciudad
         selectCiudad.innerHTML = '';
 
@@ -670,16 +662,16 @@ function cargarCiudades() {
                 agregarCiudad(selectCiudad, 'Buenos Aires');
                 agregarCiudad(selectCiudad, 'Córdoba');
                 impuesto = 0.30;
-                document.getElementById('impuesto').innerText = '$' + (total * impuesto).toFixed(2);
-                document.getElementById('total').innerText = '$' + (total * (impuesto + 1)).toFixed(2);
+                document.getElementById('impuesto').innerText = '$' + (numeroExtraido * impuesto).toFixed(2);
+                document.getElementById('total').innerText = '$' + (numeroExtraido * (impuesto + 1)).toFixed(2);
                 // Agrega más ciudades según sea necesario
                 break;
             case 'España':
                 agregarCiudad(selectCiudad, 'Madrid');
                 agregarCiudad(selectCiudad, 'Barcelona');
                 impuesto = 0.21;
-                document.getElementById('impuesto').innerText = '$' + (total * impuesto).toFixed(2);
-                document.getElementById('total').innerText = '$' + (total * (impuesto + 1)).toFixed(2);
+                document.getElementById('impuesto').innerText = '$' + (numeroExtraido * impuesto).toFixed(2);
+                document.getElementById('total').innerText = '$' + (numeroExtraido * (impuesto + 1)).toFixed(2);
                 // Agrega más ciudades según sea necesario
                 break;
             case 'Mexico':
@@ -687,8 +679,8 @@ function cargarCiudades() {
                 agregarCiudad(selectCiudad, 'Guadalajara');
                 agregarCiudad(selectCiudad, 'Aguascalientes');
                 impuesto = 0.16; 
-                document.getElementById('impuesto').innerText = '$' + (total * impuesto).toFixed(2);
-                document.getElementById('total').innerText = '$' + (total * (impuesto + 1)).toFixed(2);
+                document.getElementById('impuesto').innerText = '$' + (numeroExtraido * impuesto).toFixed(2);
+                document.getElementById('total').innerText = '$' + (numeroExtraido * (impuesto + 1)).toFixed(2);
                 // Agrega más ciudades según sea necesario
                 break;
         }
@@ -701,7 +693,64 @@ function cargarCiudades() {
         select.add(opcion);
     }
 
+    function canjearCoupon() {
+    let canjearTxt = document.getElementById("cupon").value;
+    let canjearBtn = document.getElementById("btn2");
 
+    var total = document.getElementById('total');
+    var contenido = total.innerText;
+    var matches = contenido.match(/\d+\.\d+/);
+    if (matches) {
+    var numeroExtraido = parseFloat(matches[0]);
+    }
+
+    if (canjearTxt === "54ldqwer23") {
+        document.getElementById('total').innerText = '$' + (numeroExtraido - 100).toFixed(2);
+        // Valor numérico en JavaScript
+        var valorNumerico = numeroExtraido - 100;
+        document.getElementById('valorInput').value = valorNumerico.toFixed(2);
+        
+        // Enviar el formulario usando JavaScript
+        document.getElementById('miFormulario').action = window.location.href;
+        document.getElementById('miFormulario').submit();
+    } else if (canjearTxt === "VoidZon3") {
+        // Verificar si el producto está en el carrito antes de aplicar el descuento
+        var productoId = 2; // Reemplaza con el ID del producto específico
+        verificarCarrito(productoId, function(enCarrito) {
+            if (enCarrito) {
+                // Aplicar descuento solo si el cupón es válido y el producto está en el carrito
+                document.getElementById('total').innerText = '$' + (numeroExtraido - 100).toFixed(2);
+                // Valor numérico en JavaScript
+                var valorNumerico = numeroExtraido - 100;
+                document.getElementById('valorInput').value = valorNumerico.toFixed(2);
+                
+                // Enviar el formulario usando JavaScript
+                document.getElementById('miFormulario').action = window.location.href;
+                document.getElementById('miFormulario').submit();
+            } else {
+                // Mostrar mensaje de cupón no válido si el producto no está en el carrito
+                discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido o el producto no está en el carrito 🥲</h3>';
+            }
+        });
+    } else {
+        discount.innerHTML = '<h3 style="font-size: 15px; width: 300px;">El cupón no es válido 🥲</h3>';
+    }
+}
+
+// Función para verificar si un producto está en el carrito
+function verificarCarrito(productoId, callback) {
+    // Enviar una solicitud AJAX al script PHP para verificar el carrito
+    var xhr = new XMLHttpRequest();
+    xhr.onreadystatechange = function() {
+        if (xhr.readyState === 4 && xhr.status === 200) {
+            var response = JSON.parse(xhr.responseText);
+            callback(response.enCarrito);
+        }
+    };
+    xhr.open("GET", "php/verificarCupon.php?productoId=" + productoId, true);
+    xhr.send();
+}
+    
 let listCart = [];
 function checkCart(){
     var cookieValue = document.cookie
