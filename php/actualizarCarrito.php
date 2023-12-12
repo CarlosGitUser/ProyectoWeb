@@ -11,18 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         $nuevo_precio = $_POST['nuevo_precio'];
         
         // Establecer la conexión con la base de datos (cambiar estos valores por los correspondientes a tu base de datos)
-        $servername = "localhost";
-        $username = "root";
-        $password = "";
-        $dbname = "tienda";
-
-        // Crear conexión
-        $conn = new mysqli($servername, $username, $password, $dbname);
-
-        // Verificar la conexión
-        if ($conn->connect_error) {
-            die("La conexión falló: " . $conn->connect_error);
-        }
+        require "php/conexionBD.php";
 
         if ($nueva_cantidad == 0) {
             // Si la nueva cantidad es cero, eliminar el producto del carrito

@@ -2,17 +2,7 @@
 session_start();
 
 if (isset($_SESSION["usuario"])) {
-    $id = $_SESSION["id_usuario"];
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "tienda";
-
-    $conn = new mysqli($servername, $username, $password, $dbname);
-
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
+    require "php/conexionBD.php";
 
         // Obtener la cantidad total de productos en el carrito
         $sql_carrito = "SELECT SUM(cantidad) AS total_cantidad FROM carrito WHERE id_usr = $id";

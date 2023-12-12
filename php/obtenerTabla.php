@@ -1,15 +1,6 @@
 <?php
 // Conexión a la base de datos
-$servidor='localhost';
-$cuenta='root';
-$password='';
-$bd='tienda';
-
-$conexion = new mysqli($servidor,$cuenta,$password,$bd);
-
-if ($conexion->connect_errno){
-    die('Error en la conexion');
-}
+require "php/conexionBD.php";
 
 // Consulta para obtener los productos
 $sql = "SELECT id_prod, nombre_prod, descripcion, cantidad, precio, imagen, descuento, categoria FROM producto";

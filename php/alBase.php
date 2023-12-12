@@ -3,11 +3,6 @@
     // Conexión a la base de datos (debes tener tus propias credenciales aquí)
     require "php/conexionBD.php";
 
-    // Verificar la conexión
-    if ($conn->connect_error) {
-        die("Conexión fallida: " . $conn->connect_error);
-    }
-
     // Obtener datos del formulario
     $targetDir = "../image/";
     $nombre = $_POST['nombre'];

@@ -2,10 +2,7 @@
 
 function validarUsuarioContraseña($usuario, $contrasena) {
     // Configura tus credenciales y detalles de la base de datos
-    $servidor = "localhost";
-    $usuario_bd = "root";
-    $contrasena_bd = "";
-    $nombre_bd = "tienda";
+    require "php/conexionBD.php";
 
     // Crea una conexión a la base de datos
     $conexion = new mysqli($servidor, $usuario_bd, $contrasena_bd, $nombre_bd);
