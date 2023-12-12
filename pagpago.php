@@ -258,18 +258,24 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     $id_usr = $_SESSION["id_usuario"];
     $sql = "SELECT id_prod, cantidad, monto FROM carrito WHERE id_usr = $id_usr";
     $result = $conn->query($sql);
-    
     $carrito = array(); // Variable para almacenar la información del carrito
     
     if ($result->num_rows > 0) {
         while ($row = $result->fetch_assoc()) {
             // Almacena los detalles del producto en el array $carrito
-            $carrito[] = array(
-                'id_prod' => $row["id_prod"],
-                'cantidad' => $row["cantidad"],
-                'monto' => $row["monto"]
-            );
-        }
+            $sql_producto = "SELECT nombre_prod, imagen FROM producto WHERE id_prod = $id_producto";
+            $result_producto = $conn->query($sql_producto);
+            
+            if ($result_producto->num_rows > 0){ 
+                $row_producto = $result_producto->fetch_assoc();
+                $carrito[] = array(
+                  'nombre' => $row_producto["nombre_prod"],
+                  'cantidad' => $row["cantidad"],
+                  'monto' => $row["monto"],
+                  'imagen' => $row_producto["imagen"]
+              );
+              }
+      }
     } else {
         echo "El carrito está vacío";
     }
@@ -300,11 +306,11 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         // Contenido del correo
         $mail->isHTML(true);
         $mail->Subject = 'Recibo de compra';
-        $body = "Hola,<br><br>Gracias por tu compra. Aquí están los detalles de tu carrito:<br><br>";
+        $body = "Hola,<br><br>Gracias por tu compra. Aqui estan los detalles de tu carrito:<br><br>";
         if (!empty($carrito)) {
           $body .= "<ul>";
           foreach ($carrito as $producto) {
-              $body .= "<li>Producto: " . $producto['id_prod'] . ", Cantidad: " . $producto['cantidad'] . ", Monto: " . $producto['monto'] . "</li>";
+              $body .= "<li>Producto: " . $producto['nombre_prod'] . ", Cantidad: " . $producto['cantidad'] . ", Monto: " . $producto['monto'] . "</li> <img src=image/". $producto['imagen'].">";
           }
           $body .= "</ul>";
       } else {
@@ -320,7 +326,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     } catch (Exception $e) {
         echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
     }
-    }
+  }
 ?>
 </body>
 </html>
