@@ -1,5 +1,4 @@
 <?php
-
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -23,8 +22,11 @@
     <input id="card" class="form-check-input" type="checkbox" value="">
     Paga $150.00 con tarjeta de crédito
   </label>
+  
 </div>
+    
     </div><!--col-xs-5 end-->
+    
     <div class="col-xs-5">
       <div id="cards">
         <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
@@ -36,8 +38,11 @@
   </label>
 </div>
     </div><!--col-xs-5 end-->
+    
   </div><!--row end-->
+  
   <div class="row">
+    
     <div class="col-xs-5">
       <i class="fa fa fa-user"></i>
       <label for="cardholder">Nombre</label>
