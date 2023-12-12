@@ -31,7 +31,7 @@
                 <div class="form-check">
                     <label class="form-check-label" for='paypal'>
                         <input id="paypal" class="form-check-input" type="checkbox" value="">
-                        Paga $150.00 con PayPal
+                        Pagaon  $150.00 cPayPal
                     </label>
                 </div>
             </div><!--col-xs-5 end-->

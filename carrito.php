@@ -307,7 +307,7 @@ if (isset($_SESSION['id_usuario'])) {
         $total = 0; // Inicializar la variable para almacenar el total de los montos
         while ($row = $result->fetch_assoc()) {
             $id_producto = $row["id_prod"];
-            
+            $_SESSION["id_prod"]+=$row["id_prod"].",";
             // Consulta adicional para obtener el nombre, precio y descuento del producto basado en el ID del producto en el carrito
             $sql_producto = "SELECT nombre_prod, precio, descuento, imagen FROM producto WHERE id_prod = $id_producto";
             $result_producto = $conn->query($sql_producto);
@@ -357,9 +357,9 @@ if (isset($_SESSION['id_usuario'])) {
         </div>
 
 
+        <form action="pagpago.php" method="post">
         <div class="right">
             <h1>Verificar</h1>
-
             <div class="form">
                 <div class="group">
                     <label for="name">Nombre Completo</label>
@@ -436,8 +436,9 @@ if (isset($_SESSION['id_usuario'])) {
                     
                 </div>
             </div>
-            <button class="buttonCheckout">Confirmar compra</button>
+           <input type="submit" value="proceder al pago" class="btn btn-dark">
             </div>
+            </form>
     </div>
 </div>
 
