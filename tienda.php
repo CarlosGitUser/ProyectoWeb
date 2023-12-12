@@ -21,20 +21,20 @@
         }
 </script>
 <style>
-    body {
-    margin: 0; /* Elimina el margen predeterminado del cuerpo */
+body {
+    margin: 0;
 }
-       .filtro {
+
+.filtro {
     display: flex;
     justify-content: space-between;
     align-items: center;
-
 }
 
 .filtro form {
     display: flex;
     align-items: center;
-    width: 100%; /* Ancho del formulario al 100% */
+    max-width: 100%;
     border: none;
 }
 
@@ -42,26 +42,39 @@
     margin-right: 10px;
 }
 
+
 .filtro input,
 .filtro button {
     margin-right: 10px;
+    padding: 10px 15px; /* Ajuste del espaciado interno para que sea un poco más grande */
+    border: 1px solid #3498db; /* Borde predeterminado */
+    background-color: #3498db; /* Color de fondo predeterminado */
+    color: #fff; /* Color del texto predeterminado */
+    cursor: pointer;
 }
 
-.filtro input[type="submit"] {
-    margin-right: 0; /* Evitar espacio adicional al final del botón de enviar */
+.filtro input[type="submit"],
+.filtro button[type="reset"] {
+    transition: background-color 0.3s ease; /* Efecto de transición para suavizar el cambio de color */
+}
+
+.filtro input[type="submit"]:hover,
+.filtro button[type="reset"]:hover {
+    background-color: #2980b9;
+    border: 1px solid #2980b9; /* Ajuste del borde al pasar el mouse */
 }
 
 .filtro button[type="reset"] {
-    background-color: #e74c3c; /* Color de fondo */
-    color: #fff; /* Color del texto */
-    border: 1px solid #c0392b; /* Borde */
-    padding: 8px 15px; /* Espaciado interno */
-    cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
+    background-color: #e74c3c;
+    border: 1px solid #e74c3c; /* Ajuste del borde predeterminado para el botón de reset */
 }
 
 .filtro button[type="reset"]:hover {
-    background-color: #c0392b; /* Cambiar el color de fondo al pasar sobre el botón */
+    background-color: #c0392b;
+    border: 1px solid #c0392b; /* Ajuste del borde al pasar el mouse para el botón de reset */
 }
+
+
 </style>
 </head>
 
@@ -90,10 +103,11 @@
     <div class="filtro">
         <form action="" method="get">
             <label for="minPrecio">Filtrar</label>
-            <input type="number" placeholder="Mínimo" name="minPrecio" id="minPrecio">
+            <input style="background-color: white; color: black;" type="number" placeholder="Mínimo" name="minPrecio" id="minPrecio">
             <label for="maxPrecio">hasta</label>
-            <input type="number" placeholder="Máximo" name="maxPrecio" id="maxPrecio">
-            <input type="submit" value="Filtrar">
+            <input style="background-color: white; color: black;" type="number" placeholder="Máximo" name="maxPrecio" id="maxPrecio">
+            <input type="submit" value="Filtrar"> 
+
             <button type="button" onclick="eliminarValoresGET()">Reset</button>
         </form>
     </div>
