@@ -328,6 +328,20 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               $body .= '<li>Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'] . '</li> <img src="image/'.$producto['imagen'].'">';                
               $subtotal += $producto['monto'];
             }
+            if ($country === "Mexico") {
+              $impuesto = 0.16;
+            } elseif ($country === "Argentina") {
+              $impuesto = 0.30;
+            } elseif ($country === "España") {
+              $impuesto = 0.21;
+            } else {
+              $impuesto = 0;
+            }
+
+            $envio = ($subtotal < 1000) ? 100 : 0;
+            $impuestos = ($subtotal + $envio) * $impuesto;
+            $body .= '<li>Envio: $' . $envio . '</li>';
+            $body .= '<li>Impuesto: $' . $impuestos . '</li>';
             $body .= "</ul>";
             $body .= "<br>Subtotal: $" . $subtotal;
             $body .= '<li><strong>Total:</strong> $' . $total . '</li>';
