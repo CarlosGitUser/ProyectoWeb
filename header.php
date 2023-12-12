@@ -69,6 +69,7 @@ if (session_status() == PHP_SESSION_NONE) {
             background-color: #45a049;
         }
     </style>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 </head>
 <body>
     <header class="header">
@@ -102,7 +103,17 @@ if (session_status() == PHP_SESSION_NONE) {
         <div class="icons">
             <div id="menu-btn" class="fas fa-bars"></div>
             <div id="search-btn" class="fas fa-search"></div>
-            <a href="carrito.php" class="fas fa-shopping-cart"></a>
+            <?php 
+                if(isset($_SESSION["usuario"])){
+                    echo '<a href="carrito.php" id="carrito-link" class="fas fa-shopping-cart">
+                        <span id="carrito-cantidad"></span>
+                    </a>';
+                    
+                }else{
+                    echo '<a href="login.php" id="carrito-link" class="fas fa-shopping-cart"></a>';
+                }
+            ?>
+            
             <a href="#" class="fas fa-heart"></a>
             
         </div>
@@ -136,5 +147,27 @@ if (session_status() == PHP_SESSION_NONE) {
                         
         ?>
     </header>
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            // Función para realizar la solicitud AJAX
+            function actualizarCantidadCarrito() {
+                var carritoCantidad = document.getElementById("carrito-cantidad");
+
+                // Realizar solicitud AJAX
+                var xhr = new XMLHttpRequest();
+                xhr.open("GET", "php/actualizarImagen.php", true);
+                xhr.onreadystatechange = function() {
+                    if (xhr.readyState == 4 && xhr.status == 200) {
+                        // Actualizar la cantidad en el enlace del carrito
+                        carritoCantidad.textContent = xhr.responseText;
+                    }
+                };
+                xhr.send();
+            }
+
+            // Llamar a la función para actualizar la cantidad al cargar la página
+            actualizarCantidadCarrito();
+        });
+    </script>
 </body>
 </html>
