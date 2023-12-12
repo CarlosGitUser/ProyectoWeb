@@ -260,6 +260,52 @@ header .totalQuantity{
     font-size: large;
     font-weight: bold;
 }
+.row {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos se envuelvan en una nueva línea si no hay suficiente espacio */
+    justify-content: space-around; /* Alinea los elementos a lo largo del eje principal con espacio alrededor */
+}
+#cards img, #oxxo img {
+    max-width: 100%;
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 100%;
+    margin: 0 auto;
+}
+
+#cards{
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 0%;
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+#oxxo {
+    display: flex;
+    align-items: center; /* Centra verticalmente los elementos hijos */
+    justify-content: center; /* Centra horizontalmente los elementos hijos */
+    height: 100%; /* Asegura que el contenedor ocupe toda la altura disponible */
+}
+
+#oxxo-content {
+    text-align: center; /* Centra horizontalmente el texto */
+}
+
+#oxxo img {
+    max-width: 50%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.col-xs-5 {
+    max-width: 30%;
+      }
+      
     </style>
     <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
 </head>
@@ -434,7 +480,45 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
 
                     </select>
                 </div>
+
             </div>
+            <div class="row">
+            <div class="col-xs-5">
+    <div id="cards">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+    </div><!--#cards end-->
+    <div class="form-check">
+        <label class="form-check-label" for='card-visa'>
+            <input id="card-visa" class="form-check-input" type="radio" name="payment-method" value="visa">
+            Paga $150.00 con tarjeta de crédito (Visa)
+        </label>
+    </div>
+</div><!--col-xs-5 end-->
+
+<div class="col-xs-5">
+    <div id="cards">
+        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+    </div><!--#cards end-->
+    <div class="form-check">
+        <label class="form-check-label" for='paypal'>
+            <input id="paypal" class="form-check-input" type="radio" name="payment-method" value="paypal">
+            Paga $150.00 con PayPal
+        </label>
+    </div>
+</div>
+
+<div class="col-xs-5">
+    <div id="oxxo">
+        <div id="oxxo-content">
+            <img src="image/oxxologo.png">
+            <label class="form-check-label" for='oxxo'>
+                <input id="oxxo" class="form-check-input" type="radio" name="payment-method" value="oxxo">
+                Paga $150.00 con OXXO
+            </label>
+        </div>
+    </div>
+</div>
             <div class="return">
                 <div class="row">
                     <?php 
@@ -486,9 +570,12 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
             </div>
             <input type="submit" value="proceder al pago" class="btn btn-dark">
             </div>
+            
             </form>
+            
     </div>
 </div>
+
 
   <?php include "footer.php"; ?>
 <script>
