@@ -9,31 +9,43 @@
 </head>
 <body>
 <div id="wrapper">
-  <div class="row">
-    <div class="col-xs-5">
-      <div id="cards">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
-      </div><!--#cards end-->
-      <div class="form-check">
-  <label class="form-check-label" for='card'>
-    <input id="card" class="form-check-input" type="checkbox" value="">
-    Paga $150.00 con tarjeta de crédito
-  </label>
-</div>
-    </div><!--col-xs-5 end-->
-    <div class="col-xs-5">
-      <div id="cards">
-        <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
-      </div><!--#cards end-->
-      <div class="form-check">
-  <label class="form-check-label" for='paypal'>
-    <input id="paypal" class="form-check-input" type="checkbox" value="" >
-    Paga $150.00 con PayPal
-  </label>
-</div>
-    </div><!--col-xs-5 end-->
-  </div><!--row end-->
+<div class="row">
+            <div class="col-xs-5">
+                <div id="cards">
+                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Visa-icon.png">
+                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Master-Card-icon.png">
+                </div><!--#cards end-->
+                <div class="form-check">
+                    <label class="form-check-label" for='card'>
+                        <input id="card" class="form-check-input" type="checkbox" value="">
+                        Paga $150.00 con tarjeta de crédito
+                    </label>
+                </div>
+            </div><!--col-xs-5 end-->
+            <div class="col-xs-5">
+                <div id="cards">
+                    <img src="http://icons.iconarchive.com/icons/designbolts/credit-card-payment/256/Paypal-icon.png">
+                </div><!--#cards end-->
+                <div class="form-check">
+                    <label class="form-check-label" for='paypal'>
+                        <input id="paypal" class="form-check-input" type="checkbox" value="">
+                        Paga $150.00 con PayPal
+                    </label>
+                </div>
+            </div><!--col-xs-5 end-->
+            <div class="col-xs-5">
+                <!-- New OXXO payment option -->
+                <div id="oxxo">
+                    <img src="img/oxxologo.png">
+                </div><!--#oxxo end-->
+                <div class="form-check">
+                    <label class="form-check-label" for='oxxo'>
+                        <input id="oxxo" class="form-check-input" type="checkbox" value="">
+                        Paga $150.00 con OXXO
+                    </label>
+                </div>
+            </div><!--col-xs-5 end-->
+        </div><!--row end-->
   <div class="row">
     <div class="col-xs-5">
       <i class="fa fa fa-user"></i>
