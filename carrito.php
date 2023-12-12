@@ -367,11 +367,11 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
         </form>
         <label for="">Ingrese su cupon</label><input type="text" id="cupon">
         <button id="btn2" onclick="canjearCoupon()">canjear</button>
-        </div>
-    <?php
+        <?php
     
 }
 ?>      
+</div>
 
 
         <form action="pagpago.php" method="post">
@@ -529,10 +529,8 @@ if($_SERVER['REQUEST_METHOD'] === 'POST'){
                             $_SESSION["total"] = $total + 100;
                     }
                     ?>
-                    <form method="post" action="pagpago.php">
-                        <input type="hidden" name="total" value="<?php echo $_SESSION["total"]; ?>">
-                        <input type="submit" value="Pagar">
-                    </form>
+                    <input type="hidden" name="total" value="<?php echo $_SESSION["total"]; ?>">
+                    <!-- <input type="submit" value="Pagar"> -->
                 </div>
             </div>
             <input type="submit" value="proceder al pago" class="btn btn-dark">
