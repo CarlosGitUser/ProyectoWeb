@@ -230,6 +230,14 @@ header .totalQuantity{
 
 
 }
+
+#btn2{
+    background-color: #4caf50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+}
+
 .returnCart h1{
     border-top: 1px solid #eee;  
     padding: 20px 0;
