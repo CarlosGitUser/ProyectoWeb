@@ -42,9 +42,9 @@
     $pdf->MultiCell(0, 10, $text);
     
    
-
+    
     $pdf->Ln(10);
-    $pdf->Image('image/Ccodigo_barras.png', 80, 170, 40);
+    $pdf->Image('image/Ccodigo_barras.png', 80, 200, 40);
     $pdf->SetY(-45);
     $pdf->SetFont('Arial', '', 12);
     $pdf->Cell(0, 10, '____________________________', 0, 1, 'C');

@@ -64,7 +64,7 @@
     </div>
   <footer>
     <a href="index.php" class="btn btn-dark">volver</a>
-    <a href="generarPDF.php" class="btn btn-light">Finalizar compra</a>
+    <a href="datos.php" class="btn btn-light">Finalizar compra</a>
   </footer>
   
 </div><!--wrapper end-->
@@ -90,7 +90,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
   $telefono = $_POST["telefono"];
   $codigo = $_POST["codigo"];
   $country = $_POST["country"];
-
+  $pago = $_POST["payment-method"];
   if($_SERVER["PHP_SELF"]){
     
 
@@ -205,32 +205,36 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         $mail->send();
 
         //configuracion del pdf
-         
-          
+        $text2 = ""; 
+         $text = ""; 
         $sub = 0;
         if (!empty($carrito)) {
-          $text = 'Recibo de compras de ' . $nombre;
+          $text = "Recibo de compras de " . $nombre;
           $text .= "
           Datos del usuario: 
           Correo: $correo
           Telefono: $telefono
           Direccion: $address
+          Metodo de pago: $pago
 
           ";
           if($_SESSION["total"]>1000){
-            $text .= "Envio GRATIS";
+            $text .= "Envio GRATIS
+            ";
           }else $text .= "Gastos de envio: 100
           ";
-          $text .="Datos de los productos
-          ";
-          $text = "Detalles de la compra
+        
+          $text .= "Detalles de la compra
           ";
           foreach ($carrito as $producto) {
-              $text .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
+              $text .= "Producto: " . $producto["nombre"] . ", Cantidad: " . $producto["cantidad"] . ", Monto: " . $producto["monto"];
               $text .="
               ";
+              $text2 .= "Producto: " . $producto["nombre"] . ", Cantidad: " . $producto["cantidad"] . ", Monto: " . $producto["monto"];
               //' <img src="image/'.$producto['imagen'];
-              $sub += $producto['monto'];
+              $text2 .= "
+              ";
+              $sub += $producto["monto"];
           }
           
             $tot = $_SESSION["total"];
@@ -238,16 +242,16 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           $text .= "
           
 
-          
+        
           Subtotal: $" . $sub;
           $text .= "
-          Impuesto aplicable: %".$impuesto."
+          Impuesto aplicable: ".$impuesto."%
           Total:  $".$totF;
-      
-          // Codificar el texto para que pueda ser enviado por URL
-      
-      
-          // Redirigir a la página crearPDF.php con el contenido de $text
+          $ruta = "http://localhost/cursoPhp/Proyecto2/";
+          $text .="
+          ".$ruta."ProyectoWeb/datos.php";
+         
+         
           
       } else {
           $text .= "El carrito está vacío.";
@@ -255,9 +259,12 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
       
      
       $_SESSION["texto"] = $text;
+      $_SESSION["usuario"] = $nombre;
+      $_SESSION["correo"] = $correo;
+      $_SESSION["pago"] = $pago;
+      $_SESSION["address"] =  $address;
+      $_SESSION["texto2"] = $text2;
      
-       
-
      
     } catch (Exception $e) {
         echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
