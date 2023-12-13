@@ -76,26 +76,25 @@
     <script>
     // Función para validar que las contraseñas coincidan
     function validarContraseña(event) {
-        event.preventDefault(); // Evitar que el formulario se envíe normalmente
+    event.preventDefault(); // Evitar que el formulario se envíe normalmente
 
-        var contraseña = document.getElementById("contraseña").value;
-        var confirmarContraseña = document.getElementById("confirmarContraseña").value;
-        
-        if (contraseña == confirmarContraseña) {
-            var formData = new FormData();
-            formData.append("usuario", document.getElementById("usuario").value);
-            formData.append("nombreCuenta", document.getElementById("nombreCuenta").value);
-            formData.append("correo", document.getElementById("correo").value);
-            formData.append("preguntaSeguridad", document.getElementById("preguntaSeguridad").value);
-            formData.append("respuestaSeguridad", document.getElementById("respuestaSeguridad").value);
-            formData.append("contraseña", contraseña);
+    var contraseña = document.getElementById("contraseña").value;
+    var confirmarContraseña = document.getElementById("confirmarContraseña").value;
 
-            fetch('php/regBase.php', {
-                method: 'POST',
-                body: formData
-            })
-            .then(response => {
-                if (response.ok) {
+    if (contraseña == confirmarContraseña) {
+        var formData = new FormData();
+        formData.append("usuario", document.getElementById("usuario").value);
+        formData.append("nombreCuenta", document.getElementById("nombreCuenta").value);
+        formData.append("correo", document.getElementById("correo").value);
+        formData.append("preguntaSeguridad", document.getElementById("preguntaSeguridad").value);
+        formData.append("respuestaSeguridad", document.getElementById("respuestaSeguridad").value);
+        formData.append("contraseña", contraseña);
+
+        var xhr = new XMLHttpRequest();
+        xhr.open("POST", "php/regBase.php", true);
+        xhr.onreadystatechange = function () {
+            if (xhr.readyState === XMLHttpRequest.DONE) {
+                if (xhr.status === 200) {
                     // Si la inserción fue exitosa, muestra un mensaje de éxito
                     swal("Perfecto", "Ahora eres parte de la tienda", "success");
                     window.location.replace("index.php");
@@ -103,15 +102,17 @@
                     // Si hubo un error, muestra un mensaje de error
                     swal("Error", "Hubo un problema al registrar el usuario. Por favor, inténtalo de nuevo.", "error");
                 }
-            })
-            .catch(error => {
-                console.error('Error:', error);
-                swal("Error", "Ha ocurrido un error. Por favor, inténtalo de nuevo.", "error");
-            });
-        } else {
-            swal("Contraseña incorrecta", "Las contraseñas no coinciden", "error");
-        }
+            }
+        };
+        xhr.onerror = function () {
+            swal("Error", "Ha ocurrido un error. Por favor, inténtalo de nuevo.", "error");
+        };
+
+        xhr.send(formData);
+    } else {
+        swal("Contraseña incorrecta", "Las contraseñas no coinciden", "error");
     }
+}
 
     // Agregar un event listener al formulario
     document.addEventListener("DOMContentLoaded", function() {
