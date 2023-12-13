@@ -261,7 +261,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
       
      
       $_SESSION["texto"] = $text;
-      $_SESSION["usuario"] = $nombre;
+      $_SESSION["nom_usuario"] = $nombre;
       $_SESSION["correo"] = $correo;
       $_SESSION["pago"] = $pago;
       $_SESSION["address"] =  $address;

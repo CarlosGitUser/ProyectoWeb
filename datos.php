@@ -90,7 +90,7 @@
  ?>  
  <div class="datos-pago">
  <h2>Datos del <span style="color: #eb4d4b;">usuario</span></h2>
-    <p>Nombre: <?php echo $_SESSION["usuario"]?></p><br>
+    <p>Nombre: <?php echo $_SESSION["nom_usuario"]?></p><br>
     <p>Correo:<?php echo $_SESSION["correo"]?></p><br>
     <p>Direccion de envio: <?php echo $_SESSION["address"]?></p><br>
     <p>Metodo de pago: <?php echo $_SESSION["pago"]?></p><br>
