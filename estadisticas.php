@@ -2,40 +2,46 @@
 if (session_status() == PHP_SESSION_NONE) {
     session_start();
 }
-if ($_SESSION['usuario']!='admin'){
+if ($_SESSION['usuario'] != 'admin'){
     header('Location: index.php');
+    exit(); // Para detener la ejecución si el usuario no es admin
 }
-?>
-<?php
-$servidor='localhost';
-$cuenta='root';
-$password='';
-$bd='tienda';
 
-$conexion = new mysqli($servidor,$cuenta,$password,$bd);
+$servidor = 'localhost';
+$cuenta = 'root';
+$password = '';
+$bd = 'tienda';
+
+$conexion = new mysqli($servidor, $cuenta, $password, $bd);
 
 if ($conexion->connect_errno){
-    die('Error en la conexion');
+    die('Error en la conexión: ' . $conexion->connect_error);
 }
 
-$sql = "SELECT id_prod, nombre_prod, cantidad FROM producto";
-$result = $conexion->query($sql);
+// Consulta para obtener datos de productos
+$sqlProductos = "SELECT nombre_prod, cantidad FROM producto";
+$resultProductos = $conexion->query($sqlProductos);
 
-// Crear un array para almacenar los resultados
-$productos = array();
+// Crear arrays para almacenar los resultados de productos
+$nombresProductos = [];
+$cantidadesProductos = [];
 
-// Obtener los datos de la consulta
-if ($result->num_rows > 0) {
-    while($row = $result->fetch_assoc()) {
-        $productos[] = $row;
+// Obtener los datos de la consulta de productos
+if ($resultProductos->num_rows > 0) {
+    while($row = $resultProductos->fetch_assoc()) {
+        $nombresProductos[] = $row['nombre_prod'];
+        $cantidadesProductos[] = intval($row['cantidad']);
     }
 }
 
-// Convertir los datos a formato JSON para utilizarlos en JavaScript
-$productos_json = json_encode($productos);
+// Consulta para contar el número de usuarios registrados
+$sqlUsuarios = "SELECT COUNT(*) as totalUsuarios FROM usuario";
+$resultUsuarios = $conexion->query($sqlUsuarios);
+$totalUsuarios = $resultUsuarios->fetch_assoc()['totalUsuarios'];
 
 $conexion->close();
 ?>
+
 <!DOCTYPE html>
 <html lang="es">
 <head>
@@ -48,25 +54,23 @@ $conexion->close();
 <body>
     <?php include "header.php" ?>
     <br><br><br><br><br><br><br><br><br><br><br>
-    <h1 style="text-align: center;">Inventario</h1>
-    <canvas id="graficoInventario" width="400" height="400"></canvas> 
+    
+    <div style="text-align: center;">
+        <h1>Inventario</h1>
+        <canvas id="graficoInventario" width="400" height="400"></canvas> 
+        <br><br>
+        <h1>Número de Usuarios Registrados: <?php echo $totalUsuarios; ?></h1>
+        <canvas id="graficoUsuarios" width="400" height="400"></canvas> 
+    </div>
+
     <script>
-        window.addEventListener('DOMContentLoaded', function() {
-        // Obtener los datos de productos desde PHP
-        var productosData = <?php echo $productos_json; ?>;
+        // Datos del inventario para Chart.js
+        var nombresProductos = <?php echo json_encode($nombresProductos); ?>;
+        var cantidadesProductos = <?php echo json_encode($cantidadesProductos); ?>;
 
-        // Preparar los datos para Chart.js
-        var nombresProductos = [];
-        var cantidadesProductos = [];
-
-        productosData.forEach(function(producto) {
-            nombresProductos.push(producto.nombre_prod);
-            cantidadesProductos.push(parseInt(producto.cantidad));
-        });
-
-        // Crear el gráfico con Chart.js
-        var ctx = document.getElementById('graficoInventario').getContext('2d');
-        var chart = new Chart(ctx, {
+        // Crear el gráfico de inventario con Chart.js
+        var ctxInventario = document.getElementById('graficoInventario').getContext('2d');
+        var chartInventario = new Chart(ctxInventario, {
             type: 'bar',
             data: {
                 labels: nombresProductos,
@@ -85,9 +89,39 @@ $conexion->close();
                     }
                 }
             }
-        })
-    });
+        });
+
+        // Datos de usuarios para Chart.js
+        var totalUsuarios = <?php echo $totalUsuarios; ?>;
+        var dataUsuarios = {
+            labels: ['Registrados'],
+            datasets: [{
+                label: 'Usuarios Registrados',
+                data: [totalUsuarios],
+                backgroundColor: 'rgba(255, 99, 132, 0.5)', // Color del gráfico de usuarios
+                borderColor: 'rgba(255, 99, 132, 1)', // Color del borde del gráfico de usuarios
+                borderWidth: 1
+            }]
+        };
+
+        // Crear el gráfico de usuarios registrados con Chart.js
+        var ctxUsuarios = document.getElementById('graficoUsuarios').getContext('2d');
+        var chartUsuarios = new Chart(ctxUsuarios, {
+            type: 'bar',
+            data: dataUsuarios,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        ticks: {
+                            stepSize: 1
+                        }
+                    }
+                }
+            }
+        });
     </script>
+
     <?php include "footer.php" ?>
 </body>
 </html>
