@@ -244,7 +244,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
             $tot = $_SESSION["total"];
           
           $text .= "
-          $text .= "
+          
           
 
         
