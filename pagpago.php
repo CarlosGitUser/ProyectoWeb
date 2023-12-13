@@ -266,6 +266,9 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
       $_SESSION["pago"] = $pago;
       $_SESSION["address"] =  $address;
       $_SESSION["texto2"] = $text2;
+      $_SESSION["impuesto"] = $impuesto;
+      $_SESSION["subtotal"] = $sub;
+      $_SESSION["totalFinal"] = $totF;
      
      
     } catch (Exception $e) {

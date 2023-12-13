@@ -20,6 +20,12 @@
    <h3>Datos del producto</h3>
     <p><?php echo $text2?></p>
 
+    <h3>Datos de pago</h3>
+    <p>Impuesto aplicado: <?php echo $_SESSION["impuesto"] . "%"?></p>
+    <p>Subtotal: <?php echo $_SESSION["subtotal"]?></p>
+    <p>Total Bruto: <?php echo $_SESSION["totalFinal"]?></p>
+
+   <a href="generarPDF.php">Generar PDf</a>
     <?php header("Locaton: generarPDF.php")?>
 </body>
 </html>
