@@ -43,8 +43,16 @@
             text-decoration: none;
             border-radius: 5px;
         }
-
-        a:hover {
+        #volver{
+            display: none;
+            padding: 10px 20px;
+            margin-top: 20px;
+            background-color: #130f40;
+            color: #fff;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        a:hover, #volver:hover {
             background-color: #eb4d4b;
 
         }
@@ -87,7 +95,7 @@
     <p>Total Bruto: <?php echo $_SESSION["totalFinal"]?></p>
 
    <a href="generarPDF.php" onclick="habilitar()">Generar PDf</a>
-   <a href="index.php" style="display: none;" id="volver">Volver al inicio</a>
+   <a href="index.php" id="volver">Volver al inicio</a>
 
    <script>
         function habilitar() {
