@@ -42,7 +42,7 @@
     $pdf->MultiCell(0, 10, $text);
     
    
-
+    
     $pdf->Ln(10);
     $pdf->Image('image/Ccodigo_barras.png', 80, 200, 40);
     $pdf->SetY(-45);

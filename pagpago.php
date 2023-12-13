@@ -70,7 +70,7 @@
     </div>
   <footer>
     <a href="index.php" class="btn btn-dark">volver</a>
-    <a href="generarPDF.php" class="btn btn-light">Finalizar compra</a>
+    <a href="datos.php" class="btn btn-light">Finalizar compra</a>
   </footer>
   
 </div><!--wrapper end-->
@@ -212,7 +212,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
         $mail->send();
 
         //configuracion del pdf
-         
+        $text2 = ""; 
          $text = ""; 
         $sub = 0;
         if (!empty($carrito)) {
@@ -237,31 +237,38 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               $text .= "Producto: " . $producto["nombre"] . ", Cantidad: " . $producto["cantidad"] . ", Monto: " . $producto["monto"];
               $text .="
               ";
+              $text2 .= "Producto: " . $producto["nombre"] . ", Cantidad: " . $producto["cantidad"] . ", Monto: " . $producto["monto"];
               //' <img src="image/'.$producto['imagen'];
+
+              $text2 .= "
+              ";
+
               $sub += $producto["monto"];
           }
           
             $tot = $_SESSION["total"];
           
-          $text .= "
-          
-          
-
-        
+          $text .= " 
           Subtotal: $" . $sub;
           $text .= "
           Impuesto aplicable: ".$impuesto."%
           Total:  $".$totF;
-         
-         
+        
           
       } else {
-          $text .= "El carrito está vacío.";
           $text .= "El carrito está vacío.";
       }
       
      
       $_SESSION["texto"] = $text;
+      $_SESSION["usuario"] = $nombre;
+      $_SESSION["correo"] = $correo;
+      $_SESSION["pago"] = $pago;
+      $_SESSION["address"] =  $address;
+      $_SESSION["texto2"] = $text2;
+      $_SESSION["impuesto"] = $impuesto;
+      $_SESSION["subtotal"] = $sub;
+      $_SESSION["totalFinal"] = $totF;
      
      
     } catch (Exception $e) {
