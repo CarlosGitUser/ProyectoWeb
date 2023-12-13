@@ -56,11 +56,15 @@
       <label for="pais">Pais:</label>
       <select id="pais">
         
+        
         <option value="Argentina" >Argentina</option>
+        
         
         <option value="España">España</option>
         
+        
         <option value="Mexico">Mexico</option>
+       
        
     </select>
     </div>
@@ -201,6 +205,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
              $body .= "El carrito está vacío.";
           }
           $totF = ($impuesto+1)*($subtotal+$envio);
+          $totF = ($impuesto+1)*($subtotal+$envio);
       $mail->Body = $body;
 
         // Envío del correo
@@ -239,6 +244,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
             $tot = $_SESSION["total"];
           
           $text .= "
+          $text .= "
           
 
         
@@ -250,6 +256,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
          
           
       } else {
+          $text .= "El carrito está vacío.";
           $text .= "El carrito está vacío.";
       }
       
