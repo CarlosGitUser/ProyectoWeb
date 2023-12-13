@@ -1,8 +1,9 @@
 <?php 
   session_start();
-  
+  include 'header.php';
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,7 @@
     </style>
 </head>
 <body>
+  <br><br><br><br><br><br><br><br>
 <form action="<?php echo htmlspecialchars("PHP_SELF")?>" method="post">
 <div id="wrapper">
 
@@ -53,108 +55,13 @@
       <i class="fa fa fa-user"></i>
       <label for="pais">Pais:</label>
       <select id="pais">
-        <option selected required>Seleccione</option required>
-        <option value="Afganistan">Afganistan</option>
-        <option value="Albania">Albania</option>
-        <option value="Alemania">Alemania</option>
-        <option value="Andorra">Andorra</option>
-        <option value="Angola">Angola</option>
-        <option value="ArabiaSaudi">Arabia Saudi</option>
-        <option value="Argelia">Argelia</option>
+        
         <option value="Argentina" >Argentina</option>
-        <option value="Armenia">Armenia</option>
-        <option value="Aruba">Aruba</option>
-        <option value="Australia">Australia</option>
-        <option value="Austria">Austria</option>
-        <option value="Azerbaiyan">Azerbaiyan</option>
-        <option value="Bahamas">Bahamas</option>
-        <option value="Bangladesh">Bangladesh</option>
-        <option value="Barbados">Barbados</option>
-        <option value="Belgica">Belgica</option>
-        <option value="Belice">Belice</option>
-        <option value="Benin">Benin</option>
-        <option value="Bielorrusia">Bielorrusia</option>
-        <option value="Bolivia">Bolivia</option>
-        <option value="Botsuana">Botsuana</option>
-        <option value="Brasil">Brasil</option>
-        <option value="Bulgaria">Bulgaria</option>
-        <option value="BurkinaFaso">Burkina Faso</option>
-        <option value="Burundi">Burundi</option>
-        <option value="CaboVerde">Cabo Verde</option>
-        <option value="Camboya">Camboya</option>
-        <option value="Camerun">Camerun</option>
-        <option value="Canada">Canada</option>
-        <option value="Chile">Chile</option>
-        <option value="China">China</option>
-        <option value="Colombia">Colombia</option>
-        <option value="Congo">Congo</option>
-        <option value="CoreadelSur">Corea del Sur</option>
-        <option value="CostaRica">Costa Rica</option>
-        <option value="Croacia">Croacia</option>
-        <option value="Cuba">Cuba</option>
-        <option value="Dinamarca">Dinamarca</option>
-        <option value="EAU">Emiratos Arabas Unidos</option>
-        <option value="Ecuador">Ecuador</option>
-        <option value="ElSalvador">El Salvador</option>
-        <option value="EU">Estados Unidos</option>
+        
         <option value="España">España</option>
-        <option value="Francia">Francia</option>
-        <option value="Grecia">Grecia</option>
-        <option value="Guatemala">Guatemala</option>
-        <option value="Honduras">Honduras</option>
-        <option value="HongKong">Hong Kong</option>
-        <option value="Hungria">Hungria</option>
-        <option value="Holanda">Holanda</option>
-        <option value="India">India</option>
-        <option value="Irak">Irak</option>
-        <option value="Iran">Iran</option>
-        <option value="Irlanda">Irlanda</option>
-        <option value="Islandia">Isalndia</option>
-        <option value="Italia">Italia</option>
-        <option value="Japon">Japon</option>
-        <option value="Libano">Libano</option>
-        <option value="Luxemburgo">Luxemburgo</option>
-        <option value="Macedonia">Macedonia</option>
-        <option value="Malasia">Malasia</option>
-        <option value="Marruecos">Marruecos</option>
+        
         <option value="Mexico">Mexico</option>
-        <option value="Monaco">Monaco</option>
-        <option value="Mongolia">Mongolia</option>
-        <option value="Montenegro">Montenegro</option>
-        <option value="Noruega">Noruega</option>
-        <option value="NuevaZelanda">Nueva Zelanda</option>
-        <option value="PaisesBajos">Paises Bajos</option>
-        <option value="Pakistan">Pakistan</option>
-        <option value="Palestina">Palestina</option>
-        <option value="Panama">Panama</option>
-        <option value="Paraguay">Paraguay</option>
-        <option value="Peru">Peru</option>
-        <option value="Polonia">Polonia</option>
-        <option value="Portugal">Portugal</option>
-        <option value="Qatar">Qatar</option>
-        <option value="RepublicaDominicana">República Dominicana</option>
-        <option value="Ruanda">Ruanda</option>
-        <option value="Rumania">Rumania</option>
-        <option value="Rusia">Rusia</option>
-        <option value="SaharaOccidental">Sahara Occidental</option>
-        <option value="SudAfrica">Sudáfrica</option>
-        <option value="SudVietnam">Sud Vietnam</option>
-        <option value="Suiza">Suiza</option>
-        <option value="Tailandia">Tailandia</option>
-        <option value="Taiwan">Taiwán</option>
-        <option value="Tanzania">Tanzania</option>
-        <option value="TimorOriental">Timor Oriental</option>
-        <option value="Togo">Togo</option>
-        <option value="Tonga">Tonga</option>
-        <option value="TrinidadYTobago">Trinidad y Tobago</option>
-        <option value="Tunez">Túnez</option>
-        <option value="Uganda">Uganda</option>
-        <option value="Uruguay">Uruguay</option>
-        <option value="Venezuela">Venezuela</option>
-        <option value="Vietnam">Vietnam</option>
-        <option value="Yemen">Yemen</option>
-        <option value="Zambia">Zambia</option>
-        <option value="Zimbabue">Zimbabue</option>
+       
     </select>
     </div>
   <footer>
@@ -185,7 +92,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
   $telefono = $_POST["telefono"];
   $codigo = $_POST["codigo"];
   $country = $_POST["country"];
-
+  $pago = $_POST["payment-method"];
   if($_SERVER["PHP_SELF"]){
     
 
@@ -293,7 +200,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           } else {
              $body .= "El carrito está vacío.";
           }
-      
+          $totF = ($impuesto+1)*($subtotal+$envio);
       $mail->Body = $body;
 
         // Envío del correo
@@ -301,62 +208,59 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
 
         //configuracion del pdf
          
-          
+         $text = ""; 
         $sub = 0;
         if (!empty($carrito)) {
-          $text = 'Recibo de compras de ' . $nombre;
+          $text = "Recibo de compras de " . $nombre;
           $text .= "
           Datos del usuario: 
           Correo: $correo
           Telefono: $telefono
           Direccion: $address
+          Metodo de pago: $pago
 
           ";
           if($_SESSION["total"]>1000){
-            $text .= "Envio GRATIS";
+            $text .= "Envio GRATIS
+            ";
           }else $text .= "Gastos de envio: 100
           ";
-          $text .="Datos de los productos
-          ";
-          $text2 = "Detalles de la compra
+        
+          $text .= "Detalles de la compra
           ";
           foreach ($carrito as $producto) {
-              $text2 .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
-              $text2 .="
+              $text .= "Producto: " . $producto["nombre"] . ", Cantidad: " . $producto["cantidad"] . ", Monto: " . $producto["monto"];
+              $text .="
               ";
               //' <img src="image/'.$producto['imagen'];
-              $sub += $producto['monto'];
+              $sub += $producto["monto"];
           }
           
             $tot = $_SESSION["total"];
           
-          $text2 .= "
+          $text .= "
           
 
-          
+        
           Subtotal: $" . $sub;
-          $text2 .= "
-          Impuesto: $".$impuesto."
-          Total:  $".$impuestos;
-      
-          // Codificar el texto para que pueda ser enviado por URL
-      
-      
-          // Redirigir a la página crearPDF.php con el contenido de $text
+          $text .= "
+          Impuesto aplicable: ".$impuesto."%
+          Total:  $".$totF;
+         
+         
           
       } else {
-          $text2 .= "El carrito está vacío.";
+          $text .= "El carrito está vacío.";
       }
       
      
       $_SESSION["texto"] = $text;
-      $_SESSION["texto2"] = $text2;
-       
-
+     
      
     } catch (Exception $e) {
         echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
     }
+    
     exit();
   }
 ?>
