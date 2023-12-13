@@ -223,11 +223,11 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           ";
           $text .="Datos de los productos
           ";
-          $text2 = "Detalles de la compra
+          $text = "Detalles de la compra
           ";
           foreach ($carrito as $producto) {
-              $text2 .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
-              $text2 .="
+              $text .= 'Producto: ' . $producto['nombre'] . ', Cantidad: ' . $producto['cantidad'] . ', Monto: ' . $producto['monto'];
+              $text .="
               ";
               //' <img src="image/'.$producto['imagen'];
               $sub += $producto['monto'];
@@ -235,13 +235,13 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           
             $tot = $_SESSION["total"];
           
-          $text2 .= "
+          $text .= "
           
 
           
           Subtotal: $" . $sub;
-          $text2 .= "
-          Impuesto: $".$impuesto."
+          $text .= "
+          Impuesto aplicable: %".$impuesto."
           Total:  $".$totF;
       
           // Codificar el texto para que pueda ser enviado por URL
@@ -250,12 +250,12 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
           // Redirigir a la página crearPDF.php con el contenido de $text
           
       } else {
-          $text2 .= "El carrito está vacío.";
+          $text .= "El carrito está vacío.";
       }
       
      
       $_SESSION["texto"] = $text;
-      $_SESSION["texto2"] = $text2;
+     
        
 
      
