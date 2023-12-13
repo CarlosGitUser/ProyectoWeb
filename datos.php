@@ -47,7 +47,11 @@
     <p>Subtotal: <?php echo $_SESSION["subtotal"]?></p>
     <p>Total Bruto: <?php echo $_SESSION["totalFinal"]?></p>
 
-   <a href="generarPDF.php">Generar PDf</a>
+   <a href="generarPDF.php" onclick="habilitar()">Generar PDf</a>
     <?php header("Locaton: generarPDF.php")?>
+    <a href="index.php" style="display: none;" id="volver">Volver al inicio</a>
+    <script>
+        document.getElementById("volver").style.display = "block";
+    </script>
 </body>
 </html>
