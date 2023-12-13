@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Datos del pago</title>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    
+    <style>
+        body {
+            font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif; 
+        }
+    </style>
 </head>
 <body>
+<script>
+        Swal.fire({
+    title: "Gracias por su compra :D",
+    width: 600,
+    padding: "3em",
+    color: "#716add",
+    background: "#fff url(https://sweetalert2.github.io/#examplesimages/trees.png)",
+    backdrop: `
+        rgba(0,0,123,0.4)
+        url("https://sweetalert2.github.io/#examplesimages/nyan-cat.gif")
+        left top
+        no-repeat
+    `
+});
+    </script>
  <?php 
     session_start();
 
