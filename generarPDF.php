@@ -37,14 +37,14 @@
 
     $date = date('d/m/Y');
 
-    $pdf->SetXY(70, 70);
+    $pdf->SetXY(20, 70);
     $pdf->SetFont('Arial', '', 12,  'ISO-8859-1');
     $pdf->MultiCell(0, 10, $text);
     
    
     
     $pdf->Ln(10);
-    $pdf->Image('image/Ccodigo_barras.png', 80, 200, 40);
+    $pdf->Image('image/Ccodigo_barras.png', 80, 230, 40);
     $pdf->SetY(-45);
     $pdf->SetFont('Arial', '', 12);
     $pdf->Cell(0, 10, '__________', 0, 1, 'C');
