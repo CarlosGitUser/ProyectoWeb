@@ -316,7 +316,7 @@ button{
 
 <section class="products" id="products">
 
-    <h1 class="heading"> Productos <span>Exclusivos</span> </h1>
+    <h1 class="heading" style="font-weight: bold;">Productos <span style="font-size: 34px;">Exclusivos</span></h1>
 
     <div class="filter-buttons">
         <div class="buttons active" data-filter="all">Todo</div>
@@ -427,7 +427,7 @@ button{
     </div>
 
     <div class="content">
-        <span>Tendencias para nuevas temporadas!</span>
+        <span style="font-size: 35px;">Tendencias para nuevas temporadas!</span>
         <h3>La mejor colección de invierno</h3>
         <p>Rebajas hasta el 50% de descuento</p>
         <a href="#" class="btn">Comprar ahora</a>
@@ -441,7 +441,7 @@ button{
 
 <section class="featured" id="featured">
 
-    <h1 class="heading"> <span>Productos</span> Destacados </h1>
+    <h1 class="heading" style="font-weight: bold;"> <span style="font-size: 35px;">Productos</span> Destacados </h1>
 
     <div class="swiper featured-slider">
         
@@ -600,7 +600,7 @@ button{
 
 <section class="review" id="review">
 
-    <h1 class="heading"> Opinión <span>del cliente</span> </h1>
+    <h1 class="heading" style="font-weight: bold;"> Opinión <span style="font-size: 34px;">del cliente</span> </h1>
 
     <div class="swiper review-slide">
 
@@ -686,7 +686,7 @@ button{
 
 <section class="blogs" id="blogs">
     
-    <h1 class="heading"> Nuestros <span>blogs</span></h1>
+    <h1 class="heading" style="font-weight: bold;"> Nuestros <span style="font-size: 34px;">blogs</span></h1>
 
     <div class="swiper blogs-slider">
 
