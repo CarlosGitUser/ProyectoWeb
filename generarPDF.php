@@ -47,8 +47,8 @@
     $pdf->Image('image/Ccodigo_barras.png', 80, 200, 40);
     $pdf->SetY(-45);
     $pdf->SetFont('Arial', '', 12);
-    $pdf->Cell(0, 10, '____________________________', 0, 1, 'C');
+    $pdf->Cell(0, 10, '__________', 0, 1, 'C');
     $pdf->Cell(0, 10, 'Por void zone', 0, 1, 'C');
     $pdf->Output('D', 'recibo.pdf');
-    header("index.php");
+    include 'php/pagoEliminar.php';
     ?>

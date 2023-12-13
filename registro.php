@@ -3,28 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Registrarse</title>
+    <link rel="icon" type="image/x-icon" href="image/logo.png">
     <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <style>
         body {
-            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
+            background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Open Sans", sans-serif;
         }
 
         h2 {
             text-align: center;
-            color: #333;
+            color: white;
             margin-top: 30px;
+            font-weight: bold;
+            font-size: 40px;
+            transition: color 0.3s ease;
+        }
+        h2:hover {
+        color: #5861b6; /* Cambia el color al pasar el ratón sobre el título */
         }
 
         form {
             max-width: 400px;
             margin: 20px auto;
             padding: 20px;
-            background-color: #fff;
-            border-radius: 8px;
+            background-color: #ad9afa;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
         }
 
@@ -51,7 +60,7 @@
         }
 
         input[type="submit"] {
-            background-color: #4caf50;
+            background-color: #5861b6;
             color: white;
             padding: 12px 20px;
             border: none;
@@ -61,7 +70,7 @@
         }
 
         input[type="submit"]:hover {
-            background-color: #45a049;
+            background-color: #2b2a42;
         }
     </style>
     <script>

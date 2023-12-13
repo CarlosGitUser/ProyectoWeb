@@ -67,10 +67,13 @@
         }
 
         section.autores {
-            background-color: #333;
+            background-color: #eb4d4b;
             color: white;
             text-align: center;
             padding: 20px 0;
+            margin: 20px;
+            padding-right: 10px;
+            padding-left: 30px;
         }
 
 </style>
@@ -114,8 +117,11 @@
 </section>
 
 <section class="autores">
-    <legend >Nuestro Equipo de  trabajo</legend>
+    <legend style="font-size: 35px; font-weight:bold;">Nuestro Equipo de  trabajo</legend>
     <table>
+        <br>
+        <br>
+        <br>
         <tr>
             <td><img src="image/asly.jpeg" alt="" width="80px"></td>
             <td><p>Asly Lizbeth Salinas Morales</p></td>

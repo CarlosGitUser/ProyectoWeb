@@ -1,8 +1,9 @@
 <?php 
   session_start();
-  
+  include 'header.php';
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -16,6 +17,7 @@
     </style>
 </head>
 <body>
+  <br><br><br><br><br><br><br><br>
 <form action="<?php echo htmlspecialchars("PHP_SELF")?>" method="post">
 <div id="wrapper">
 
@@ -54,11 +56,15 @@
       <label for="pais">Pais:</label>
       <select id="pais">
         
+        
         <option value="Argentina" >Argentina</option>
+        
         
         <option value="España">España</option>
         
+        
         <option value="Mexico">Mexico</option>
+       
        
     </select>
     </div>
@@ -199,6 +205,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
              $body .= "El carrito está vacío.";
           }
           $totF = ($impuesto+1)*($subtotal+$envio);
+          $totF = ($impuesto+1)*($subtotal+$envio);
       $mail->Body = $body;
 
         // Envío del correo
@@ -232,26 +239,21 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
               ";
               $text2 .= "Producto: " . $producto["nombre"] . ", Cantidad: " . $producto["cantidad"] . ", Monto: " . $producto["monto"];
               //' <img src="image/'.$producto['imagen'];
+
               $text2 .= "
               ";
+
               $sub += $producto["monto"];
           }
           
             $tot = $_SESSION["total"];
           
-          $text .= "
-          
-
-        
+          $text .= " 
           Subtotal: $" . $sub;
           $text .= "
           Impuesto aplicable: ".$impuesto."%
           Total:  $".$totF;
-          $ruta = "http://localhost/cursoPhp/Proyecto2/";
-          $text .="
-          ".$ruta."ProyectoWeb/datos.php";
-         
-         
+        
           
       } else {
           $text .= "El carrito está vacío.";
@@ -269,6 +271,7 @@ var selected = $(this).parent().parent().parent();    $(selected).toggleClass('h
     } catch (Exception $e) {
         echo "Hubo un error al enviar el mensaje: {$mail->ErrorInfo}";
     }
+    
     exit();
   }
 ?>
