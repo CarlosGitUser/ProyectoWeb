@@ -13,73 +13,72 @@ session_start();
     <style>
         
         body {
-    margin: 0;
-    padding: 0;
-    background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    font-family: "Open Sans", sans-serif;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    height: 100vh; /* Ajusta la altura al 100% de la ventana */
-}
+            margin: 0;
+            padding: 0;
+            background-image: linear-gradient(135deg, #FAB2FF 10%, #1904E5 100%);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: "Open Sans", sans-serif;
+        }
 
-.login-container {
-    max-width: 400px;
-    margin: 20px;
-    padding: 20px;
-    background-color: #ad9afa;
-    
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-}
-
-h2 {
-    text-align: center;
-    color: white;
-    margin-top: 30px;
-    font-weight: bold;
-    font-size: 40px;
-    transition: color 0.3s ease;
-}
-
-h2:hover {
-    color: #5861b6;
-}
+        h2 {
+            text-align: center;
+            color: white;
+            margin-top: 30px;
+            font-weight: bold;
+            font-size: 40px;
+            transition: color 0.3s ease;
+        }
+        h2:hover {
+        color: #5861b6; /* Cambia el color al pasar el ratón sobre el título */
+        }
 
 
+        form {
+            max-width: 400px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            background-color: #ad9afa;
+        }
 
-label {
-    display: block;
-    margin-bottom: 8px;
-    color: #333;
-}
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #333;
+        }
 
-input[type="text"],
-input[type="password"] {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    box-sizing: border-box;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-}
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 15px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
 
-button[type="submit"] {
-    background-color: #5861b6;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
+        select {
+            background-color: #fff;
+        }
 
-button[type="submit"]:hover {
-    background-color: #2b2a42;
-}
+        button[type="submit"] {
+            background-color: #5861b6;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
 
+        button[type="submit"]:hover {
+            background-color: #2b2a42;
+        }
 
 
     </style>
@@ -155,10 +154,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
  ?>
 
 <body>
-
-<div class="image-login">
-    <img src="image/tranding.png" alt="">
-</div>
     <div class="login-container">
         <h2>Iniciar Sesión</h2>
         <form action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>" method="post">
@@ -181,8 +176,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <button type="button" class="btn btn-dark">Volver</button>
         </a>
     </form>
-        
-        
     </div>
 
 </body>
